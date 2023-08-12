@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		788FB5E3EAB6BF28F1A36ECD /* Pods_PetConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA296A3C4A310183E7641D7 /* Pods_PetConnect.framework */; };
 		EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3892A87AB6000DAF44C /* AppDelegate.swift */; };
 		EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A38B2A87AB6000DAF44C /* SceneDelegate.swift */; };
 		EE22A38E2A87AB6000DAF44C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A38D2A87AB6000DAF44C /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7892613F535C27311A7612F9 /* Pods-PetConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetConnect.debug.xcconfig"; path = "Target Support Files/Pods-PetConnect/Pods-PetConnect.debug.xcconfig"; sourceTree = "<group>"; };
+		7FD9428F92764E5AA76A5608 /* Pods-PetConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetConnect.release.xcconfig"; path = "Target Support Files/Pods-PetConnect/Pods-PetConnect.release.xcconfig"; sourceTree = "<group>"; };
+		DFA296A3C4A310183E7641D7 /* Pods_PetConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE22A3862A87AB6000DAF44C /* PetConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE22A3892A87AB6000DAF44C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE22A38B2A87AB6000DAF44C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				788FB5E3EAB6BF28F1A36ECD /* Pods_PetConnect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DEDEB0876923403FF121617 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7892613F535C27311A7612F9 /* Pods-PetConnect.debug.xcconfig */,
+				7FD9428F92764E5AA76A5608 /* Pods-PetConnect.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7D1A1D07E029E525C558E954 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFA296A3C4A310183E7641D7 /* Pods_PetConnect.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE22A37D2A87AB6000DAF44C = {
 			isa = PBXGroup;
 			children = (
 				EE22A3882A87AB6000DAF44C /* PetConnect */,
 				EE22A3872A87AB6000DAF44C /* Products */,
+				5DEDEB0876923403FF121617 /* Pods */,
+				7D1A1D07E029E525C558E954 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE22A39A2A87AB6200DAF44C /* Build configuration list for PBXNativeTarget "PetConnect" */;
 			buildPhases = (
+				FB2BDD7BE72A1ECDAA6E1F7C /* [CP] Check Pods Manifest.lock */,
 				EE22A3822A87AB6000DAF44C /* Sources */,
 				EE22A3832A87AB6000DAF44C /* Frameworks */,
 				EE22A3842A87AB6000DAF44C /* Resources */,
@@ -132,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FB2BDD7BE72A1ECDAA6E1F7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PetConnect-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EE22A3822A87AB6000DAF44C /* Sources */ = {
@@ -287,6 +337,7 @@
 		};
 		EE22A39B2A87AB6200DAF44C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7892613F535C27311A7612F9 /* Pods-PetConnect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,16 +346,18 @@
 				DEVELOPMENT_TEAM = 4FV5WJHF4V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PetConnect/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = Shredding.PetConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -315,6 +368,7 @@
 		};
 		EE22A39C2A87AB6200DAF44C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FD9428F92764E5AA76A5608 /* Pods-PetConnect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,16 +377,18 @@
 				DEVELOPMENT_TEAM = 4FV5WJHF4V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PetConnect/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = Shredding.PetConnect;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
