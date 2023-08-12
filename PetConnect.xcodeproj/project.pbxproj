@@ -15,6 +15,7 @@
 		EE22A3962A87AB6200DAF44C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE22A3942A87AB6200DAF44C /* LaunchScreen.storyboard */; };
 		EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */; };
 		EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */; };
+		EE22A3A62A87EF7100DAF44C /* Заглушка (Потом удалить).swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A52A87EF7100DAF44C /* Заглушка (Потом удалить).swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EE22A3972A87AB6200DAF44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		EE22A3A52A87EF7100DAF44C /* Заглушка (Потом удалить).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Заглушка (Потом удалить).swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		EE22A39F2A87AE1E00DAF44C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EE22A3A52A87EF7100DAF44C /* Заглушка (Потом удалить).swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				EE22A38E2A87AB6000DAF44C /* ViewController.swift in Sources */,
 				EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */,
 				EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */,
+				EE22A3A62A87EF7100DAF44C /* Заглушка (Потом удалить).swift in Sources */,
 				EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */,
 				EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */,
 			);
