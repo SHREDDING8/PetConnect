@@ -19,6 +19,7 @@
 		EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */; };
 		EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */; };
 		EE22A3A62A87EF7100DAF44C /* Заглушка (Потом удалить).swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A52A87EF7100DAF44C /* Заглушка (Потом удалить).swift */; };
+		EE5ABC202A8978DD00E762D6 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC1F2A8978DD00E762D6 /* Empty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,9 @@
 		EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
 		EE22A3A52A87EF7100DAF44C /* Заглушка (Потом удалить).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Заглушка (Потом удалить).swift"; sourceTree = "<group>"; };
+		EE5ABC1F2A8978DD00E762D6 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
+		EE5ABC212A8978E200E762D6 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
+		EE5ABC222A8978E400E762D6 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 		EE22A39E2A87AE1700DAF44C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EE5ABC1B2A8978B400E762D6 /* Auth */,
 				EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */,
 				EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */,
 				848E405C2A87F55A0014D704 /* BaseNavigationController.swift */,
@@ -128,6 +133,40 @@
 				EE22A3A52A87EF7100DAF44C /* Заглушка (Потом удалить).swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		EE5ABC1B2A8978B400E762D6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EE5ABC1E2A8978D100E762D6 /* Presenter */,
+				EE5ABC1D2A8978CB00E762D6 /* View */,
+				EE5ABC1C2A8978BD00E762D6 /* Model */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		EE5ABC1C2A8978BD00E762D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE5ABC222A8978E400E762D6 /* Empty.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE5ABC1D2A8978CB00E762D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE5ABC212A8978E200E762D6 /* Empty.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE5ABC1E2A8978D100E762D6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EE5ABC1F2A8978DD00E762D6 /* Empty.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +272,7 @@
 				EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */,
 				EE22A3A62A87EF7100DAF44C /* Заглушка (Потом удалить).swift in Sources */,
 				EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */,
+				EE5ABC202A8978DD00E762D6 /* Empty.swift in Sources */,
 				EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */,
 				848E40612A880E700014D704 /* PrimaryNavBarView.swift in Sources */,
 			);
