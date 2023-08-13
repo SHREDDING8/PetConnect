@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		788FB5E3EAB6BF28F1A36ECD /* Pods_PetConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA296A3C4A310183E7641D7 /* Pods_PetConnect.framework */; };
+		848E405D2A87F55A0014D704 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E405C2A87F55A0014D704 /* BaseNavigationController.swift */; };
+		848E40612A880E700014D704 /* PrimaryNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40602A880E700014D704 /* PrimaryNavBarView.swift */; };
+		848E40632A88C7E50014D704 /* UIViewController + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40622A88C7E50014D704 /* UIViewController + ext.swift */; };
 		EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3892A87AB6000DAF44C /* AppDelegate.swift */; };
 		EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A38B2A87AB6000DAF44C /* SceneDelegate.swift */; };
 		EE22A38E2A87AB6000DAF44C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A38D2A87AB6000DAF44C /* ViewController.swift */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		7892613F535C27311A7612F9 /* Pods-PetConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetConnect.debug.xcconfig"; path = "Target Support Files/Pods-PetConnect/Pods-PetConnect.debug.xcconfig"; sourceTree = "<group>"; };
 		7FD9428F92764E5AA76A5608 /* Pods-PetConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetConnect.release.xcconfig"; path = "Target Support Files/Pods-PetConnect/Pods-PetConnect.release.xcconfig"; sourceTree = "<group>"; };
+		848E405C2A87F55A0014D704 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		848E40602A880E700014D704 /* PrimaryNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryNavBarView.swift; sourceTree = "<group>"; };
+		848E40622A88C7E50014D704 /* UIViewController + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + ext.swift"; sourceTree = "<group>"; };
 		DFA296A3C4A310183E7641D7 /* Pods_PetConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE22A3862A87AB6000DAF44C /* PetConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE22A3892A87AB6000DAF44C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +115,9 @@
 			children = (
 				EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */,
 				EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */,
+				848E405C2A87F55A0014D704 /* BaseNavigationController.swift */,
+				848E40602A880E700014D704 /* PrimaryNavBarView.swift */,
+				848E40622A88C7E50014D704 /* UIViewController + ext.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -218,11 +227,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE22A38E2A87AB6000DAF44C /* ViewController.swift in Sources */,
+				848E405D2A87F55A0014D704 /* BaseNavigationController.swift in Sources */,
+				848E40632A88C7E50014D704 /* UIViewController + ext.swift in Sources */,
 				EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */,
 				EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */,
 				EE22A3A62A87EF7100DAF44C /* Заглушка (Потом удалить).swift in Sources */,
 				EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */,
 				EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */,
+				848E40612A880E700014D704 /* PrimaryNavBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

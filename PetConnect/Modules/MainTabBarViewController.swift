@@ -77,6 +77,7 @@ class MainTabBarViewController: UITabBarController {
         viewController.tabBarItem.image =  page.getImage()
         viewController.tabBarItem.selectedImage = page.getSelectedImage()
         self.tabBar.tintColor = UIColor(named: "TabBarSelectedColor")
+        self.tabBar.backgroundColor = UIColor(named: "TabBarBgColor")
         return viewController
     }
 }

@@ -27,7 +27,7 @@ class MainBuilder:MainBuilderProtocol{
     
     // MARK: - Main Pages
     static func createHomePage()->UIViewController{
-        return UINavigationController()
+        return BaseNavigationController(rootViewController: HomePageViewController())
     }
     
     static func createPetPage()->UIViewController{
