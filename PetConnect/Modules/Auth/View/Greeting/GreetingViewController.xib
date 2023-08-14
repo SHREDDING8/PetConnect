@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089.1"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,6 +39,9 @@
                         <color key="baseForegroundColor" name="GreetingGreen"/>
                         <color key="baseBackgroundColor" name="GreetingLightGreen"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="signInTapped:" destination="-1" eventType="touchUpInside" id="Zsp-h8-TpZ"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PetConnect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5m-fw-ODD">
                     <rect key="frame" x="15" y="109" width="400" height="41"/>
@@ -59,11 +61,14 @@
                         <constraint firstAttribute="height" constant="44" id="aOM-gN-RyD"/>
                     </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Зарегестрироваться" cornerStyle="capsule">
+                    <buttonConfiguration key="configuration" style="filled" title="Зарегистрироваться" cornerStyle="capsule">
                         <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="baseBackgroundColor" name="GreetingGreen"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="signUpTapped:" destination="-1" eventType="touchUpInside" id="FUh-uI-OS8"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

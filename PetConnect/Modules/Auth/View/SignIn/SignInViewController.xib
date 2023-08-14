@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22113.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="PetConnect" customModuleProvider="target">
+            <connections>
+                <outlet property="logInButton" destination="z82-Ds-mp3" id="5mu-Zw-cVq"/>
+                <outlet property="loginFocusedLabel" destination="Brf-lR-0C7" id="D5C-ff-Lp8"/>
+                <outlet property="loginView" destination="uoH-0h-u5b" id="KlK-3D-z7D"/>
+                <outlet property="passwordFocusedLabel" destination="cjI-Js-zFr" id="Ffx-6L-jeq"/>
+                <outlet property="passwordView" destination="Y9z-Xh-ik6" id="csn-y5-iXV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wrongPasswordLabel" destination="Nea-mz-y2G" id="FOD-zn-fzf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uoH-0h-u5b">
+                    <rect key="frame" x="20" y="84" width="390" height="60"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="loginTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин или Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HzZ-N1-Ogo">
+                            <rect key="frame" x="16" y="8" width="358" height="44"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="JjE-hZ-CmG"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="HzZ-N1-Ogo" secondAttribute="trailing" constant="16" id="5SJ-AY-y03"/>
+                        <constraint firstItem="HzZ-N1-Ogo" firstAttribute="leading" secondItem="uoH-0h-u5b" secondAttribute="leading" constant="16" id="CYi-1z-JJB"/>
+                        <constraint firstAttribute="height" constant="60" id="auI-yq-KWE"/>
+                        <constraint firstAttribute="bottom" secondItem="HzZ-N1-Ogo" secondAttribute="bottom" constant="8" id="d1g-Y7-iir"/>
+                        <constraint firstItem="HzZ-N1-Ogo" firstAttribute="top" secondItem="uoH-0h-u5b" secondAttribute="top" constant="8" id="dcU-JM-24E"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9z-Xh-ik6">
+                    <rect key="frame" x="20" y="160" width="390" height="60"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="passwordTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="C0D-bW-A1s">
+                            <rect key="frame" x="16" y="8" width="358" height="44"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="WMP-FJ-QyM"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="C0D-bW-A1s" firstAttribute="top" secondItem="Y9z-Xh-ik6" secondAttribute="top" constant="8" id="Ghn-YE-TOo"/>
+                        <constraint firstAttribute="height" constant="60" id="T8b-GZ-FlG"/>
+                        <constraint firstAttribute="bottom" secondItem="C0D-bW-A1s" secondAttribute="bottom" constant="8" id="Zvf-tM-7W8"/>
+                        <constraint firstAttribute="trailing" secondItem="C0D-bW-A1s" secondAttribute="trailing" constant="16" id="bcl-L4-3XN"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="nmP-RF-XKQ"/>
+                        <constraint firstItem="C0D-bW-A1s" firstAttribute="leading" secondItem="Y9z-Xh-ik6" secondAttribute="leading" constant="16" id="tYt-lY-usv"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин или Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brf-lR-0C7">
+                    <rect key="frame" x="36" y="77" width="95" height="15"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="95" id="93p-6z-dNk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="12"/>
+                    <color key="textColor" name="GreetingGreen"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjI-Js-zFr">
+                    <rect key="frame" x="36" y="153" width="50" height="15"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="9IC-22-viP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="12"/>
+                    <color key="textColor" name="GreetingGreen"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z82-Ds-mp3">
+                    <rect key="frame" x="20" y="839" width="390" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="RnX-rT-ye5"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Войти" cornerStyle="capsule">
+                        <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" name="GreetingGreen"/>
+                    </buttonConfiguration>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Неверно введен логин или пароль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nea-mz-y2G">
+                    <rect key="frame" x="20" y="232" width="390" height="15"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="z82-Ds-mp3" secondAttribute="bottom" constant="15" id="1Ua-eZ-Zvg"/>
+                <constraint firstItem="Nea-mz-y2G" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="1ga-6u-jF5"/>
+                <constraint firstItem="Nea-mz-y2G" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6vn-9H-nbU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="z82-Ds-mp3" secondAttribute="trailing" constant="20" id="B25-cd-h3b"/>
+                <constraint firstItem="cjI-Js-zFr" firstAttribute="leading" secondItem="Y9z-Xh-ik6" secondAttribute="leading" constant="16" id="DsB-nB-vnx"/>
+                <constraint firstItem="Brf-lR-0C7" firstAttribute="top" secondItem="uoH-0h-u5b" secondAttribute="top" constant="-7" id="M6c-l8-0Pw"/>
+                <constraint firstItem="cjI-Js-zFr" firstAttribute="top" secondItem="Y9z-Xh-ik6" secondAttribute="top" constant="-7" id="N2w-Iz-kpE"/>
+                <constraint firstItem="Nea-mz-y2G" firstAttribute="top" secondItem="Y9z-Xh-ik6" secondAttribute="bottom" constant="12" id="Rji-J6-AKK"/>
+                <constraint firstItem="z82-Ds-mp3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="UTo-gn-k8r"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Y9z-Xh-ik6" secondAttribute="trailing" constant="20" id="fbh-vJ-cfT"/>
+                <constraint firstItem="uoH-0h-u5b" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="glZ-ef-dp0"/>
+                <constraint firstItem="Brf-lR-0C7" firstAttribute="leading" secondItem="uoH-0h-u5b" secondAttribute="leading" constant="16" id="hOX-tU-qwI"/>
+                <constraint firstItem="Y9z-Xh-ik6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="iRK-ZL-AkD"/>
+                <constraint firstItem="Y9z-Xh-ik6" firstAttribute="top" secondItem="uoH-0h-u5b" secondAttribute="bottom" constant="16" id="l9f-JX-iE3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uoH-0h-u5b" secondAttribute="trailing" constant="20" id="vo2-oa-6jR"/>
+                <constraint firstItem="uoH-0h-u5b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zAz-Ja-Ley"/>
+            </constraints>
+            <point key="canvasLocation" x="-37.404580152671755" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="GreetingGreen">
+            <color red="0.0" green="0.41999998688697815" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

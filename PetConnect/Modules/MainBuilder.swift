@@ -32,7 +32,7 @@ class MainBuilder:MainBuilderProtocol{
         let view = GreetingViewController()
         let presenter = GreetingPresenter(view: view)
         view.presenter = presenter
-        return view
+        return BaseNavigationController(rootViewController: view)
     }
     
     // MARK: - Main Pages

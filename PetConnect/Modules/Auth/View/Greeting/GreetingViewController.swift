@@ -5,9 +5,6 @@
 //  Created by SHREDDING on 13.08.2023.
 //
 
-// MARK: - TODO
-// Настроить шрифты
-
 import UIKit
 
 class GreetingViewController: UIViewController {
@@ -17,6 +14,15 @@ class GreetingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.largeTitleDisplayMode = .never
+        setAppName()
+        
+        
+        
+    }
+    
+    fileprivate func setAppName(){
         
         let appTitleString = NSMutableAttributedString(
             string: "Pet",
@@ -37,9 +43,23 @@ class GreetingViewController: UIViewController {
         )
         
         self.appTitle.attributedText = appTitleString
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func signInTapped(_ sender: UIButton) {
+        
+        let signInController = AuthBuilder.createSignInPage()
+        self.navigationController?.pushViewController(signInController, animated: true)
         
     }
     
+    @IBAction func signUpTapped(_ sender: UIButton) {
+        
+        let signUpController = AuthBuilder.createSignUpPage()
+        self.navigationController?.pushViewController(signUpController, animated: true)
+        
+    }
 }
 
 extension GreetingViewController:GreetingViewProtocol{
