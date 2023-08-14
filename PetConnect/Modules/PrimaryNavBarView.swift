@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol PrimaryNavBarViewDelegate: AnyObject {
+    func openUserProfile()
+}
+
 final class PrimaryNavBarView: UIView {
+    
+    weak var delegate: PrimaryNavBarViewDelegate?
     
     private lazy var title: UILabel = {
         let element = UILabel()
@@ -21,6 +27,8 @@ final class PrimaryNavBarView: UIView {
         let element = UIButton()
         element.translatesAutoresizingMaskIntoConstraints = false
         element.addTarget(self, action: #selector(avatarPressed), for: .touchUpInside)
+        element.layer.masksToBounds = true
+        element.layer.cornerRadius = 14
         return element
     }()
     
@@ -48,11 +56,13 @@ final class PrimaryNavBarView: UIView {
             
             avatar.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             avatar.centerYAnchor.constraint(equalTo: centerYAnchor),
+            avatar.heightAnchor.constraint(equalToConstant: 28),
+            avatar.widthAnchor.constraint(equalToConstant: 28),
         ])
     }
     
     @objc func avatarPressed() {
-        print(#function)
+        delegate?.openUserProfile()
     }
     
     func configure(with text: String, image: UIImage?) {
