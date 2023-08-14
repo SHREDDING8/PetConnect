@@ -37,10 +37,10 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uoH-0h-u5b">
                     <rect key="frame" x="20" y="84" width="390" height="60"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="loginTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин или Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HzZ-N1-Ogo">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="loginTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин или Email" textAlignment="natural" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HzZ-N1-Ogo">
                             <rect key="frame" x="16" y="8" width="358" height="44"/>
                             <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="username"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="JjE-hZ-CmG"/>
                             </connections>
@@ -58,10 +58,10 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y9z-Xh-ik6">
                     <rect key="frame" x="20" y="160" width="390" height="60"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="passwordTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="C0D-bW-A1s">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="passwordTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C0D-bW-A1s">
                             <rect key="frame" x="16" y="8" width="358" height="44"/>
                             <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                             <connections>
                                 <outlet property="delegate" destination="-1" id="WMP-FJ-QyM"/>
                             </connections>
