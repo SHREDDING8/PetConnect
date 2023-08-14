@@ -37,7 +37,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uoH-0h-u5b">
                     <rect key="frame" x="20" y="84" width="390" height="60"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="loginTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин или Email" textAlignment="natural" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HzZ-N1-Ogo">
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="loginTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин или Email" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HzZ-N1-Ogo">
                             <rect key="frame" x="16" y="8" width="358" height="44"/>
                             <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
                             <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="username"/>

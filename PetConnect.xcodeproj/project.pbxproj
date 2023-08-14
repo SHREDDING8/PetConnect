@@ -39,6 +39,7 @@
 		EEFA9AF82A8A92AE00EA95A5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AF62A8A92AE00EA95A5 /* SignUpViewController.swift */; };
 		EEFA9AF92A8A92AE00EA95A5 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFA9AF72A8A92AE00EA95A5 /* SignUpViewController.xib */; };
 		EEFA9AFB2A8A964700EA95A5 /* signUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AFA2A8A964700EA95A5 /* signUpPresenter.swift */; };
+		EEFA9AFD2A8ACDA000EA95A5 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AFC2A8ACDA000EA95A5 /* SignUpModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		EEFA9AF62A8A92AE00EA95A5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EEFA9AF72A8A92AE00EA95A5 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		EEFA9AFA2A8A964700EA95A5 /* signUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpPresenter.swift; sourceTree = "<group>"; };
+		EEFA9AFC2A8ACDA000EA95A5 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				EEDC7F682A8A5ECF008CBD72 /* signInModel.swift */,
+				EEFA9AFC2A8ACDA000EA95A5 /* SignUpModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */,
 				EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */,
 				EE5ABC522A89D20600E762D6 /* GreetingPresenter.swift in Sources */,
+				EEFA9AFD2A8ACDA000EA95A5 /* SignUpModel.swift in Sources */,
 				EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */,
 				EEFA9AF42A8A8AB200EA95A5 /* AuthResponseJson.swift in Sources */,
 				EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */,

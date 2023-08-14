@@ -23,6 +23,9 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var signUpButton: UIButton!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,13 +71,39 @@ class SignUpViewController: UIViewController {
 }
 
 extension SignUpViewController:UITextFieldDelegate{
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.scrollView.setContentOffset(.zero, animated: true)
         textField.resignFirstResponder()
         return true
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch textField.restorationIdentifier{
+        case "loginTextField":
+            presenter?.setLogin(value: textField.text ?? "")
+        case "emailTextField":
+            presenter?.setEmail(value: textField.text ?? "")
+        case "passwordTextField":
+            presenter?.setPassword(value: textField.text ?? "")
+        case "confirmPasswordTextField":
+            presenter?.setConfirmPassword(value: textField.text ?? "")
+            
+         default:
+            break
+        }
+        
+        presenter?.textFieldChanged()
+    }
 }
 
 extension SignUpViewController:SignUpViewProtocol{
+    func enableRegisrationButton() {
+        self.signUpButton.isEnabled = true
+    }
+    
+    func disableRegisrationButton() {
+        self.signUpButton.isEnabled = false
+    }
     
 }
