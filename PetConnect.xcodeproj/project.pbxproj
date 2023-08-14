@@ -19,9 +19,15 @@
 		EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */; };
 		EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */; };
 		EE22A3A62A87EF7100DAF44C /* Заглушка (Потом удалить).swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A52A87EF7100DAF44C /* Заглушка (Потом удалить).swift */; };
-		EE5ABC202A8978DD00E762D6 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC1F2A8978DD00E762D6 /* Empty.swift */; };
 		EE5ABC252A89795B00E762D6 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC232A89795A00E762D6 /* GreetingViewController.swift */; };
 		EE5ABC262A89795B00E762D6 /* GreetingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC242A89795A00E762D6 /* GreetingViewController.xib */; };
+		EE5ABC412A89816100E762D6 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC2D2A89816100E762D6 /* SF-Pro-Display-Light.otf */; };
+		EE5ABC422A89816100E762D6 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC2E2A89816100E762D6 /* SF-Pro-Display-Regular.otf */; };
+		EE5ABC432A89816100E762D6 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC2F2A89816100E762D6 /* SF-Pro-Display-Bold.otf */; };
+		EE5ABC442A89816100E762D6 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC302A89816100E762D6 /* SF-Pro-Display-Medium.otf */; };
+		EE5ABC452A89816100E762D6 /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC312A89816100E762D6 /* SF-Pro-Display-Heavy.otf */; };
+		EE5ABC462A89816100E762D6 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC322A89816100E762D6 /* SF-Pro-Display-Semibold.otf */; };
+		EE5ABC522A89D20600E762D6 /* GreetingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC512A89D20600E762D6 /* GreetingPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,10 +47,16 @@
 		EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
 		EE22A3A52A87EF7100DAF44C /* Заглушка (Потом удалить).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Заглушка (Потом удалить).swift"; sourceTree = "<group>"; };
-		EE5ABC1F2A8978DD00E762D6 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		EE5ABC222A8978E400E762D6 /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		EE5ABC232A89795A00E762D6 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
 		EE5ABC242A89795A00E762D6 /* GreetingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreetingViewController.xib; sourceTree = "<group>"; };
+		EE5ABC2D2A89816100E762D6 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
+		EE5ABC2E2A89816100E762D6 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		EE5ABC2F2A89816100E762D6 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		EE5ABC302A89816100E762D6 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		EE5ABC312A89816100E762D6 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
+		EE5ABC322A89816100E762D6 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		EE5ABC512A89D20600E762D6 /* GreetingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,7 @@
 		EE22A3882A87AB6000DAF44C /* PetConnect */ = {
 			isa = PBXGroup;
 			children = (
+				EE5ABC272A89811400E762D6 /* Fonts */,
 				EE22A39F2A87AE1E00DAF44C /* Services */,
 				EE22A39E2A87AE1700DAF44C /* Modules */,
 				EE22A39D2A87ADFD00DAF44C /* App */,
@@ -168,9 +181,30 @@
 		EE5ABC1E2A8978D100E762D6 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				EE5ABC1F2A8978DD00E762D6 /* Empty.swift */,
+				EE5ABC512A89D20600E762D6 /* GreetingPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EE5ABC272A89811400E762D6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EE5ABC282A89816100E762D6 /* San Francisco Pro Display */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EE5ABC282A89816100E762D6 /* San Francisco Pro Display */ = {
+			isa = PBXGroup;
+			children = (
+				EE5ABC2D2A89816100E762D6 /* SF-Pro-Display-Light.otf */,
+				EE5ABC2E2A89816100E762D6 /* SF-Pro-Display-Regular.otf */,
+				EE5ABC2F2A89816100E762D6 /* SF-Pro-Display-Bold.otf */,
+				EE5ABC302A89816100E762D6 /* SF-Pro-Display-Medium.otf */,
+				EE5ABC312A89816100E762D6 /* SF-Pro-Display-Heavy.otf */,
+				EE5ABC322A89816100E762D6 /* SF-Pro-Display-Semibold.otf */,
+			);
+			path = "San Francisco Pro Display";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +266,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE5ABC462A89816100E762D6 /* SF-Pro-Display-Semibold.otf in Resources */,
 				EE22A3962A87AB6200DAF44C /* LaunchScreen.storyboard in Resources */,
 				EE22A3932A87AB6200DAF44C /* Assets.xcassets in Resources */,
 				EE5ABC262A89795B00E762D6 /* GreetingViewController.xib in Resources */,
+				EE5ABC442A89816100E762D6 /* SF-Pro-Display-Medium.otf in Resources */,
+				EE5ABC432A89816100E762D6 /* SF-Pro-Display-Bold.otf in Resources */,
+				EE5ABC412A89816100E762D6 /* SF-Pro-Display-Light.otf in Resources */,
+				EE5ABC422A89816100E762D6 /* SF-Pro-Display-Regular.otf in Resources */,
+				EE5ABC452A89816100E762D6 /* SF-Pro-Display-Heavy.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,8 +317,8 @@
 				EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */,
 				EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */,
 				EE22A3A62A87EF7100DAF44C /* Заглушка (Потом удалить).swift in Sources */,
+				EE5ABC522A89D20600E762D6 /* GreetingPresenter.swift in Sources */,
 				EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */,
-				EE5ABC202A8978DD00E762D6 /* Empty.swift in Sources */,
 				EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */,
 				848E40612A880E700014D704 /* PrimaryNavBarView.swift in Sources */,
 			);
