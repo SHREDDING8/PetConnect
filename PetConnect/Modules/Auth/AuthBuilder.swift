@@ -24,8 +24,10 @@ class AuthBuilder:AuthBuilderProtocol{
     }
     
     static func createSignUpPage() -> UIViewController {
-        return UIViewController()
+        let view = SignUpViewController()
+        let presenter = SignUpPresenter(view: view)
+        view.presenter = presenter
+        return view
     }
-    
     
 }
