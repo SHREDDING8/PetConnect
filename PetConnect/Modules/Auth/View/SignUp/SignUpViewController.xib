@@ -20,8 +20,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="PetConnect" customModuleProvider="target">
             <connections>
                 <outlet property="confirmPasswordView" destination="f0E-jo-3y1" id="qWi-lg-GMe"/>
+                <outlet property="emailLabel" destination="TXt-fU-ynO" id="gq2-t3-8hQ"/>
                 <outlet property="emailView" destination="HdN-Kt-w8h" id="Bmg-WX-JFM"/>
+                <outlet property="loginLabel" destination="F0F-jW-7bR" id="2us-fr-1w5"/>
                 <outlet property="loginView" destination="fnu-bA-FCj" id="cew-tg-Exn"/>
+                <outlet property="passwordLabel" destination="2Co-YL-9ci" id="NNM-VX-BaA"/>
                 <outlet property="passwordView" destination="Lgr-CE-KJz" id="vhA-XW-Y5K"/>
                 <outlet property="scrollView" destination="Jaz-AS-Zlw" id="ldu-jw-eJr"/>
                 <outlet property="scrollViewBottomConstraint" destination="sO3-Pn-UOB" id="nax-ie-oh7"/>
@@ -130,7 +133,7 @@
                                         <constraint firstAttribute="height" constant="60" id="qTp-QS-K7d"/>
                                     </constraints>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0F-jW-7bR">
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0F-jW-7bR">
                                     <rect key="frame" x="36" y="20" width="40" height="15"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -140,7 +143,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXt-fU-ynO">
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXt-fU-ynO">
                                     <rect key="frame" x="36" y="96" width="35" height="15"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -150,7 +153,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Co-YL-9ci">
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Co-YL-9ci">
                                     <rect key="frame" x="36" y="172" width="45" height="15"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>

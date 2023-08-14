@@ -23,6 +23,13 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
     
+    
+    @IBOutlet weak var loginLabel: UILabel!
+    
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    @IBOutlet weak var passwordLabel: UILabel!
+    
     @IBOutlet weak var signUpButton: UIButton!
     
     
@@ -68,6 +75,12 @@ class SignUpViewController: UIViewController {
         self.scrollViewBottomConstraint.constant = 20
     }
     
+    fileprivate func setOpacity(_ view:UIView, opacity:Float){
+        UIView.animate(withDuration: 0.3) {
+            view.layer.opacity = opacity
+        }
+    }
+    
 }
 
 extension SignUpViewController:UITextFieldDelegate{
@@ -78,16 +91,60 @@ extension SignUpViewController:UITextFieldDelegate{
         return true
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField.restorationIdentifier{
+        case "loginTextField":
+            self.loginView.layer.borderColor = UIColor(named: "GreetingGreen")?.cgColor
+            loginLabel.textColor = UIColor(named: "GreetingGreen") ?? .black
+            setOpacity(loginLabel, opacity: 1)
+            
+        case "emailTextField":
+            self.emailView.layer.borderColor = UIColor(named: "GreetingGreen")?.cgColor
+            emailLabel.textColor = UIColor(named: "GreetingGreen") ?? .black
+            setOpacity(emailLabel, opacity: 1)
+            
+        case "passwordTextField":
+            passwordLabel.textColor = UIColor(named: "GreetingGreen") ?? .black
+            setOpacity(passwordLabel, opacity: 1)
+            
+        case "confirmPasswordTextField":
+            self.confirmPasswordView.layer.borderColor = UIColor(named: "GreetingGreen")?.cgColor
+            
+         default:
+            break
+        }
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch textField.restorationIdentifier{
         case "loginTextField":
             presenter?.setLogin(value: textField.text ?? "")
+            self.loginView.layer.borderColor = UIColor.black.cgColor
+            loginLabel.textColor = .black
+            if !textField.hasText{
+                setOpacity(loginLabel, opacity: 0)
+            }
+            
+            
         case "emailTextField":
             presenter?.setEmail(value: textField.text ?? "")
+            self.emailView.layer.borderColor = UIColor.black.cgColor
+            emailLabel.textColor = .black
+            if !textField.hasText{
+                setOpacity(emailLabel, opacity: 0)
+            }
+            
+            
         case "passwordTextField":
             presenter?.setPassword(value: textField.text ?? "")
+            emailLabel.textColor = .black
+            if !textField.hasText{
+                setOpacity(passwordLabel, opacity: 0)
+            }
+            
         case "confirmPasswordTextField":
             presenter?.setConfirmPassword(value: textField.text ?? "")
+            self.confirmPasswordView.layer.borderColor = UIColor.black.cgColor
             
          default:
             break
