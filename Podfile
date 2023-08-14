@@ -7,5 +7,6 @@ target 'PetConnect' do
 	
   # Pods for PetConnect
 	# pod 'SDWebImage', '~> 5.12'
+	pod 'Alamofire'
 	
 end

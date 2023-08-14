@@ -18,7 +18,6 @@
 		EE22A3962A87AB6200DAF44C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE22A3942A87AB6200DAF44C /* LaunchScreen.storyboard */; };
 		EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */; };
 		EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */; };
-		EE22A3A62A87EF7100DAF44C /* Заглушка (Потом удалить).swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A52A87EF7100DAF44C /* Заглушка (Потом удалить).swift */; };
 		EE5ABC252A89795B00E762D6 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC232A89795A00E762D6 /* GreetingViewController.swift */; };
 		EE5ABC262A89795B00E762D6 /* GreetingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC242A89795A00E762D6 /* GreetingViewController.xib */; };
 		EE5ABC412A89816100E762D6 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC2D2A89816100E762D6 /* SF-Pro-Display-Light.otf */; };
@@ -33,6 +32,10 @@
 		EE5ABC5B2A8A467A00E762D6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC592A8A467A00E762D6 /* SignInViewController.swift */; };
 		EE5ABC5C2A8A467A00E762D6 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC5A2A8A467A00E762D6 /* SignInViewController.xib */; };
 		EEDC7F692A8A5ED0008CBD72 /* signInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F682A8A5ECF008CBD72 /* signInModel.swift */; };
+		EEDC7F6C2A8A6A0B008CBD72 /* GeneralNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F6B2A8A6A0B008CBD72 /* GeneralNetworkService.swift */; };
+		EEDC7F6F2A8A6B37008CBD72 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */; };
+		EEDC7F722A8A6D1E008CBD72 /* AuthrequestJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F712A8A6D1E008CBD72 /* AuthrequestJson.swift */; };
+		EEFA9AF42A8A8AB200EA95A5 /* AuthResponseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AF32A8A8AB200EA95A5 /* AuthResponseJson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +54,6 @@
 		EE22A3972A87AB6200DAF44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
-		EE22A3A52A87EF7100DAF44C /* Заглушка (Потом удалить).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Заглушка (Потом удалить).swift"; sourceTree = "<group>"; };
 		EE5ABC232A89795A00E762D6 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
 		EE5ABC242A89795A00E762D6 /* GreetingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreetingViewController.xib; sourceTree = "<group>"; };
 		EE5ABC2D2A89816100E762D6 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
@@ -66,6 +68,10 @@
 		EE5ABC592A8A467A00E762D6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EE5ABC5A2A8A467A00E762D6 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		EEDC7F682A8A5ECF008CBD72 /* signInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInModel.swift; sourceTree = "<group>"; };
+		EEDC7F6B2A8A6A0B008CBD72 /* GeneralNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralNetworkService.swift; sourceTree = "<group>"; };
+		EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
+		EEDC7F712A8A6D1E008CBD72 /* AuthrequestJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthrequestJson.swift; sourceTree = "<group>"; };
+		EEFA9AF32A8A8AB200EA95A5 /* AuthResponseJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseJson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +161,7 @@
 		EE22A39F2A87AE1E00DAF44C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				EE22A3A52A87EF7100DAF44C /* Заглушка (Потом удалить).swift */,
+				EEDC7F6A2A8A69C5008CBD72 /* NetworkServices */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -236,6 +242,33 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
+		EEDC7F6A2A8A69C5008CBD72 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				EEDC7F6D2A8A6A89008CBD72 /* AuthNetworkServices */,
+				EEDC7F6B2A8A6A0B008CBD72 /* GeneralNetworkService.swift */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		EEDC7F6D2A8A6A89008CBD72 /* AuthNetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				EEDC7F702A8A6D07008CBD72 /* Json */,
+				EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */,
+			);
+			path = AuthNetworkServices;
+			sourceTree = "<group>";
+		};
+		EEDC7F702A8A6D07008CBD72 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				EEDC7F712A8A6D1E008CBD72 /* AuthrequestJson.swift */,
+				EEFA9AF32A8A8AB200EA95A5 /* AuthResponseJson.swift */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,6 +280,7 @@
 				EE22A3822A87AB6000DAF44C /* Sources */,
 				EE22A3832A87AB6000DAF44C /* Frameworks */,
 				EE22A3842A87AB6000DAF44C /* Resources */,
+				7E866C7DD5A3BC3E7BBD03DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,6 +345,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7E866C7DD5A3BC3E7BBD03DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetConnect/Pods-PetConnect-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetConnect/Pods-PetConnect-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetConnect/Pods-PetConnect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FB2BDD7BE72A1ECDAA6E1F7C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEDC7F6F2A8A6B37008CBD72 /* AuthNetworkService.swift in Sources */,
 				EE5ABC5B2A8A467A00E762D6 /* SignInViewController.swift in Sources */,
 				EEDC7F692A8A5ED0008CBD72 /* signInModel.swift in Sources */,
 				EE22A38E2A87AB6000DAF44C /* ViewController.swift in Sources */,
@@ -348,13 +400,15 @@
 				EE5ABC252A89795B00E762D6 /* GreetingViewController.swift in Sources */,
 				848E40632A88C7E50014D704 /* UIViewController + ext.swift in Sources */,
 				EE5ABC582A8A464B00E762D6 /* SignInPresenter.swift in Sources */,
+				EEDC7F722A8A6D1E008CBD72 /* AuthrequestJson.swift in Sources */,
 				EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */,
 				EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */,
-				EE22A3A62A87EF7100DAF44C /* Заглушка (Потом удалить).swift in Sources */,
 				EE5ABC522A89D20600E762D6 /* GreetingPresenter.swift in Sources */,
 				EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */,
+				EEFA9AF42A8A8AB200EA95A5 /* AuthResponseJson.swift in Sources */,
 				EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */,
 				848E40612A880E700014D704 /* PrimaryNavBarView.swift in Sources */,
+				EEDC7F6C2A8A6A0B008CBD72 /* GeneralNetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,7 +463,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -472,7 +526,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

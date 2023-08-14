@@ -17,7 +17,8 @@ class AuthBuilder:AuthBuilderProtocol{
     static func createSignInPage() -> UIViewController {
         let view = SignInViewController()
         let model = signInModel()
-        let presenter = SignInPresenter(view: view, model: model)
+        let networkService = AuthNetworkService()
+        let presenter = SignInPresenter(view: view, model: model, networkService: networkService)
         view.presenter = presenter
         return view
     }

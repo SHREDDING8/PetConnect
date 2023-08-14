@@ -15,22 +15,28 @@ public enum signInFields{
 protocol SignInViewProtocol:AnyObject{
     func enableLogInButton()
     func disableLogInButton()
+    func showSignInError()
 }
 
 protocol SignInPresenterProtocol:AnyObject{
-    init(view:SignInViewProtocol, model:signInModel)
+    init(view:SignInViewProtocol, model:signInModel, networkService:AuthNetworkServiceProtocol)
     
     func setSignInData(type:signInFields, value:String)
+    func signInTapped()
 }
+
+
 class SignInPresenter:SignInPresenterProtocol{
 
     weak var view:SignInViewProtocol?
     var model:signInModel?
+    var networkService:AuthNetworkServiceProtocol?
     
     
-    required init(view:SignInViewProtocol, model:signInModel) {
+    required init(view:SignInViewProtocol, model:signInModel,networkService:AuthNetworkServiceProtocol) {
         self.view = view
         self.model = model
+        self.networkService = networkService
     }
     
     func setSignInData(type: signInFields, value: String) {
@@ -45,6 +51,16 @@ class SignInPresenter:SignInPresenterProtocol{
         }else{
             view?.enableLogInButton()
         }
+    }
+    
+    func signInTapped(){
+        self.networkService?.signIn(login: model?.getLogin() ?? "", password: model?.getPassword() ?? "", completion: {
+            accessToken, refreshToken in
+            if accessToken == nil || refreshToken == nil{
+                self.view?.showSignInError()
+                return
+            }
+        })
     }
     
 }

@@ -53,6 +53,13 @@ class SignInViewController: UIViewController {
         }
     }
     
+    // MARK: - Actions
+    
+    @IBAction func signInTapped(_ sender: Any) {
+        presenter?.signInTapped()
+    }
+    
+    
 }
 
 extension SignInViewController:UITextFieldDelegate{
@@ -71,6 +78,7 @@ extension SignInViewController:UITextFieldDelegate{
         case .some(_):
             break
         }
+        hideSignInError()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -102,6 +110,14 @@ extension SignInViewController:UITextFieldDelegate{
 }
 
 extension SignInViewController: SignInViewProtocol{
+    
+    func showSignInError() {
+        self.wrongPasswordLabel.layer.opacity = 1
+    }
+    func hideSignInError() {
+        self.wrongPasswordLabel.layer.opacity = 0
+    }
+    
     func enableLogInButton() {
         self.logInButton.isEnabled = true
     }
