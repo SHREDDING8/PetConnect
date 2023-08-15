@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class HomePageViewController: UIViewController, HomePageViewControllerProtocol {
+final class HomePageViewController: UIViewController {
     
     var homePageView = HomePageView()
     var presenter: HomePagePresenterProtocol!
@@ -28,7 +28,9 @@ final class HomePageViewController: UIViewController, HomePageViewControllerProt
         
         configurePrimaryNavBar(with: "Главная", image: UIImage(named: "kris"))
     }
-    
+}
+
+extension HomePageViewController: HomePageViewControllerProtocol {
     func updatePets(with pets: [Pet]) {
         if !pets.isEmpty {
             homePageView.updatePets(petsArray: pets)
