@@ -10,12 +10,15 @@ import Foundation
 protocol SignUpViewProtocol:AnyObject{
     func enableRegisrationButton()
     func disableRegisrationButton()
+    func setWeakPassword()
+    func setStrongPassword()
 }
 
 protocol SignUpPresenterProtocol:AnyObject{
     init(view:SignUpViewProtocol, model:SignUpModel)
     
     func textFieldChanged()
+    func passwordDidChange(value:String)
     
     func setLogin(value:String)
     func setEmail(value:String)
@@ -32,10 +35,18 @@ class SignUpPresenter:SignUpPresenterProtocol{
     }
     
     func textFieldChanged(){
-        if (model?.isEmptyData() ?? true){
-            view?.disableRegisrationButton()
-        }else{
+        if !(model?.isEmptyData() ?? true) && AuthValidation.validatePassword(value: (model?.password ?? "")) && AuthValidation.validateEmail(value: model?.email ?? "") && model?.password == model?.confirmPassword{
             view?.enableRegisrationButton()
+        }else{
+            view?.disableRegisrationButton()
+        }
+    }
+    
+    func passwordDidChange(value:String){
+        if !AuthValidation.validatePassword(value: (value)) {
+            view?.setWeakPassword()
+        }else{
+            view?.setStrongPassword()
         }
     }
     

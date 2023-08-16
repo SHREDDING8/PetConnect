@@ -40,6 +40,7 @@
 		EEFA9AF92A8A92AE00EA95A5 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFA9AF72A8A92AE00EA95A5 /* SignUpViewController.xib */; };
 		EEFA9AFB2A8A964700EA95A5 /* signUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AFA2A8A964700EA95A5 /* signUpPresenter.swift */; };
 		EEFA9AFD2A8ACDA000EA95A5 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AFC2A8ACDA000EA95A5 /* SignUpModel.swift */; };
+		EEFA9B012A8B437F00EA95A5 /* AuthValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9B002A8B437F00EA95A5 /* AuthValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		EEFA9AF72A8A92AE00EA95A5 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		EEFA9AFA2A8A964700EA95A5 /* signUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpPresenter.swift; sourceTree = "<group>"; };
 		EEFA9AFC2A8ACDA000EA95A5 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		EEFA9B002A8B437F00EA95A5 /* AuthValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		EE22A39F2A87AE1E00DAF44C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EEFA9AFE2A8B431F00EA95A5 /* ValidationServices */,
 				EEDC7F6A2A8A69C5008CBD72 /* NetworkServices */,
 			);
 			path = Services;
@@ -287,6 +290,22 @@
 				EEFA9AF72A8A92AE00EA95A5 /* SignUpViewController.xib */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		EEFA9AFE2A8B431F00EA95A5 /* ValidationServices */ = {
+			isa = PBXGroup;
+			children = (
+				EEFA9AFF2A8B434D00EA95A5 /* Auth */,
+			);
+			path = ValidationServices;
+			sourceTree = "<group>";
+		};
+		EEFA9AFF2A8B434D00EA95A5 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EEFA9B002A8B437F00EA95A5 /* AuthValidation.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +447,7 @@
 				EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */,
 				EE5ABC522A89D20600E762D6 /* GreetingPresenter.swift in Sources */,
 				EEFA9AFD2A8ACDA000EA95A5 /* SignUpModel.swift in Sources */,
+				EEFA9B012A8B437F00EA95A5 /* AuthValidation.swift in Sources */,
 				EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */,
 				EEFA9AF42A8A8AB200EA95A5 /* AuthResponseJson.swift in Sources */,
 				EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */,

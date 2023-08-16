@@ -24,7 +24,9 @@
                 <outlet property="emailView" destination="HdN-Kt-w8h" id="Bmg-WX-JFM"/>
                 <outlet property="loginLabel" destination="F0F-jW-7bR" id="2us-fr-1w5"/>
                 <outlet property="loginView" destination="fnu-bA-FCj" id="cew-tg-Exn"/>
+                <outlet property="passwordDocLabel" destination="a8E-fq-lCN" id="mdl-wN-eYw"/>
                 <outlet property="passwordLabel" destination="2Co-YL-9ci" id="NNM-VX-BaA"/>
+                <outlet property="passwordTextField" destination="Wwy-TZ-pTa" id="63e-ZC-5MJ"/>
                 <outlet property="passwordView" destination="Lgr-CE-KJz" id="vhA-XW-Y5K"/>
                 <outlet property="scrollView" destination="Jaz-AS-Zlw" id="ldu-jw-eJr"/>
                 <outlet property="scrollViewBottomConstraint" destination="sO3-Pn-UOB" id="nax-ie-oh7"/>
@@ -109,7 +111,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль должен содержать не менее 8-ми символов, в том числе цифры, прописные и строчные буквы латинского алфавита" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8E-fq-lCN">
                                     <rect key="frame" x="36" y="243" width="321" height="43"/>
                                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
-                                    <color key="textColor" red="0.72941176470588232" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0E-jo-3y1">

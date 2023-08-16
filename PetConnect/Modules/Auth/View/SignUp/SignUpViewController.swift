@@ -19,6 +19,10 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var passwordView: UIView!
     
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var passwordDocLabel: UILabel!
+    
     @IBOutlet weak var confirmPasswordView: UIView!
     
     @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
@@ -40,6 +44,10 @@ class SignUpViewController: UIViewController {
         configureNavBar()
         configureBorderViews([loginView,emailView,passwordView,confirmPasswordView])
         addKeyboardObservers()
+        
+        self.passwordTextField.addTarget(self, action: #selector(passwordDidChange), for: .editingChanged)
+        
+        
     }
     
     fileprivate func configureNavBar(){
@@ -104,7 +112,7 @@ extension SignUpViewController:UITextFieldDelegate{
             setOpacity(emailLabel, opacity: 1)
             
         case "passwordTextField":
-            passwordLabel.textColor = UIColor(named: "GreetingGreen") ?? .black
+            passwordDidChange()
             setOpacity(passwordLabel, opacity: 1)
             
         case "confirmPasswordTextField":
@@ -137,7 +145,9 @@ extension SignUpViewController:UITextFieldDelegate{
             
         case "passwordTextField":
             presenter?.setPassword(value: textField.text ?? "")
-            emailLabel.textColor = .black
+            passwordLabel.textColor = .black
+            passwordDocLabel.textColor = .black
+            passwordView.layer.borderColor = UIColor.black.cgColor
             if !textField.hasText{
                 setOpacity(passwordLabel, opacity: 0)
             }
@@ -152,6 +162,22 @@ extension SignUpViewController:UITextFieldDelegate{
         
         presenter?.textFieldChanged()
     }
+        
+    @objc fileprivate func passwordDidChange(){
+        if !AuthValidation.validatePassword(value: (passwordTextField.text ?? "")){
+            self.passwordView.layer.borderColor = UIColor.systemRed.cgColor
+            self.passwordDocLabel.textColor = UIColor.systemRed
+            self.passwordLabel.textColor = UIColor.systemRed
+        }else{
+            self.passwordView.layer.borderColor = UIColor(named: "GreetingGreen")?.cgColor
+            self.passwordDocLabel.textColor = UIColor(named: "GreetingGreen")
+            self.passwordLabel.textColor = UIColor(named: "GreetingGreen")
+        }
+    }
+    
+    
+    
+    
 }
 
 extension SignUpViewController:SignUpViewProtocol{
@@ -161,6 +187,18 @@ extension SignUpViewController:SignUpViewProtocol{
     
     func disableRegisrationButton() {
         self.signUpButton.isEnabled = false
+    }
+    
+    func setWeakPassword(){
+        self.passwordView.layer.borderColor = UIColor.systemRed.cgColor
+        self.passwordDocLabel.textColor = UIColor.systemRed
+        self.passwordLabel.textColor = UIColor.systemRed
+    }
+    
+    func setStrongPassword(){
+        self.passwordView.layer.borderColor = UIColor(named: "GreetingGreen")?.cgColor
+        self.passwordDocLabel.textColor = UIColor(named: "GreetingGreen")
+        self.passwordLabel.textColor = UIColor(named: "GreetingGreen")
     }
     
 }
