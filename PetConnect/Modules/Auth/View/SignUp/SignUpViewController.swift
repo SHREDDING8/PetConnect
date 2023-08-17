@@ -164,19 +164,8 @@ extension SignUpViewController:UITextFieldDelegate{
     }
         
     @objc fileprivate func passwordDidChange(){
-        if !AuthValidation.validatePassword(value: (passwordTextField.text ?? "")){
-            self.passwordView.layer.borderColor = UIColor.systemRed.cgColor
-            self.passwordDocLabel.textColor = UIColor.systemRed
-            self.passwordLabel.textColor = UIColor.systemRed
-        }else{
-            self.passwordView.layer.borderColor = UIColor(named: "GreetingGreen")?.cgColor
-            self.passwordDocLabel.textColor = UIColor(named: "GreetingGreen")
-            self.passwordLabel.textColor = UIColor(named: "GreetingGreen")
-        }
+        presenter?.passwordDidChange(value: passwordTextField.text ?? "")
     }
-    
-    
-    
     
 }
 
