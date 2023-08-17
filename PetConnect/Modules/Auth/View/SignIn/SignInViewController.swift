@@ -132,4 +132,8 @@ extension SignInViewController: SignInViewProtocol{
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
+    func goToMainPage() {
+        MainBuilder.setMainWindow(window: self.view.window)
+    }
+    
 }

@@ -17,6 +17,7 @@ protocol SignInViewProtocol:AnyObject{
     func disableLogInButton()
     func showSignInError()
     func goToConfirmEmail(email:String,password:String)
+    func goToMainPage()
 }
 
 protocol SignInPresenterProtocol:AnyObject{
@@ -58,6 +59,11 @@ class SignInPresenter:SignInPresenterProtocol{
         Task{
             do{
                 let resultSignIn = try await self.networkService?.signIn(login: model?.getLogin() ?? "", password: model?.getPassword() ?? "")
+                
+                DispatchQueue.main.async {
+                    self.view?.goToMainPage()
+                }
+                
             }catch AuthErrors.notActivated{
                 DispatchQueue.main.async {
                     self.view?.goToConfirmEmail(
