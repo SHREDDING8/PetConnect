@@ -15,7 +15,7 @@
 		848E405B2A87F3240014D704 /* HomePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E405A2A87F3240014D704 /* HomePagePresenter.swift */; };
 		848E405D2A87F55A0014D704 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E405C2A87F55A0014D704 /* BaseNavigationController.swift */; };
 		848E40612A880E700014D704 /* PrimaryNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40602A880E700014D704 /* PrimaryNavBarView.swift */; };
-		848E40632A88C7E50014D704 /* UIViewController + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40622A88C7E50014D704 /* UIViewController + ext.swift */; };
+		848E40632A88C7E50014D704 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40622A88C7E50014D704 /* UIViewController+Extention.swift */; };
 		848E40652A88DBDC0014D704 /* PetsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40642A88DBDC0014D704 /* PetsCollectionView.swift */; };
 		848E40672A88DBE90014D704 /* PetsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40662A88DBE90014D704 /* PetsCollectionViewCell.swift */; };
 		848E406A2A88DE660014D704 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40692A88DE660014D704 /* Pet.swift */; };
@@ -40,7 +40,7 @@
 		848E405A2A87F3240014D704 /* HomePagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePagePresenter.swift; sourceTree = "<group>"; };
 		848E405C2A87F55A0014D704 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		848E40602A880E700014D704 /* PrimaryNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryNavBarView.swift; sourceTree = "<group>"; };
-		848E40622A88C7E50014D704 /* UIViewController + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + ext.swift"; sourceTree = "<group>"; };
+		848E40622A88C7E50014D704 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
 		848E40642A88DBDC0014D704 /* PetsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionView.swift; sourceTree = "<group>"; };
 		848E40662A88DBE90014D704 /* PetsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionViewCell.swift; sourceTree = "<group>"; };
 		848E40692A88DE660014D704 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 				EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */,
 				848E405C2A87F55A0014D704 /* BaseNavigationController.swift */,
 				848E40602A880E700014D704 /* PrimaryNavBarView.swift */,
-				848E40622A88C7E50014D704 /* UIViewController + ext.swift */,
+				848E40622A88C7E50014D704 /* UIViewController+Extention.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -287,7 +287,7 @@
 			files = (
 				EE22A38E2A87AB6000DAF44C /* ViewController.swift in Sources */,
 				848E405D2A87F55A0014D704 /* BaseNavigationController.swift in Sources */,
-				848E40632A88C7E50014D704 /* UIViewController + ext.swift in Sources */,
+				848E40632A88C7E50014D704 /* UIViewController+Extention.swift in Sources */,
 				EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */,
 				EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */,
 				EE22A3A62A87EF7100DAF44C /* Заглушка (Потом удалить).swift in Sources */,
