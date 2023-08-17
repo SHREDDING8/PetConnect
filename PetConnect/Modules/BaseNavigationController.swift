@@ -26,5 +26,7 @@ class BaseNavigationController: UINavigationController {
             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20, weight: .bold)
         ]
         
+        self.navigationBar.prefersLargeTitles = true
+        
     }
 }
