@@ -11,7 +11,7 @@ import Alamofire
 protocol UsersNetworkServiceProtocol{
     func existUsername(username:String) async throws -> Bool
     func existEmail(email:String) async throws -> Bool
-    func signUp(username:String, email:String, password:String, completion: @escaping (AuthErrors?,String?,String?)->Void)
+    func signUp(username:String, email:String, password:String) async throws -> Bool
 }
 
 class UsersNetworkService:UsersNetworkServiceProtocol{
@@ -55,11 +55,44 @@ class UsersNetworkService:UsersNetworkServiceProtocol{
     
     
     // MARK: - signUp
-    func signUp(username:String, email:String, password:String, completion: @escaping (AuthErrors?,String?,String?)->Void){
+    func signUp(username:String, email:String, password:String) async throws -> Bool{
         
-        // MARK: - check username existing
+        //            // check username existing
+        //            let usernameIsExist = try await self.existUsername(username: username)
+        //
+        //            if usernameIsExist{
+        //                completion(.usernameExist, )
+        //                return
+        //            }
+        //
+        //            // check email existing
+        //
+        //            let emailIsExist = try await self.existEmail(email: email)
+        //
+        //            if emailIsExist{
+        //                completion(.emailExist, nil, nil)
+        //                return
+        //            }
         
-        //        let existUsernameUrlString
+        // signUp
+        
+        let signUpUrl = URL(string: GeneralNetworkService.UsersControllerUrls.signUp)!
+        
+        let body = SignUpRequestStruct(username: username, email: email, password: password)
+        
+        let result:Bool = await withCheckedContinuation { continuation in
+            
+            AF.request(signUpUrl, method: .post, parameters: body, encoder: .json).response { response in
+                switch response.result {
+                case .success(_):
+                    continuation.resume(returning: true)
+                case .failure(_):
+                    continuation.resume(returning: false)
+                }
+            }
+        }
+        
+        return result
         
     }
 }

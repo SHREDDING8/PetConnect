@@ -39,6 +39,7 @@ class SignUpPresenter:SignUpPresenterProtocol{
     }
     
     func textFieldChanged(){
+
         if !(model?.isEmptyData() ?? true) && AuthValidation.validatePassword(value: (model?.password ?? "")) && AuthValidation.validateEmail(value: model?.email ?? "") && model?.password == model?.confirmPassword{
             view?.enableRegisrationButton()
         }else{
