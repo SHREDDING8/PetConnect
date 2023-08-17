@@ -42,6 +42,7 @@
 		EEDC7F6F2A8A6B37008CBD72 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */; };
 		EEDC7F722A8A6D1E008CBD72 /* AuthrequestJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F712A8A6D1E008CBD72 /* AuthrequestJson.swift */; };
 		EEF75DBB2A8E7734000F1C3A /* TextField Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75DBA2A8E7734000F1C3A /* TextField Extension.swift */; };
+		EEF75DBD2A8EA57B000F1C3A /* Ui Window Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75DBC2A8EA57B000F1C3A /* Ui Window Extension.swift */; };
 		EEFA9AF42A8A8AB200EA95A5 /* AuthResponseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AF32A8A8AB200EA95A5 /* AuthResponseJson.swift */; };
 		EEFA9AF82A8A92AE00EA95A5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AF62A8A92AE00EA95A5 /* SignUpViewController.swift */; };
 		EEFA9AF92A8A92AE00EA95A5 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFA9AF72A8A92AE00EA95A5 /* SignUpViewController.xib */; };
@@ -90,6 +91,7 @@
 		EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
 		EEDC7F712A8A6D1E008CBD72 /* AuthrequestJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthrequestJson.swift; sourceTree = "<group>"; };
 		EEF75DBA2A8E7734000F1C3A /* TextField Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField Extension.swift"; sourceTree = "<group>"; };
+		EEF75DBC2A8EA57B000F1C3A /* Ui Window Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ui Window Extension.swift"; sourceTree = "<group>"; };
 		EEFA9AF32A8A8AB200EA95A5 /* AuthResponseJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseJson.swift; sourceTree = "<group>"; };
 		EEFA9AF62A8A92AE00EA95A5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EEFA9AF72A8A92AE00EA95A5 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				EEF75DBA2A8E7734000F1C3A /* TextField Extension.swift */,
+				EEF75DBC2A8EA57B000F1C3A /* Ui Window Extension.swift */,
 			);
 			path = "General Views";
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				EE66A1862A8D9757006947BE /* RequestJsonStructs.swift in Sources */,
 				EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */,
 				EE5ABC522A89D20600E762D6 /* GreetingPresenter.swift in Sources */,
+				EEF75DBD2A8EA57B000F1C3A /* Ui Window Extension.swift in Sources */,
 				EEFA9AFD2A8ACDA000EA95A5 /* SignUpModel.swift in Sources */,
 				EE66A1912A8E5469006947BE /* EmailConfirmationPresenter.swift in Sources */,
 				EEFA9B012A8B437F00EA95A5 /* AuthValidation.swift in Sources */,
