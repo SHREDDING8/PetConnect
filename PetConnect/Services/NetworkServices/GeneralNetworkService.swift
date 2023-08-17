@@ -32,5 +32,8 @@ class GeneralNetworkService{
         static let getMyInfo = ControllersUrls.users + "me"
         static let usernameExist = ControllersUrls.users + "exist-username"
         static let existEmail = ControllersUrls.users + "exist-email"
+        
+        static let activation = ControllersUrls.users + "activation"
+        static let activationResend = ControllersUrls.users + "activation/resend"
     }
 }

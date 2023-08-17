@@ -13,3 +13,8 @@ struct SignUpRequestStruct:Codable{
     let email:String
     let password:String
 }
+
+struct ActivationRequestStruct:Codable{
+    let email:String
+    let code:String
+}

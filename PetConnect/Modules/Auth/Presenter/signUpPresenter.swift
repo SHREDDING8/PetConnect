@@ -12,9 +12,16 @@ protocol SignUpViewProtocol:AnyObject{
     func disableRegisrationButton()
     func setWeakPassword()
     func setStrongPassword()
+    
+    func usernameExist()
+    func emailExist()
+    func unknownError()
+    
+    func goToEmailConfirmation()
 }
 
 protocol SignUpPresenterProtocol:AnyObject{
+    var model:SignUpModel? { get set }
     init(view:SignUpViewProtocol, model:SignUpModel, networkService:UsersNetworkServiceProtocol)
     
     func textFieldChanged()
@@ -56,7 +63,7 @@ class SignUpPresenter:SignUpPresenterProtocol{
     }
     
     func setLogin(value:String){
-        model?.login = value
+        model?.username = value
     }
     
     func setEmail(value:String){
@@ -74,7 +81,46 @@ class SignUpPresenter:SignUpPresenterProtocol{
     }
     
     func signUpTapped(){
-        
+        Task {
+            do{
+                // check existing username
+                let isUsernameExist = try await networkService?.existUsername(username: model?.username ?? "")
+                
+                if isUsernameExist ?? false{
+                    DispatchQueue.main.async {
+                        self.view?.usernameExist()
+                    }
+                    
+                    return
+                }
+                
+                // check existing email
+                let isEmailExist = try await networkService?.existEmail(email: model?.email ?? "")
+                
+                if isEmailExist ?? false{
+                    DispatchQueue.main.async {
+                        self.view?.emailExist()
+                    }
+                    
+                    return
+                }
+                
+                // signUp
+                let isSignUp = try await networkService?.signUp(username: model?.username ?? "", email: model?.email ?? "", password: model?.password ?? "")
+                
+                if !(isSignUp ?? false){
+                    DispatchQueue.main.async {
+                        self.view?.unknownError()
+                    }
+                }
+                
+                view?.goToEmailConfirmation()
+            } catch{
+                DispatchQueue.main.async {
+                    self.view?.unknownError()
+                }
+            }
+        }
     }
     
 }

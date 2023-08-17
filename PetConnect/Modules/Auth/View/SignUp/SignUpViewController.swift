@@ -37,10 +37,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     
     
-
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         configureNavBar()
         configureBorderViews([loginView,emailView,passwordView,confirmPasswordView])
         addKeyboardObservers()
@@ -72,7 +74,7 @@ class SignUpViewController: UIViewController {
     }
     
     @objc fileprivate func keyboardWillShow(notification: NSNotification){
-
+        
         if let keyboard = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue{
             self.scrollViewBottomConstraint.constant = keyboard.height - 60
         }
@@ -87,6 +89,13 @@ class SignUpViewController: UIViewController {
         UIView.animate(withDuration: 0.3) {
             view.layer.opacity = opacity
         }
+        
+    }
+    
+    
+    @IBAction func signUpTapped(_ sender: Any) {
+        self.setOpacity(self.errorLabel, opacity: 0)
+        presenter?.signUpTapped()
     }
     
 }
@@ -100,7 +109,11 @@ extension SignUpViewController:UITextFieldDelegate{
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        self.setOpacity(self.errorLabel, opacity: 0)
+        
         switch textField.restorationIdentifier{
+            
         case "loginTextField":
             self.loginView.layer.borderColor = UIColor(named: "GreetingGreen")?.cgColor
             loginLabel.textColor = UIColor(named: "GreetingGreen") ?? .black
@@ -118,7 +131,7 @@ extension SignUpViewController:UITextFieldDelegate{
         case "confirmPasswordTextField":
             self.confirmPasswordView.layer.borderColor = UIColor(named: "GreetingGreen")?.cgColor
             
-         default:
+        default:
             break
         }
     }
@@ -156,13 +169,13 @@ extension SignUpViewController:UITextFieldDelegate{
             presenter?.setConfirmPassword(value: textField.text ?? "")
             self.confirmPasswordView.layer.borderColor = UIColor.black.cgColor
             
-         default:
+        default:
             break
         }
         
         presenter?.textFieldChanged()
     }
-        
+    
     @objc fileprivate func passwordDidChange(){
         presenter?.passwordDidChange(value: passwordTextField.text ?? "")
     }
@@ -170,6 +183,7 @@ extension SignUpViewController:UITextFieldDelegate{
 }
 
 extension SignUpViewController:SignUpViewProtocol{
+    
     func enableRegisrationButton() {
         self.signUpButton.isEnabled = true
     }
@@ -188,6 +202,29 @@ extension SignUpViewController:SignUpViewProtocol{
         self.passwordView.layer.borderColor = UIColor(named: "GreetingGreen")?.cgColor
         self.passwordDocLabel.textColor = UIColor(named: "GreetingGreen")
         self.passwordLabel.textColor = UIColor(named: "GreetingGreen")
+    }
+    
+    
+    func usernameExist() {
+        self.errorLabel.text = "Такой логин уже существует"
+        self.setOpacity(self.errorLabel, opacity: 1)
+    }
+    
+    func emailExist() {
+        self.errorLabel.text = "Такой email уже существует"
+        self.setOpacity(self.errorLabel, opacity: 1)
+    }
+    
+    func unknownError() {
+        self.errorLabel.text = "Неизвестная ошибка"
+        self.setOpacity(self.errorLabel, opacity: 1)
+    }
+    
+    func goToEmailConfirmation(){
+        let controller = AuthBuilder.createEmailConfirmationPage(email: presenter?.model?.email ?? "", password: presenter?.model?.password ?? "")
+        
+        self.navigationController?.pushViewController(controller, animated: true)
+        self.navigationController?.viewControllers.remove(at: (self.navigationController?.viewControllers.endIndex)! - 1)
     }
     
 }

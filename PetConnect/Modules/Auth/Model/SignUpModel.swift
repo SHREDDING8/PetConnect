@@ -8,12 +8,12 @@
 import Foundation
 
 struct SignUpModel{
-    var login:String = ""
+    var username:String = ""
     var email:String = ""
     var password:String = ""
     var confirmPassword:String = ""
     
     func isEmptyData()->Bool{
-        return login.isEmpty || email.isEmpty || password.isEmpty || confirmPassword.isEmpty
+        return username.isEmpty || email.isEmpty || password.isEmpty || confirmPassword.isEmpty
     }
 }

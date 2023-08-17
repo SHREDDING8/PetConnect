@@ -34,10 +34,14 @@
 		EE66A1832A8D9741006947BE /* UsersNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1822A8D9741006947BE /* UsersNetworkService.swift */; };
 		EE66A1862A8D9757006947BE /* RequestJsonStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1852A8D9757006947BE /* RequestJsonStructs.swift */; };
 		EE66A1882A8D9764006947BE /* ResponseJsonStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1872A8D9764006947BE /* ResponseJsonStructs.swift */; };
+		EE66A18B2A8E2751006947BE /* EmailConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1892A8E2751006947BE /* EmailConfirmationViewController.swift */; };
+		EE66A18C2A8E2751006947BE /* EmailConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE66A18A2A8E2751006947BE /* EmailConfirmationViewController.xib */; };
+		EE66A1912A8E5469006947BE /* EmailConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1902A8E5469006947BE /* EmailConfirmationPresenter.swift */; };
 		EEDC7F692A8A5ED0008CBD72 /* signInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F682A8A5ECF008CBD72 /* signInModel.swift */; };
 		EEDC7F6C2A8A6A0B008CBD72 /* GeneralNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F6B2A8A6A0B008CBD72 /* GeneralNetworkService.swift */; };
 		EEDC7F6F2A8A6B37008CBD72 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */; };
 		EEDC7F722A8A6D1E008CBD72 /* AuthrequestJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F712A8A6D1E008CBD72 /* AuthrequestJson.swift */; };
+		EEF75DBB2A8E7734000F1C3A /* TextField Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75DBA2A8E7734000F1C3A /* TextField Extension.swift */; };
 		EEFA9AF42A8A8AB200EA95A5 /* AuthResponseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AF32A8A8AB200EA95A5 /* AuthResponseJson.swift */; };
 		EEFA9AF82A8A92AE00EA95A5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AF62A8A92AE00EA95A5 /* SignUpViewController.swift */; };
 		EEFA9AF92A8A92AE00EA95A5 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFA9AF72A8A92AE00EA95A5 /* SignUpViewController.xib */; };
@@ -78,10 +82,14 @@
 		EE66A1822A8D9741006947BE /* UsersNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersNetworkService.swift; sourceTree = "<group>"; };
 		EE66A1852A8D9757006947BE /* RequestJsonStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestJsonStructs.swift; sourceTree = "<group>"; };
 		EE66A1872A8D9764006947BE /* ResponseJsonStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseJsonStructs.swift; sourceTree = "<group>"; };
+		EE66A1892A8E2751006947BE /* EmailConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailConfirmationViewController.swift; sourceTree = "<group>"; };
+		EE66A18A2A8E2751006947BE /* EmailConfirmationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailConfirmationViewController.xib; sourceTree = "<group>"; };
+		EE66A1902A8E5469006947BE /* EmailConfirmationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailConfirmationPresenter.swift; sourceTree = "<group>"; };
 		EEDC7F682A8A5ECF008CBD72 /* signInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInModel.swift; sourceTree = "<group>"; };
 		EEDC7F6B2A8A6A0B008CBD72 /* GeneralNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralNetworkService.swift; sourceTree = "<group>"; };
 		EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
 		EEDC7F712A8A6D1E008CBD72 /* AuthrequestJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthrequestJson.swift; sourceTree = "<group>"; };
+		EEF75DBA2A8E7734000F1C3A /* TextField Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField Extension.swift"; sourceTree = "<group>"; };
 		EEFA9AF32A8A8AB200EA95A5 /* AuthResponseJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseJson.swift; sourceTree = "<group>"; };
 		EEFA9AF62A8A92AE00EA95A5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EEFA9AF72A8A92AE00EA95A5 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
@@ -140,6 +148,7 @@
 		EE22A3882A87AB6000DAF44C /* PetConnect */ = {
 			isa = PBXGroup;
 			children = (
+				EEF75DB92A8E7722000F1C3A /* General Views */,
 				EE5ABC272A89811400E762D6 /* Fonts */,
 				EE22A39F2A87AE1E00DAF44C /* Services */,
 				EE22A39E2A87AE1700DAF44C /* Modules */,
@@ -206,6 +215,7 @@
 		EE5ABC1D2A8978CB00E762D6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EE66A1922A8E572E006947BE /* Email Confirmation */,
 				EEFA9AF52A8A928D00EA95A5 /* SignUp */,
 				EE5ABC562A8A463300E762D6 /* SignIn */,
 				EE5ABC552A8A462400E762D6 /* Greeting */,
@@ -219,6 +229,7 @@
 				EE5ABC512A89D20600E762D6 /* GreetingPresenter.swift */,
 				EE5ABC572A8A464B00E762D6 /* SignInPresenter.swift */,
 				EEFA9AFA2A8A964700EA95A5 /* signUpPresenter.swift */,
+				EE66A1902A8E5469006947BE /* EmailConfirmationPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -280,6 +291,15 @@
 			path = Json;
 			sourceTree = "<group>";
 		};
+		EE66A1922A8E572E006947BE /* Email Confirmation */ = {
+			isa = PBXGroup;
+			children = (
+				EE66A1892A8E2751006947BE /* EmailConfirmationViewController.swift */,
+				EE66A18A2A8E2751006947BE /* EmailConfirmationViewController.xib */,
+			);
+			path = "Email Confirmation";
+			sourceTree = "<group>";
+		};
 		EEDC7F6A2A8A69C5008CBD72 /* NetworkServices */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +326,14 @@
 				EEFA9AF32A8A8AB200EA95A5 /* AuthResponseJson.swift */,
 			);
 			path = Json;
+			sourceTree = "<group>";
+		};
+		EEF75DB92A8E7722000F1C3A /* General Views */ = {
+			isa = PBXGroup;
+			children = (
+				EEF75DBA2A8E7734000F1C3A /* TextField Extension.swift */,
+			);
+			path = "General Views";
 			sourceTree = "<group>";
 		};
 		EEFA9AF52A8A928D00EA95A5 /* SignUp */ = {
@@ -401,6 +429,7 @@
 				EEFA9AF92A8A92AE00EA95A5 /* SignUpViewController.xib in Resources */,
 				EE5ABC442A89816100E762D6 /* SF-Pro-Display-Medium.otf in Resources */,
 				EE5ABC432A89816100E762D6 /* SF-Pro-Display-Bold.otf in Resources */,
+				EE66A18C2A8E2751006947BE /* EmailConfirmationViewController.xib in Resources */,
 				EE5ABC412A89816100E762D6 /* SF-Pro-Display-Light.otf in Resources */,
 				EE5ABC422A89816100E762D6 /* SF-Pro-Display-Regular.otf in Resources */,
 				EE5ABC452A89816100E762D6 /* SF-Pro-Display-Heavy.otf in Resources */,
@@ -470,14 +499,17 @@
 				EEFA9AFB2A8A964700EA95A5 /* signUpPresenter.swift in Sources */,
 				EE66A1882A8D9764006947BE /* ResponseJsonStructs.swift in Sources */,
 				EEDC7F722A8A6D1E008CBD72 /* AuthrequestJson.swift in Sources */,
+				EEF75DBB2A8E7734000F1C3A /* TextField Extension.swift in Sources */,
 				EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */,
 				EE66A1862A8D9757006947BE /* RequestJsonStructs.swift in Sources */,
 				EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */,
 				EE5ABC522A89D20600E762D6 /* GreetingPresenter.swift in Sources */,
 				EEFA9AFD2A8ACDA000EA95A5 /* SignUpModel.swift in Sources */,
+				EE66A1912A8E5469006947BE /* EmailConfirmationPresenter.swift in Sources */,
 				EEFA9B012A8B437F00EA95A5 /* AuthValidation.swift in Sources */,
 				EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */,
 				EEFA9AF42A8A8AB200EA95A5 /* AuthResponseJson.swift in Sources */,
+				EE66A18B2A8E2751006947BE /* EmailConfirmationViewController.swift in Sources */,
 				EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */,
 				848E40612A880E700014D704 /* PrimaryNavBarView.swift in Sources */,
 				EEDC7F6C2A8A6A0B008CBD72 /* GeneralNetworkService.swift in Sources */,

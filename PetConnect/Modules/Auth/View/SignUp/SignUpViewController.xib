@@ -22,6 +22,7 @@
                 <outlet property="confirmPasswordView" destination="f0E-jo-3y1" id="qWi-lg-GMe"/>
                 <outlet property="emailLabel" destination="TXt-fU-ynO" id="gq2-t3-8hQ"/>
                 <outlet property="emailView" destination="HdN-Kt-w8h" id="Bmg-WX-JFM"/>
+                <outlet property="errorLabel" destination="dq1-7b-DVZ" id="zVo-0Y-PnA"/>
                 <outlet property="loginLabel" destination="F0F-jW-7bR" id="2us-fr-1w5"/>
                 <outlet property="loginView" destination="fnu-bA-FCj" id="cew-tg-Exn"/>
                 <outlet property="passwordDocLabel" destination="a8E-fq-lCN" id="mdl-wN-eYw"/>
@@ -43,7 +44,7 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="680"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gc0-7Q-XQC">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="367"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="393.33333333333331"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnu-bA-FCj">
                                     <rect key="frame" x="20" y="27" width="353" height="60"/>
@@ -135,6 +136,12 @@
                                         <constraint firstAttribute="height" constant="60" id="qTp-QS-K7d"/>
                                     </constraints>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dq1-7b-DVZ">
+                                    <rect key="frame" x="20" y="374" width="353" height="14.333333333333314"/>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                                    <color key="textColor" systemColor="systemRedColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0F-jW-7bR">
                                     <rect key="frame" x="36" y="20" width="40" height="15"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,13 +182,16 @@
                                 <constraint firstItem="F0F-jW-7bR" firstAttribute="leading" secondItem="fnu-bA-FCj" secondAttribute="leading" constant="16" id="EAN-d5-HkD"/>
                                 <constraint firstItem="f0E-jo-3y1" firstAttribute="top" secondItem="a8E-fq-lCN" secondAttribute="bottom" constant="16" id="Gwl-4F-Xmg"/>
                                 <constraint firstItem="2Co-YL-9ci" firstAttribute="leading" secondItem="Lgr-CE-KJz" secondAttribute="leading" constant="16" id="JVa-yi-iuq"/>
+                                <constraint firstAttribute="bottom" secondItem="dq1-7b-DVZ" secondAttribute="bottom" constant="5" id="Kp9-cb-ofn"/>
                                 <constraint firstAttribute="trailing" secondItem="HdN-Kt-w8h" secondAttribute="trailing" constant="20" id="OET-Pp-X1C"/>
+                                <constraint firstItem="dq1-7b-DVZ" firstAttribute="leading" secondItem="Gc0-7Q-XQC" secondAttribute="leading" constant="20" id="QDf-Em-T2n"/>
                                 <constraint firstAttribute="trailing" secondItem="a8E-fq-lCN" secondAttribute="trailing" constant="36" id="QsB-wr-em0"/>
                                 <constraint firstItem="2Co-YL-9ci" firstAttribute="top" secondItem="Lgr-CE-KJz" secondAttribute="top" constant="-7" id="SPa-Q8-nfd"/>
                                 <constraint firstItem="Lgr-CE-KJz" firstAttribute="leading" secondItem="Gc0-7Q-XQC" secondAttribute="leading" constant="20" id="Sk1-NV-CpD"/>
                                 <constraint firstItem="F0F-jW-7bR" firstAttribute="top" secondItem="fnu-bA-FCj" secondAttribute="top" constant="-7" id="Xh2-Dy-NCi"/>
+                                <constraint firstItem="dq1-7b-DVZ" firstAttribute="top" secondItem="f0E-jo-3y1" secondAttribute="bottom" constant="12" id="eig-lN-FnR"/>
+                                <constraint firstItem="dq1-7b-DVZ" firstAttribute="centerX" secondItem="Gc0-7Q-XQC" secondAttribute="centerX" id="erA-QG-o3L"/>
                                 <constraint firstItem="f0E-jo-3y1" firstAttribute="leading" secondItem="Gc0-7Q-XQC" secondAttribute="leading" constant="20" id="gSb-8p-5wY"/>
-                                <constraint firstAttribute="bottom" secondItem="f0E-jo-3y1" secondAttribute="bottom" constant="5" id="h4c-bE-HiC"/>
                                 <constraint firstItem="HdN-Kt-w8h" firstAttribute="leading" secondItem="Gc0-7Q-XQC" secondAttribute="leading" constant="20" id="hfd-C3-Irn"/>
                                 <constraint firstItem="fnu-bA-FCj" firstAttribute="top" secondItem="Gc0-7Q-XQC" secondAttribute="top" constant="27" id="ikw-fN-rFb"/>
                                 <constraint firstItem="a8E-fq-lCN" firstAttribute="leading" secondItem="Gc0-7Q-XQC" secondAttribute="leading" constant="36" id="jLb-I8-ldG"/>
@@ -214,6 +224,9 @@
                         <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="baseBackgroundColor" name="GreetingGreen"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="signUpTapped:" destination="-1" eventType="touchUpInside" id="stT-Zh-rw2"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -236,6 +249,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
