@@ -16,6 +16,7 @@
 		848E405D2A87F55A0014D704 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E405C2A87F55A0014D704 /* BaseNavigationController.swift */; };
 		848E40612A880E700014D704 /* PrimaryNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40602A880E700014D704 /* PrimaryNavBarView.swift */; };
 		848E40632A88C7E50014D704 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40622A88C7E50014D704 /* UIViewController+Extention.swift */; };
+		848E40632A88C7E50014D704 /* UIViewController + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40622A88C7E50014D704 /* UIViewController + ext.swift */; };
 		848E40652A88DBDC0014D704 /* PetsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40642A88DBDC0014D704 /* PetsCollectionView.swift */; };
 		848E40672A88DBE90014D704 /* PetsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40662A88DBE90014D704 /* PetsCollectionViewCell.swift */; };
 		848E406A2A88DE660014D704 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40692A88DE660014D704 /* Pet.swift */; };
@@ -41,6 +42,7 @@
 		848E405C2A87F55A0014D704 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		848E40602A880E700014D704 /* PrimaryNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryNavBarView.swift; sourceTree = "<group>"; };
 		848E40622A88C7E50014D704 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
+		848E40622A88C7E50014D704 /* UIViewController + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + ext.swift"; sourceTree = "<group>"; };
 		848E40642A88DBDC0014D704 /* PetsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionView.swift; sourceTree = "<group>"; };
 		848E40662A88DBE90014D704 /* PetsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionViewCell.swift; sourceTree = "<group>"; };
 		848E40692A88DE660014D704 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };

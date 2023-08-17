@@ -12,8 +12,6 @@ protocol PrimaryNavBarViewDelegate: AnyObject {
     /// Open user profile
     func openUserProfile()
 }
-
-// MARK: - PrimaryNavBarView
 final class PrimaryNavBarView: UIView {
     
     weak var delegate: PrimaryNavBarViewDelegate?
