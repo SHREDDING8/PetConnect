@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Main Tab Bar Configurator
 class MainTabBarViewController: UITabBarController {
     
     private enum PageConstants{
@@ -16,6 +17,8 @@ class MainTabBarViewController: UITabBarController {
         case walk
         case profile
         
+        /// Get a title for item in the Main Tab Bar
+        /// - Returns: name of the page
         func getTitle()->String{
             switch self {
             
@@ -31,6 +34,8 @@ class MainTabBarViewController: UITabBarController {
             
         }
         
+        /// Select inactive image for unelected items in the Main Tab Bar
+        /// - Returns: imge for Tab Bar
         func getImage()->UIImage?{
             switch self {
             
@@ -45,6 +50,8 @@ class MainTabBarViewController: UITabBarController {
             }
         }
         
+        /// Select active image for pressed item in the Main Tab Bar
+        /// - Returns: imge for Tab Bar
         func getSelectedImage()->UIImage?{
             switch self {
             case .home:
@@ -59,6 +66,7 @@ class MainTabBarViewController: UITabBarController {
         }
     }
 
+    /// Configure viewControllers
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,10 +76,13 @@ class MainTabBarViewController: UITabBarController {
         let profilePage = self.configureViewController(MainBuilder.createProfilePage(), .profile)
         
         self.viewControllers = [homePage,petPage,walkPage,profilePage]
-        
-        
     }
     
+    /// Set up Tab Bar item
+    /// - Parameters:
+    ///   - viewController: viewController for the particular page
+    ///   - page: type of the page
+    /// - Returns: set up viewController
     private func configureViewController(_ viewController:UIViewController, _ page:PageConstants)->UIViewController{
         viewController.tabBarItem.title = page.getTitle()
         viewController.tabBarItem.image =  page.getImage()
