@@ -56,12 +56,8 @@ class GreetingViewController: UIViewController {
     
     @IBAction func signUpTapped(_ sender: UIButton) {
         
-//        let signUpController = AuthBuilder.createSignUpPage()
-//        self.navigationController?.pushViewController(signUpController, animated: true)
-        
-        let controller = AuthBuilder.createEmailConfirmationPage(email: "test", password: "test")
-        
-        self.navigationController?.pushViewController(controller, animated: true)
+        let signUpController = AuthBuilder.createSignUpPage()
+        self.navigationController?.pushViewController(signUpController, animated: true)
         
     }
 }

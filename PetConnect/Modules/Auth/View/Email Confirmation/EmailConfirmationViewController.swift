@@ -33,10 +33,12 @@ class EmailConfirmationViewController: UIViewController {
         super.viewDidLoad()
         configureTextFields()
         
-        self.firstDigitTextField.becomeFirstResponder()
-        
         let codeStackViewTap = UITapGestureRecognizer(target: self, action: #selector(codeTapped))
         codeStackView.addGestureRecognizer(codeStackViewTap)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.firstDigitTextField.becomeFirstResponder()
     }
     
     fileprivate func configureTextFields(){
