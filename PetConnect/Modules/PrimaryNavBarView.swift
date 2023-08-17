@@ -8,9 +8,10 @@
 import UIKit
 
 protocol PrimaryNavBarViewDelegate: AnyObject {
+    
+    /// Open user profile
     func openUserProfile()
 }
-
 final class PrimaryNavBarView: UIView {
     
     weak var delegate: PrimaryNavBarViewDelegate?
@@ -32,16 +33,21 @@ final class PrimaryNavBarView: UIView {
         return element
     }()
     
+    /// Set up views
+    /// - Parameter frame: view frame
     override init(frame: CGRect) {
         super.init(frame: frame)
         setViews()
         layoutViews()
     }
     
+    /// Error handling
+    /// - Parameter coder: NSCoder
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /// Add subviews
     private func setViews() {
         backgroundColor = UIColor(named: "NavBarBgColor")
         
@@ -49,6 +55,7 @@ final class PrimaryNavBarView: UIView {
         addSubview(avatar)
     }
     
+    /// Add constraints to the view
     private func layoutViews() {
         NSLayoutConstraint.activate([
             title.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
@@ -61,10 +68,15 @@ final class PrimaryNavBarView: UIView {
         ])
     }
     
+    /// Trigger the delegate function
     @objc func avatarPressed() {
         delegate?.openUserProfile()
     }
     
+    /// Configure Primary Tab Bar
+    /// - Parameters:
+    ///   - text: nav bar title
+    ///   - image: nav bar image
     func configure(with text: String, image: UIImage?) {
         title.text = text
         avatar.setImage(image, for: .normal)

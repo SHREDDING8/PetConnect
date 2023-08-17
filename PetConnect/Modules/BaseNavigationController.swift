@@ -7,14 +7,17 @@
 
 import UIKit
 
+// MARK: - BaseNavigationController
 class BaseNavigationController: UINavigationController {
     
+    /// configure view
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configure()
     }
     
+    /// Add style to navigationBar and view
     private func configure() {
         view.backgroundColor = UIColor(named: "NavBarBgColor")
         

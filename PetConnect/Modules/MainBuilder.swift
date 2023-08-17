@@ -10,11 +10,24 @@ import UIKit
 
 // MARK: - MainBuilderProtocol
 protocol MainBuilderProtocol{
+    /// Create Main Builder
+    /// - Returns: Main Tab Bar
     static func createMainBuilder() -> UIViewController
     
+    /// Create home page
+    /// - Returns: home page
     static func createHomePage()->UIViewController
+    
+    /// Create pet page
+    /// - Returns: pet page
     static func createPetPage()->UIViewController
+    
+    /// Create walk page
+    /// - Returns: walk page
     static func createWalkPage()->UIViewController
+    
+    /// Create profile page
+    /// - Returns: profile page
     static func createProfilePage()->UIViewController
 }
 
