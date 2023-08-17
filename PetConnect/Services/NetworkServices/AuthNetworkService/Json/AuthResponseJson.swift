@@ -11,3 +11,10 @@ struct SignInResponseJsonStruct:Decodable{
     let accessToken:String
     let refreshToken:String
 }
+
+struct SignInErrorJsonStruct:Decodable{
+    let status:String
+    let message:String
+    let details:String
+    let code:Int
+}

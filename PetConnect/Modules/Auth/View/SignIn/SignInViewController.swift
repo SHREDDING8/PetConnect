@@ -126,4 +126,10 @@ extension SignInViewController: SignInViewProtocol{
         self.logInButton.isEnabled = false
     }
     
+    func goToConfirmEmail(email: String, password: String) {
+        let controller = AuthBuilder.createEmailConfirmationPage(email: email, password: password)
+        
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
 }

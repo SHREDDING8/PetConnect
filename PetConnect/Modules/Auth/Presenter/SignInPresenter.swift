@@ -16,6 +16,7 @@ protocol SignInViewProtocol:AnyObject{
     func enableLogInButton()
     func disableLogInButton()
     func showSignInError()
+    func goToConfirmEmail(email:String,password:String)
 }
 
 protocol SignInPresenterProtocol:AnyObject{
@@ -54,13 +55,23 @@ class SignInPresenter:SignInPresenterProtocol{
     }
     
     func signInTapped(){
-        self.networkService?.signIn(login: model?.getLogin() ?? "", password: model?.getPassword() ?? "", completion: {
-            accessToken, refreshToken in
-            if accessToken == nil || refreshToken == nil{
-                self.view?.showSignInError()
-                return
+        Task{
+            do{
+                let resultSignIn = try await self.networkService?.signIn(login: model?.getLogin() ?? "", password: model?.getPassword() ?? "")
+            }catch AuthErrors.notActivated{
+                DispatchQueue.main.async {
+                    self.view?.goToConfirmEmail(
+                        email: self.model?.getLogin() ?? "",
+                        password: self.model?.getPassword() ?? ""
+                    )
+                }
+                
+            }catch {
+                DispatchQueue.main.async {
+                    self.view?.showSignInError()
+                }
             }
-        })
+        }
     }
     
 }
