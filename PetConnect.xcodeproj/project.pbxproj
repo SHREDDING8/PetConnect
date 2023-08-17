@@ -31,6 +31,9 @@
 		EE5ABC582A8A464B00E762D6 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC572A8A464B00E762D6 /* SignInPresenter.swift */; };
 		EE5ABC5B2A8A467A00E762D6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC592A8A467A00E762D6 /* SignInViewController.swift */; };
 		EE5ABC5C2A8A467A00E762D6 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC5A2A8A467A00E762D6 /* SignInViewController.xib */; };
+		EE66A1832A8D9741006947BE /* UsersNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1822A8D9741006947BE /* UsersNetworkService.swift */; };
+		EE66A1862A8D9757006947BE /* RequestJsonStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1852A8D9757006947BE /* RequestJsonStructs.swift */; };
+		EE66A1882A8D9764006947BE /* ResponseJsonStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1872A8D9764006947BE /* ResponseJsonStructs.swift */; };
 		EEDC7F692A8A5ED0008CBD72 /* signInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F682A8A5ECF008CBD72 /* signInModel.swift */; };
 		EEDC7F6C2A8A6A0B008CBD72 /* GeneralNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F6B2A8A6A0B008CBD72 /* GeneralNetworkService.swift */; };
 		EEDC7F6F2A8A6B37008CBD72 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */; };
@@ -72,6 +75,9 @@
 		EE5ABC572A8A464B00E762D6 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		EE5ABC592A8A467A00E762D6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EE5ABC5A2A8A467A00E762D6 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		EE66A1822A8D9741006947BE /* UsersNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersNetworkService.swift; sourceTree = "<group>"; };
+		EE66A1852A8D9757006947BE /* RequestJsonStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestJsonStructs.swift; sourceTree = "<group>"; };
+		EE66A1872A8D9764006947BE /* ResponseJsonStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseJsonStructs.swift; sourceTree = "<group>"; };
 		EEDC7F682A8A5ECF008CBD72 /* signInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInModel.swift; sourceTree = "<group>"; };
 		EEDC7F6B2A8A6A0B008CBD72 /* GeneralNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralNetworkService.swift; sourceTree = "<group>"; };
 		EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
@@ -256,22 +262,41 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
+		EE66A1812A8D926F006947BE /* UsersNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				EE66A1842A8D9746006947BE /* Json */,
+				EE66A1822A8D9741006947BE /* UsersNetworkService.swift */,
+			);
+			path = UsersNetworkService;
+			sourceTree = "<group>";
+		};
+		EE66A1842A8D9746006947BE /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				EE66A1852A8D9757006947BE /* RequestJsonStructs.swift */,
+				EE66A1872A8D9764006947BE /* ResponseJsonStructs.swift */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
 		EEDC7F6A2A8A69C5008CBD72 /* NetworkServices */ = {
 			isa = PBXGroup;
 			children = (
-				EEDC7F6D2A8A6A89008CBD72 /* AuthNetworkServices */,
+				EE66A1812A8D926F006947BE /* UsersNetworkService */,
+				EEDC7F6D2A8A6A89008CBD72 /* AuthNetworkService */,
 				EEDC7F6B2A8A6A0B008CBD72 /* GeneralNetworkService.swift */,
 			);
 			path = NetworkServices;
 			sourceTree = "<group>";
 		};
-		EEDC7F6D2A8A6A89008CBD72 /* AuthNetworkServices */ = {
+		EEDC7F6D2A8A6A89008CBD72 /* AuthNetworkService */ = {
 			isa = PBXGroup;
 			children = (
 				EEDC7F702A8A6D07008CBD72 /* Json */,
 				EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */,
 			);
-			path = AuthNetworkServices;
+			path = AuthNetworkService;
 			sourceTree = "<group>";
 		};
 		EEDC7F702A8A6D07008CBD72 /* Json */ = {
@@ -435,6 +460,7 @@
 				EE5ABC5B2A8A467A00E762D6 /* SignInViewController.swift in Sources */,
 				EEDC7F692A8A5ED0008CBD72 /* signInModel.swift in Sources */,
 				EE22A38E2A87AB6000DAF44C /* ViewController.swift in Sources */,
+				EE66A1832A8D9741006947BE /* UsersNetworkService.swift in Sources */,
 				EE5ABC542A8A442500E762D6 /* AuthBuilder.swift in Sources */,
 				848E405D2A87F55A0014D704 /* BaseNavigationController.swift in Sources */,
 				EE5ABC252A89795B00E762D6 /* GreetingViewController.swift in Sources */,
@@ -442,8 +468,10 @@
 				848E40632A88C7E50014D704 /* UIViewController + ext.swift in Sources */,
 				EE5ABC582A8A464B00E762D6 /* SignInPresenter.swift in Sources */,
 				EEFA9AFB2A8A964700EA95A5 /* signUpPresenter.swift in Sources */,
+				EE66A1882A8D9764006947BE /* ResponseJsonStructs.swift in Sources */,
 				EEDC7F722A8A6D1E008CBD72 /* AuthrequestJson.swift in Sources */,
 				EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */,
+				EE66A1862A8D9757006947BE /* RequestJsonStructs.swift in Sources */,
 				EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */,
 				EE5ABC522A89D20600E762D6 /* GreetingPresenter.swift in Sources */,
 				EEFA9AFD2A8ACDA000EA95A5 /* SignUpModel.swift in Sources */,

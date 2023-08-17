@@ -15,7 +15,7 @@ protocol SignUpViewProtocol:AnyObject{
 }
 
 protocol SignUpPresenterProtocol:AnyObject{
-    init(view:SignUpViewProtocol, model:SignUpModel)
+    init(view:SignUpViewProtocol, model:SignUpModel, networkService:UsersNetworkServiceProtocol)
     
     func textFieldChanged()
     func passwordDidChange(value:String)
@@ -24,14 +24,18 @@ protocol SignUpPresenterProtocol:AnyObject{
     func setEmail(value:String)
     func setPassword(value:String)
     func setConfirmPassword(value:String)
+    
+    func signUpTapped()
 }
 class SignUpPresenter:SignUpPresenterProtocol{
     weak var view:SignUpViewProtocol?
     var model:SignUpModel?
+    var networkService:UsersNetworkServiceProtocol?
     
-    required init(view:SignUpViewProtocol, model:SignUpModel) {
+    required init(view:SignUpViewProtocol, model:SignUpModel, networkService:UsersNetworkServiceProtocol) {
         self.view = view
         self.model = model
+        self.networkService = networkService
     }
     
     func textFieldChanged(){
@@ -62,8 +66,14 @@ class SignUpPresenter:SignUpPresenterProtocol{
         model?.password = value
     }
     
+    /// Adding confirm password to model
+    /// - Parameter value: confirm password value
     func setConfirmPassword(value:String){
         model?.confirmPassword = value
+    }
+    
+    func signUpTapped(){
+        
     }
     
 }
