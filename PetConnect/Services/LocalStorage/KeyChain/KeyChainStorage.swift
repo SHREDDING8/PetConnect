@@ -16,6 +16,9 @@ protocol KeyChainStorageProtocol{
     func getAccessToken()->String?
     func getRefreshToken()->String?
     
+    func deleteAccessToken()
+    func deleteRefreshToken()
+    
 }
 
 open class KeyChainStorage:KeyChainStorageProtocol{
@@ -44,5 +47,11 @@ open class KeyChainStorage:KeyChainStorageProtocol{
         return refreshToken
     }
     
+    func deleteAccessToken(){
+        keychain.delete(self.accessTokenKey)
+    }
+    func deleteRefreshToken(){
+        keychain.delete(self.refreshTokenKey)
+    }
     
 }

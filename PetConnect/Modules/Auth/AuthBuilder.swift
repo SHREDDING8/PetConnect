@@ -32,7 +32,8 @@ class AuthBuilder:AuthBuilderProtocol{
         let view = SignInViewController()
         let model = signInModel()
         let networkService = AuthNetworkService()
-        let presenter = SignInPresenter(view: view, model: model, networkService: networkService)
+        let keyChainService = KeyChainStorage()
+        let presenter = SignInPresenter(view: view, model: model, networkService: networkService, keyChainService: keyChainService)
         view.presenter = presenter
         return view
     }
@@ -50,7 +51,8 @@ class AuthBuilder:AuthBuilderProtocol{
         let view = EmailConfirmationViewController()
         let networkService = UsersNetworkService()
         let authNetworkService = AuthNetworkService()
-        let presenter = EmailConfirmationPresenter(view: view,networkService: networkService, authNetworkService: authNetworkService, email: email, password: password)
+        let keyChainService = KeyChainStorage()
+        let presenter = EmailConfirmationPresenter(view: view,networkService: networkService, authNetworkService: authNetworkService, keyChainService: keyChainService, email: email, password: password)
         
         view.presenter = presenter
         return view
