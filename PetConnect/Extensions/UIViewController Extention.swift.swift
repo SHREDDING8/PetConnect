@@ -8,6 +8,11 @@
 import UIKit
 
 extension UIViewController {
+    
+    /// Configure Primary Nav Bar
+    /// - Parameters:
+    ///   - text: nav bar title
+    ///   - image: nav bar image
     func configurePrimaryNavBar(with text: String, image: UIImage?) {
         navigationController?.navigationBar.isHidden = true
         
