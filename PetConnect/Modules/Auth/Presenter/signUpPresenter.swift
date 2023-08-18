@@ -122,7 +122,6 @@ class SignUpPresenter:SignUpPresenterProtocol{
             }catch UsersError.emailExist {
                 
                 DispatchQueue.main.async {
-                    print("emailExist")
                     self.view?.emailExist()
                 }
                 

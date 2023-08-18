@@ -26,7 +26,12 @@ protocol SignInViewProtocol:AnyObject{
 }
 
 protocol SignInPresenterProtocol:AnyObject{
-    init(view:SignInViewProtocol, model:signInModel, networkService:AuthNetworkServiceProtocol)
+    init(
+        view:SignInViewProtocol,
+        model:signInModel,
+        networkService:AuthNetworkServiceProtocol,
+        keyChainService:KeyChainStorageProtocol?
+    )
     
     
     /// setting credentionals to model
@@ -44,12 +49,18 @@ class SignInPresenter:SignInPresenterProtocol{
     weak var view:SignInViewProtocol?
     var model:signInModel?
     var networkService:AuthNetworkServiceProtocol?
+    var keyChainService:KeyChainStorageProtocol?
     
     
-    required init(view:SignInViewProtocol, model:signInModel,networkService:AuthNetworkServiceProtocol) {
+    required init(
+        view:SignInViewProtocol,
+        model:signInModel,
+        networkService:AuthNetworkServiceProtocol,
+        keyChainService:KeyChainStorageProtocol?) {
         self.view = view
         self.model = model
         self.networkService = networkService
+        self.keyChainService = keyChainService
     }
     
     func setSignInData(type: signInFields, value: String) {
@@ -71,9 +82,20 @@ class SignInPresenter:SignInPresenterProtocol{
             do{
                 let resultSignIn = try await self.networkService?.signIn(login: model?.getLogin() ?? "", password: model?.getPassword() ?? "")
                 
-                DispatchQueue.main.async {
-                    self.view?.goToMainPage()
+                if resultSignIn != nil{
+                    keyChainService?.saveAccessToken(token: resultSignIn!.0)
+                    keyChainService?.saveRefreshToken(token: resultSignIn!.1)
+                    DispatchQueue.main.async {
+                        self.view?.goToMainPage()
+                    }
+                    
+                }else{
+                    DispatchQueue.main.async {
+                        self.view?.showSignInError()
+                    }
                 }
+                
+
                 
             }catch AuthErrors.notActivated{
                 DispatchQueue.main.async {
