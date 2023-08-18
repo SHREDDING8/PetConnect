@@ -8,6 +8,8 @@
 import Foundation
 import KeychainSwift
 
+
+/// Service to handle keyChain storage (key - value)
 protocol KeyChainStorageProtocol{
     
     func saveAccessToken(token:String)
