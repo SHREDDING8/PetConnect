@@ -101,7 +101,7 @@ open class KeyChainStorage:KeyChainStorageProtocol{
     func isRefreshTokenAvailable() -> Bool {
         
         if let refreshTokenTimeSaved = self.getRefreshTokenTimeSaved(){
-            let tokenExpired = Calendar.current.date(byAdding: DateComponents(day: 6,hour: 23, minute: 50), to: refreshTokenTimeSaved)!
+            let tokenExpired = Calendar.current.date(byAdding: DateComponents(day: 6, hour: 23, minute: 50), to: refreshTokenTimeSaved)!
             
             if tokenExpired > refreshTokenTimeSaved{
                 return true
