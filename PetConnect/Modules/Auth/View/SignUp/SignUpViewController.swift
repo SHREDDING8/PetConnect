@@ -158,6 +158,8 @@ extension SignUpViewController:UITextFieldDelegate{
             
         case "passwordTextField":
             presenter?.setPassword(value: textField.text ?? "")
+            print(textField.text ?? "")
+            print(presenter?.model?.password)
             passwordLabel.textColor = .black
             passwordDocLabel.textColor = .black
             passwordView.layer.borderColor = UIColor.black.cgColor
@@ -224,7 +226,7 @@ extension SignUpViewController:SignUpViewProtocol{
         let controller = AuthBuilder.createEmailConfirmationPage(email: presenter?.model?.email ?? "", password: presenter?.model?.password ?? "")
         
         self.navigationController?.pushViewController(controller, animated: true)
-        self.navigationController?.viewControllers.remove(at: (self.navigationController?.viewControllers.endIndex)! - 1)
+        self.navigationController?.viewControllers.remove(at: (self.navigationController?.viewControllers.endIndex)! - 2)
     }
     
 }

@@ -39,6 +39,7 @@ class SignUpPresenter:SignUpPresenterProtocol{
     var model:SignUpModel?
     var networkService:UsersNetworkServiceProtocol?
     
+    
     required init(view:SignUpViewProtocol, model:SignUpModel, networkService:UsersNetworkServiceProtocol) {
         self.view = view
         self.model = model
@@ -46,7 +47,7 @@ class SignUpPresenter:SignUpPresenterProtocol{
     }
     
     func textFieldChanged(){
-
+        
         if !(model?.isEmptyData() ?? true) && AuthValidation.validatePassword(value: (model?.password ?? "")) && AuthValidation.validateEmail(value: model?.email ?? "") && model?.password == model?.confirmPassword{
             view?.enableRegisrationButton()
         }else{
@@ -72,6 +73,7 @@ class SignUpPresenter:SignUpPresenterProtocol{
     
     func setPassword(value:String){
         model?.password = value
+        print(model?.password)
     }
     
     /// Adding confirm password to model
@@ -84,42 +86,45 @@ class SignUpPresenter:SignUpPresenterProtocol{
         Task {
             do{
                 // check existing username
+                
                 let isUsernameExist = try await networkService?.existUsername(username: model?.username ?? "")
+                
+                let isSignUp = try await networkService?.signUp(username: model?.username ?? "", email: model?.email ?? "", password: model?.password ?? "")
+                
                 
                 if isUsernameExist ?? false{
                     DispatchQueue.main.async {
                         self.view?.usernameExist()
                     }
-                    
                     return
                 }
-                
-                // check existing email
-                let isEmailExist = try await networkService?.existEmail(email: model?.email ?? "")
-                
-                if isEmailExist ?? false{
-                    DispatchQueue.main.async {
-                        self.view?.emailExist()
-                    }
-                    
-                    return
-                }
-                
-                // signUp
-                let isSignUp = try await networkService?.signUp(username: model?.username ?? "", email: model?.email ?? "", password: model?.password ?? "")
-                
+                                
                 if !(isSignUp ?? false){
                     DispatchQueue.main.async {
                         self.view?.unknownError()
+                        return
+                    }
+                }else{
+                    DispatchQueue.main.sync {
+                        self.view?.goToEmailConfirmation()
                     }
                 }
                 
-                view?.goToEmailConfirmation()
+                
+            }catch UsersError.emailExist {
+                
+                DispatchQueue.main.async {
+                    print("emailExist")
+                    self.view?.emailExist()
+                }
+                
             } catch{
                 DispatchQueue.main.async {
                     self.view?.unknownError()
                 }
+                return
             }
+            
         }
     }
     

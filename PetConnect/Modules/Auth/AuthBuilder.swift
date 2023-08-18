@@ -36,7 +36,8 @@ class AuthBuilder:AuthBuilderProtocol{
     static func createEmailConfirmationPage(email:String, password:String)->UIViewController{
         let view = EmailConfirmationViewController()
         let networkService = UsersNetworkService()
-        let presenter = EmailConfirmationPresenter(view: view,networkService: networkService, email: email, password: password)
+        let authNetworkService = AuthNetworkService()
+        let presenter = EmailConfirmationPresenter(view: view,networkService: networkService, authNetworkService: authNetworkService, email: email, password: password)
         
         view.presenter = presenter
         return view

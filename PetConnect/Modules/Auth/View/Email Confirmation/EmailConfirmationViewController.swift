@@ -11,10 +11,6 @@ class EmailConfirmationViewController: UIViewController {
     
     var presenter:EmailConfirmationPresenterProtocol?
     
-    // MARK: - My Objects
-    
-//    var inputView:KeyboardInputView!
-    
     // MARK: - OutLets
     @IBOutlet weak var codeStackView: UIStackView!
     
@@ -137,7 +133,9 @@ extension EmailConfirmationViewController:EmailConfirmationViewProtocol{
     }
     
     func confrimationOk() {
-        presenter?.login()
+        
+        MainBuilder.setMainWindow(window: view.window)
+        
     }
     
     func resendOk() {

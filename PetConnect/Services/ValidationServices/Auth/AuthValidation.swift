@@ -17,10 +17,8 @@ class AuthValidation{
     
     static func validatePassword(value:String)->Bool{
 
-        let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,100}"
-//        let passwordRegexEnglishCaps =
+        let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[.*[!@#&()–[{}]:;',?/*~$^+=<>.\"%_|`].*])[A-Za-z0-9.*[!@#&()–[{}]:;',?/*~$^+=<>.\"%_|`].*]{8,100}"
         
-        print(value)
         let passwordPred = NSPredicate(format:"SELF MATCHES %@", passwordRegex)
         
         return passwordPred.evaluate(with: value)

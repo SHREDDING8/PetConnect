@@ -17,6 +17,11 @@ protocol UsersNetworkServiceProtocol{
     func activtionResend(email:String) async throws -> Bool
 }
 
+enum UsersError:Error{
+    case emailExist
+    case unknown
+}
+
 class UsersNetworkService:UsersNetworkServiceProtocol{
     
     func existUsername(username:String) async throws -> Bool{
@@ -63,15 +68,25 @@ class UsersNetworkService:UsersNetworkServiceProtocol{
         let signUpUrl = URL(string: GeneralNetworkService.UsersControllerUrls.signUp)!
         
         let body = SignUpRequestStruct(username: username, email: email, password: password)
-        
-        let result:Bool = await withCheckedContinuation { continuation in
+                
+        let result:Bool = try await withCheckedThrowingContinuation { continuation in
             
             AF.request(signUpUrl, method: .post, parameters: body, encoder: .json).response { response in
                 switch response.result {
-                case .success(_):
+                case .success(let success):
+                    if let error = try? JSONDecoder().decode(SignInErrorJsonStruct.self, from: success ?? Data()){
+                        
+                        if error.message == "Email already exists!"{
+                            continuation.resume(throwing: UsersError.emailExist)
+                        }else{
+                            continuation.resume(throwing: UsersError.unknown)
+                        }
+                        return
+                    }
+                    
                     continuation.resume(returning: true)
                 case .failure(_):
-                    continuation.resume(returning: false)
+                    continuation.resume(throwing: UsersError.unknown)
                 }
             }
         }
