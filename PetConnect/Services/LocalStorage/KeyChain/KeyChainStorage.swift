@@ -18,6 +18,7 @@ protocol KeyChainStorageProtocol{
     func getAccessToken()->String?
     func getRefreshToken()->String?
     func getAccessTokenTimeSaved()->Date?
+    func getRefreshTokenTimeSaved()->Date?
     
     func deleteAccessToken()
     func deleteRefreshToken()
@@ -32,6 +33,7 @@ open class KeyChainStorage:KeyChainStorageProtocol{
     private let accessTokenTimeSavedKey: String = "accessTokenTime"
     
     private let refreshTokenKey: String = "refreshToken"
+    private let refreshokenTimeSavedKey: String = "refreshTokenTime"
     
     let dateFormatter = DateFormatter()
     let dateFormat = "MM-dd-yyyy HH:mm"
@@ -47,6 +49,7 @@ open class KeyChainStorage:KeyChainStorageProtocol{
     
     func saveRefreshToken(token: String) {
         keychain.set(token, forKey: self.refreshTokenKey)
+        keychain.set(dateFormatter.string(from: Date.now), forKey: self.refreshokenTimeSavedKey)
     }
     
     func getAccessToken() -> String? {
@@ -61,6 +64,12 @@ open class KeyChainStorage:KeyChainStorageProtocol{
     
     func getAccessTokenTimeSaved()->Date?{
         let dateString = keychain.get(self.accessTokenTimeSavedKey)
+        let date = dateFormatter.date(from: dateString ?? "")
+        return date
+    }
+    
+    func getRefreshTokenTimeSaved()->Date?{
+        let dateString = keychain.get(self.refreshokenTimeSavedKey)
         let date = dateFormatter.date(from: dateString ?? "")
         return date
     }
