@@ -12,3 +12,7 @@ struct SignInRequestJsonStruct:Codable{
     let emailOrUsername:String
     let password:String
 }
+
+struct RefreshTokenRequestJsonStruct:Codable{
+    let refreshToken:String
+}
