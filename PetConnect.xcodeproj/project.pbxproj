@@ -26,6 +26,7 @@
 		EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */; };
 		EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */; };
 		EE364A6C2A8F9BC1008A8796 /* KeyChainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE364A6B2A8F9BC1008A8796 /* KeyChainStorage.swift */; };
+		EE364A702A901E10008A8796 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE364A6F2A901E10008A8796 /* CustomTextField.swift */; };
 		EE5ABC252A89795B00E762D6 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC232A89795A00E762D6 /* GreetingViewController.swift */; };
 		EE5ABC262A89795B00E762D6 /* GreetingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC242A89795A00E762D6 /* GreetingViewController.xib */; };
 		EE5ABC412A89816100E762D6 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC2D2A89816100E762D6 /* SF-Pro-Display-Light.otf */; };
@@ -85,6 +86,7 @@
 		EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
 		EE364A6B2A8F9BC1008A8796 /* KeyChainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainStorage.swift; sourceTree = "<group>"; };
+		EE364A6F2A901E10008A8796 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		EE5ABC232A89795A00E762D6 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
 		EE5ABC242A89795A00E762D6 /* GreetingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreetingViewController.xib; sourceTree = "<group>"; };
 		EE5ABC2D2A89816100E762D6 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 		EE22A3882A87AB6000DAF44C /* PetConnect */ = {
 			isa = PBXGroup;
 			children = (
+				EE364A6D2A901CFA008A8796 /* CustomViews */,
 				EEF75DB92A8E7722000F1C3A /* Extensions */,
 				EE5ABC272A89811400E762D6 /* Fonts */,
 				EE22A39F2A87AE1E00DAF44C /* Services */,
@@ -268,6 +271,22 @@
 				EE364A6B2A8F9BC1008A8796 /* KeyChainStorage.swift */,
 			);
 			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		EE364A6D2A901CFA008A8796 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				EE364A6E2A901D92008A8796 /* Forms */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		EE364A6E2A901D92008A8796 /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				EE364A6F2A901E10008A8796 /* CustomTextField.swift */,
+			);
+			path = Forms;
 			sourceTree = "<group>";
 		};
 		EE5ABC1B2A8978B400E762D6 /* Auth */ = {
@@ -587,6 +606,7 @@
 				EEF75DBD2A8EA57B000F1C3A /* Ui Window Extension.swift in Sources */,
 				EEFA9AFD2A8ACDA000EA95A5 /* SignUpModel.swift in Sources */,
 				EE66A1912A8E5469006947BE /* EmailConfirmationPresenter.swift in Sources */,
+				EE364A702A901E10008A8796 /* CustomTextField.swift in Sources */,
 				EEFA9B012A8B437F00EA95A5 /* AuthValidation.swift in Sources */,
 				EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */,
 				EEFA9AF42A8A8AB200EA95A5 /* AuthResponseJson.swift in Sources */,
