@@ -18,7 +18,13 @@ protocol EmailConfirmationViewProtocol:AnyObject{
 
 protocol EmailConfirmationPresenterProtocol:AnyObject{
     var passCode:[Int] { get set }
-    init(view:EmailConfirmationViewProtocol, networkService:UsersNetworkServiceProtocol,authNetworkService:AuthNetworkServiceProtocol?, email:String, password:String)
+    init(
+        view:EmailConfirmationViewProtocol,
+        networkService:UsersNetworkServiceProtocol,
+        authNetworkService:AuthNetworkServiceProtocol?,
+        keyChainService:KeyChainStorageProtocol,
+        email:String,
+        password:String)
     
     func confirmTapped()
     func resendTapped()
@@ -28,16 +34,24 @@ class EmailConfirmationPresenter:EmailConfirmationPresenterProtocol{
     weak var view:EmailConfirmationViewProtocol?
     let networkService:UsersNetworkServiceProtocol?
     var authNetworkService:AuthNetworkServiceProtocol?
+    var keyChainService:KeyChainStorageProtocol?
     let email:String!
     let password:String!
     var passCode:[Int] = []
     
-    required init(view:EmailConfirmationViewProtocol, networkService:UsersNetworkServiceProtocol , authNetworkService:AuthNetworkServiceProtocol?, email:String, password:String) {
+    required init(
+        view:EmailConfirmationViewProtocol,
+        networkService:UsersNetworkServiceProtocol ,
+        authNetworkService:AuthNetworkServiceProtocol?,
+        keyChainService:KeyChainStorageProtocol,
+        email:String,
+        password:String) {
         self.view = view
         self.networkService = networkService
         self.email = email
         self.password = password
         self.authNetworkService = authNetworkService
+        self.keyChainService = keyChainService
     }
     
     func confirmTapped(){
@@ -51,6 +65,8 @@ class EmailConfirmationPresenter:EmailConfirmationPresenterProtocol{
                 let login = try await authNetworkService?.signIn(login: email, password: password)
                 
                 if login != nil{
+                    keyChainService?.saveAccessToken(token: login!.0)
+                    keyChainService?.saveRefreshToken(token: login!.1)
                     DispatchQueue.main.async {
                         self.view?.confrimationOk()
                     }
