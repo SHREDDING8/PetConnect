@@ -21,11 +21,11 @@
 		848E406C2A8A16710014D704 /* NotificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E406B2A8A16710014D704 /* NotificationsTableViewCell.swift */; };
 		EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3892A87AB6000DAF44C /* AppDelegate.swift */; };
 		EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A38B2A87AB6000DAF44C /* SceneDelegate.swift */; };
-		EE22A38E2A87AB6000DAF44C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A38D2A87AB6000DAF44C /* ViewController.swift */; };
 		EE22A3932A87AB6200DAF44C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE22A3922A87AB6200DAF44C /* Assets.xcassets */; };
 		EE22A3962A87AB6200DAF44C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE22A3942A87AB6200DAF44C /* LaunchScreen.storyboard */; };
 		EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */; };
 		EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */; };
+		EE364A6C2A8F9BC1008A8796 /* KeyChainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE364A6B2A8F9BC1008A8796 /* KeyChainStorage.swift */; };
 		EE5ABC252A89795B00E762D6 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC232A89795A00E762D6 /* GreetingViewController.swift */; };
 		EE5ABC262A89795B00E762D6 /* GreetingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC242A89795A00E762D6 /* GreetingViewController.xib */; };
 		EE5ABC412A89816100E762D6 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC2D2A89816100E762D6 /* SF-Pro-Display-Light.otf */; };
@@ -79,12 +79,12 @@
 		EE22A3862A87AB6000DAF44C /* PetConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE22A3892A87AB6000DAF44C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE22A38B2A87AB6000DAF44C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE22A38D2A87AB6000DAF44C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE22A3922A87AB6200DAF44C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE22A3952A87AB6200DAF44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE22A3972A87AB6200DAF44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
+		EE364A6B2A8F9BC1008A8796 /* KeyChainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainStorage.swift; sourceTree = "<group>"; };
 		EE5ABC232A89795A00E762D6 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
 		EE5ABC242A89795A00E762D6 /* GreetingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreetingViewController.xib; sourceTree = "<group>"; };
 		EE5ABC2D2A89816100E762D6 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
@@ -215,7 +215,6 @@
 				EE22A39F2A87AE1E00DAF44C /* Services */,
 				EE22A39E2A87AE1700DAF44C /* Modules */,
 				EE22A39D2A87ADFD00DAF44C /* App */,
-				EE22A38D2A87AB6000DAF44C /* ViewController.swift */,
 				EE22A3972A87AB6200DAF44C /* Info.plist */,
 			);
 			path = PetConnect;
@@ -248,10 +247,27 @@
 		EE22A39F2A87AE1E00DAF44C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EE364A692A8F9B93008A8796 /* LocalStorage */,
 				EEFA9AFE2A8B431F00EA95A5 /* ValidationServices */,
 				EEDC7F6A2A8A69C5008CBD72 /* NetworkServices */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		EE364A692A8F9B93008A8796 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				EE364A6A2A8F9BAA008A8796 /* KeyChain */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		EE364A6A2A8F9BAA008A8796 /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				EE364A6B2A8F9BC1008A8796 /* KeyChainStorage.swift */,
+			);
+			path = KeyChain;
 			sourceTree = "<group>";
 		};
 		EE5ABC1B2A8978B400E762D6 /* Auth */ = {
@@ -554,7 +570,6 @@
 				EEDC7F6F2A8A6B37008CBD72 /* AuthNetworkService.swift in Sources */,
 				EE5ABC5B2A8A467A00E762D6 /* SignInViewController.swift in Sources */,
 				EEDC7F692A8A5ED0008CBD72 /* signInModel.swift in Sources */,
-				EE22A38E2A87AB6000DAF44C /* ViewController.swift in Sources */,
 				EE66A1832A8D9741006947BE /* UsersNetworkService.swift in Sources */,
 				EE5ABC542A8A442500E762D6 /* AuthBuilder.swift in Sources */,
 				848E405D2A87F55A0014D704 /* BaseNavigationController.swift in Sources */,
@@ -576,6 +591,7 @@
 				EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */,
 				EEFA9AF42A8A8AB200EA95A5 /* AuthResponseJson.swift in Sources */,
 				EE66A18B2A8E2751006947BE /* EmailConfirmationViewController.swift in Sources */,
+				EE364A6C2A8F9BC1008A8796 /* KeyChainStorage.swift in Sources */,
 				848E406C2A8A16710014D704 /* NotificationsTableViewCell.swift in Sources */,
 				EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */,
 				848E40552A87F2DF0014D704 /* HomePageProtocols.swift in Sources */,
