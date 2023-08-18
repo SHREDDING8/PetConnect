@@ -9,6 +9,12 @@ import Foundation
 import UIKit
 
 extension UITextField {
+    
+    /// Adding toolbar to textField with done and cancel buttons
+    /// - Parameters:
+    ///   - onDone: selector that execute after tap on done
+    ///   - onCancel: selector that execute after tap on cancel
+    ///   - showCancelButton: is show cancel button
     func addDoneCancelToolbar(onDone: (target: Any, action: Selector)? = nil, onCancel: (target: Any, action: Selector)? = nil, showCancelButton:Bool) {
         let onCancel = onCancel ?? (target: self, action: #selector(cancelButtonTapped))
         let onDone = onDone ?? (target: self, action: #selector(doneButtonTapped))

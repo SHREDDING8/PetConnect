@@ -13,6 +13,9 @@ struct SignUpModel{
     var password:String = ""
     var confirmPassword:String = ""
     
+    
+    /// check username or email or password or confirmPassword is empty
+    /// - Returns: true - if atleast one value is empty
     func isEmptyData()->Bool{
         return username.isEmpty || email.isEmpty || password.isEmpty || confirmPassword.isEmpty
     }

@@ -25,6 +25,9 @@ class EmailConfirmationViewController: UIViewController {
     
     @IBOutlet weak var confirmButton: UIButton!
     
+    
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTextFields()
@@ -37,6 +40,8 @@ class EmailConfirmationViewController: UIViewController {
         self.firstDigitTextField.becomeFirstResponder()
     }
     
+    
+    /// configure passCode text field
     fileprivate func configureTextFields(){
         
         self.firstDigitTextField.addTarget(self, action: #selector(textFieldDidChange) , for: .editingChanged)
@@ -45,6 +50,7 @@ class EmailConfirmationViewController: UIViewController {
         self.fourthDigitTextField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
     
+    /// handle the tap to stack view
     @objc func codeTapped(){
         self.firstDigitTextField.isUserInteractionEnabled = true
         self.firstDigitTextField.becomeFirstResponder()
@@ -57,6 +63,7 @@ class EmailConfirmationViewController: UIViewController {
         self.confirmButton.isEnabled = false
     }
     
+    /// handle changing text fields
     @objc func textFieldDidChange(){
         if firstDigitTextField.isFirstResponder{
             if firstDigitTextField.hasText{
@@ -93,6 +100,7 @@ class EmailConfirmationViewController: UIViewController {
         }
     }
     
+    
     @IBAction func confirmTapped(_ sender: Any) {
         presenter?.confirmTapped()
     }
@@ -102,6 +110,10 @@ class EmailConfirmationViewController: UIViewController {
     }
     
     
+    /// set up next textfield
+    /// - Parameters:
+    ///   - textField: current TextField
+    ///   - nextTextField: will setup TextField
     fileprivate func nextTextField(textField:UITextField, nextTextField:UITextField?){
         if let next = nextTextField{
             next.isUserInteractionEnabled = true
@@ -115,6 +127,7 @@ class EmailConfirmationViewController: UIViewController {
 }
 
 extension EmailConfirmationViewController:UITextFieldDelegate{
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if "0123456789".contains(string){
             return true
@@ -122,6 +135,7 @@ extension EmailConfirmationViewController:UITextFieldDelegate{
             return false
         }
     }
+    
 }
 
 extension EmailConfirmationViewController:EmailConfirmationViewProtocol{

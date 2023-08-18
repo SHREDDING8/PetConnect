@@ -9,19 +9,45 @@ import Foundation
 import Alamofire
 
 protocol UsersNetworkServiceProtocol{
+    
+    /// The request to server to check existing username
+    /// - Parameter username: username value
+    /// - Returns: true - if username exist
     func existUsername(username:String) async throws -> Bool
+    
+    /// The request to server to check existing email
+    /// - Parameter email: email value
+    /// - Returns: true - if email exist
     func existEmail(email:String) async throws -> Bool
+    
+    /// The request to server to signUp
+    /// - Parameters:
+    ///   - username: username value
+    ///   - email: email value
+    ///   - password: password value
+    /// - Returns: true - is signUp is successuful
     func signUp(username:String, email:String, password:String) async throws -> Bool
     
+    /// The request to server to check code to activae account
+    /// - Parameters:
+    ///   - email: email value
+    ///   - code: passCode value
+    /// - Returns: true - if activation is ok
     func activation(email:String, code:String) async throws -> Bool
+    
+    /// The request to server to resend activation code
+    /// - Parameter email: email value
+    /// - Returns: true - if resend is ok
     func activtionResend(email:String) async throws -> Bool
 }
 
+/// Possible errors in Users Network Service
 enum UsersError:Error{
     case emailExist
     case unknown
 }
 
+/// Users Network Service
 class UsersNetworkService:UsersNetworkServiceProtocol{
     
     func existUsername(username:String) async throws -> Bool{
@@ -72,15 +98,21 @@ class UsersNetworkService:UsersNetworkServiceProtocol{
         let result:Bool = try await withCheckedThrowingContinuation { continuation in
             
             AF.request(signUpUrl, method: .post, parameters: body, encoder: .json).response { response in
+                
                 switch response.result {
+                    
                 case .success(let success):
                     if let error = try? JSONDecoder().decode(SignInErrorJsonStruct.self, from: success ?? Data()){
                         
-                        if error.message == "Email already exists!"{
+                        switch error.message{
+                            
+                        case "Email already exists!":
                             continuation.resume(throwing: UsersError.emailExist)
-                        }else{
+                            
+                        default:
                             continuation.resume(throwing: UsersError.unknown)
                         }
+                        
                         return
                     }
                     

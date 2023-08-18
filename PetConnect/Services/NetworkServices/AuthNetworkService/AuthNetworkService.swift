@@ -8,6 +8,8 @@
 import Foundation
 import Alamofire
 
+
+/// Possible Auth network service errors
 public enum AuthErrors:Error{
     case usernameExist
     case emailExist
@@ -17,6 +19,12 @@ public enum AuthErrors:Error{
 }
 
 protocol AuthNetworkServiceProtocol{
+    
+    ///  Request to server to SignIn
+    /// - Parameters:
+    ///   - login: username or email value
+    ///   - password: password value
+    /// - Returns: (accessToken, refreshToken)
     func signIn(login:String,password:String) async throws -> (String, String)
     
 }
@@ -24,11 +32,6 @@ class AuthNetworkService:AuthNetworkServiceProtocol{
     
     // MARK: - signIn
     
-    /// Request to server Sign In to account
-    /// - Parameters:
-    ///   - login: username or email value
-    ///   - password: password value
-    ///   - completion: returns accessToken, refreshToken
     func signIn(login:String,password:String) async throws -> (String, String){
         let urlString = GeneralNetworkService.AuthControllerUrls.signIn
         let url = URL(string: urlString)!

@@ -23,7 +23,6 @@ protocol EmailConfirmationPresenterProtocol:AnyObject{
     func confirmTapped()
     func resendTapped()
     
-    func login()
 }
 class EmailConfirmationPresenter:EmailConfirmationPresenterProtocol{
     weak var view:EmailConfirmationViewProtocol?
@@ -83,7 +82,4 @@ class EmailConfirmationPresenter:EmailConfirmationPresenterProtocol{
         }
     }
     
-    func login() {
-        
-    }
 }

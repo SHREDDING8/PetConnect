@@ -8,8 +8,21 @@
 import Foundation
 import UIKit
 protocol AuthBuilderProtocol{
+    
+    /// creates SignIn Page
+    /// - Returns: signIn UIViewController
     static func createSignInPage()->UIViewController
+    
+    /// creates SignUp Page
+    /// - Returns: SignUp UIViewController
+    ///
     static func createSignUpPage()->UIViewController
+    
+    /// creates account confirmation Page
+    /// - Parameters:
+    ///   - email: email value
+    ///   - password: password value
+    /// - Returns: account confirmation UIViewController
     static func createEmailConfirmationPage(email:String, password:String)->UIViewController
 }
 

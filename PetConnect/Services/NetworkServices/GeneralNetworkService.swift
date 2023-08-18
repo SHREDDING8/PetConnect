@@ -12,19 +12,23 @@ protocol GeneralNetworkServiceProtocol{
 }
 
 class GeneralNetworkService{
+    /// General domain for requests to server
     static let domain:String = "https://pet-connect.ru/api/"
     
+    /// Possible request controllers urls
     public enum ControllersUrls{
         static let auth =  GeneralNetworkService.domain + "auth/"
         static let users = GeneralNetworkService.domain + "users/"
     }
     
+    /// Possible urls for auth controller
     public enum AuthControllerUrls{
         static let signIn = GeneralNetworkService.ControllersUrls.auth + "sign-in"
         static let refreshToken = GeneralNetworkService.ControllersUrls.auth + "refresh-token"
         static let logout = GeneralNetworkService.ControllersUrls.auth + "logout"
     }
     
+    /// Possible url for users controller
     public enum UsersControllerUrls{
         static let updateUser = ControllersUrls.users + "/"
         static let deleteUser = ControllersUrls.users + "/"

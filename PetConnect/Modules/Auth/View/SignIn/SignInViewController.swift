@@ -46,19 +46,12 @@ class SignInViewController: UIViewController {
             view.layer.cornerRadius = view.frame.height / 2 - 1
         }
     }
-    
-    fileprivate func setOpacityLabel(_ label:UILabel, opacity:Float){
-        UIView.animate(withDuration: 0.3) {
-            label.layer.opacity = opacity
-        }
-    }
-    
+        
     // MARK: - Actions
     
     @IBAction func signInTapped(_ sender: Any) {
         presenter?.signInTapped()
     }
-    
     
 }
 
@@ -68,11 +61,11 @@ extension SignInViewController:UITextFieldDelegate{
         switch textField.restorationIdentifier{
         case "loginTextField":
             loginView.layer.borderColor = UIColor(named: "GreetingGreen")?.cgColor
-            setOpacityLabel(loginFocusedLabel, opacity: 1)
+            self.loginFocusedLabel.setOpacity(opacity: 1, animated: true)
             loginFocusedLabel.textColor = UIColor(named: "GreetingGreen")
         case "passwordTextField":
             passwordView.layer.borderColor = UIColor(named: "GreetingGreen")?.cgColor
-            setOpacityLabel(passwordFocusedLabel, opacity: 1)
+            self.passwordFocusedLabel.setOpacity(opacity: 1, animated: true)
         case .none:
             break
         case .some(_):
@@ -86,14 +79,14 @@ extension SignInViewController:UITextFieldDelegate{
         case "loginTextField":
             loginView.layer.borderColor = UIColor.black.cgColor
             if (textField.text?.isEmpty ?? true){
-                setOpacityLabel(loginFocusedLabel, opacity: 0)
+                self.loginFocusedLabel.setOpacity(opacity: 0, animated: true)
             }else{
                 self.loginFocusedLabel.textColor = .black
             }
             presenter?.setSignInData(type: .login, value: textField.text ?? "")
         case "passwordTextField":
             passwordView.layer.borderColor = UIColor.black.cgColor
-            setOpacityLabel(passwordFocusedLabel, opacity: 0)
+            self.passwordFocusedLabel.setOpacity(opacity: 0, animated: true)
             presenter?.setSignInData(type: .password, value: textField.text ?? "")
             
         case .none:

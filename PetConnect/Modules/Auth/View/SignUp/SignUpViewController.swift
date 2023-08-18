@@ -11,6 +11,7 @@ class SignUpViewController: UIViewController {
     
     var presenter:SignUpPresenterProtocol?
     
+    // MARK: - @IBOutlets
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var loginView: UIView!
@@ -39,7 +40,7 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
-    
+    // MARK: - life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,7 +49,6 @@ class SignUpViewController: UIViewController {
         addKeyboardObservers()
         
         self.passwordTextField.addTarget(self, action: #selector(passwordDidChange), for: .editingChanged)
-        
         
     }
     
@@ -85,16 +85,9 @@ class SignUpViewController: UIViewController {
         self.scrollViewBottomConstraint.constant = 20
     }
     
-    fileprivate func setOpacity(_ view:UIView, opacity:Float){
-        UIView.animate(withDuration: 0.3) {
-            view.layer.opacity = opacity
-        }
-        
-    }
-    
-    
+
     @IBAction func signUpTapped(_ sender: Any) {
-        self.setOpacity(self.errorLabel, opacity: 0)
+        self.errorLabel.setOpacity(opacity: 0, animated: true)
         presenter?.signUpTapped()
     }
     
@@ -110,23 +103,24 @@ extension SignUpViewController:UITextFieldDelegate{
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
-        self.setOpacity(self.errorLabel, opacity: 0)
+        self.errorLabel.setOpacity(opacity: 0, animated: true)
         
         switch textField.restorationIdentifier{
             
         case "loginTextField":
             self.loginView.layer.borderColor = UIColor(named: "GreetingGreen")?.cgColor
             loginLabel.textColor = UIColor(named: "GreetingGreen") ?? .black
-            setOpacity(loginLabel, opacity: 1)
+            self.loginLabel.setOpacity(opacity: 1, animated: true)
             
         case "emailTextField":
             self.emailView.layer.borderColor = UIColor(named: "GreetingGreen")?.cgColor
             emailLabel.textColor = UIColor(named: "GreetingGreen") ?? .black
-            setOpacity(emailLabel, opacity: 1)
+            self.emailLabel.setOpacity(opacity: 1, animated: true)
+            
             
         case "passwordTextField":
             passwordDidChange()
-            setOpacity(passwordLabel, opacity: 1)
+            self.passwordLabel.setOpacity(opacity: 1, animated: true)
             
         case "confirmPasswordTextField":
             self.confirmPasswordView.layer.borderColor = UIColor(named: "GreetingGreen")?.cgColor
@@ -143,7 +137,7 @@ extension SignUpViewController:UITextFieldDelegate{
             self.loginView.layer.borderColor = UIColor.black.cgColor
             loginLabel.textColor = .black
             if !textField.hasText{
-                setOpacity(loginLabel, opacity: 0)
+                self.loginLabel.setOpacity(opacity: 0, animated: true)
             }
             
             
@@ -152,19 +146,17 @@ extension SignUpViewController:UITextFieldDelegate{
             self.emailView.layer.borderColor = UIColor.black.cgColor
             emailLabel.textColor = .black
             if !textField.hasText{
-                setOpacity(emailLabel, opacity: 0)
+                self.emailLabel.setOpacity(opacity: 0, animated: true)
             }
             
             
         case "passwordTextField":
             presenter?.setPassword(value: textField.text ?? "")
-            print(textField.text ?? "")
-            print(presenter?.model?.password)
             passwordLabel.textColor = .black
             passwordDocLabel.textColor = .black
             passwordView.layer.borderColor = UIColor.black.cgColor
             if !textField.hasText{
-                setOpacity(passwordLabel, opacity: 0)
+                self.passwordLabel.setOpacity(opacity: 0, animated: true)
             }
             
         case "confirmPasswordTextField":
@@ -209,17 +201,17 @@ extension SignUpViewController:SignUpViewProtocol{
     
     func usernameExist() {
         self.errorLabel.text = "Такой логин уже существует"
-        self.setOpacity(self.errorLabel, opacity: 1)
+        self.errorLabel.setOpacity(opacity: 1, animated: true)
     }
     
     func emailExist() {
         self.errorLabel.text = "Такой email уже существует"
-        self.setOpacity(self.errorLabel, opacity: 1)
+        self.errorLabel.setOpacity(opacity: 1, animated: true)
     }
     
     func unknownError() {
         self.errorLabel.text = "Неизвестная ошибка"
-        self.setOpacity(self.errorLabel, opacity: 1)
+        self.errorLabel.setOpacity(opacity: 1, animated: true)
     }
     
     func goToEmailConfirmation(){

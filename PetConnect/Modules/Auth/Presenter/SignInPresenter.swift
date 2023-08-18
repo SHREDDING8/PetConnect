@@ -13,17 +13,28 @@ public enum signInFields{
 }
 
 protocol SignInViewProtocol:AnyObject{
+    /// enable SignIn button
     func enableLogInButton()
+    /// disable SignIn button
     func disableLogInButton()
+    /// showing SignIn errpr
     func showSignInError()
+    /// transition to confirm email page
     func goToConfirmEmail(email:String,password:String)
+    /// transition to Main tab bar
     func goToMainPage()
 }
 
 protocol SignInPresenterProtocol:AnyObject{
     init(view:SignInViewProtocol, model:signInModel, networkService:AuthNetworkServiceProtocol)
     
+    
+    /// setting credentionals to model
+    /// - Parameters:
+    ///   - type: login or password
+    ///   - value: value
     func setSignInData(type:signInFields, value:String)
+    /// handle tap on signIn button
     func signInTapped()
 }
 

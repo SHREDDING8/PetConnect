@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Struct to configure JSON for SignIn Request
 struct SignInRequestJsonStruct:Codable{
     let emailOrUsername:String
     let password:String

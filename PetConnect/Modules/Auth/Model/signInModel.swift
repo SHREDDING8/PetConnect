@@ -11,6 +11,7 @@ struct signInModel{
     private var login:String = ""
     private var password:String = ""
     
+    
     mutating func setLogin(login:String){
         self.login = login
     }
@@ -25,6 +26,8 @@ struct signInModel{
         return password
     }
     
+    /// checks login or password is empty
+    /// - Returns: true - if data is empty
     func isEmptyData()->Bool{
         if login.isEmpty || password.isEmpty{
             return true

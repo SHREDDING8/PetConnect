@@ -7,11 +7,13 @@
 
 import Foundation
 
+/// JSON struct to decode SignIn response
 struct SignInResponseJsonStruct:Decodable{
     let accessToken:String
     let refreshToken:String
 }
 
+/// JSON struct to decode SignIn errors
 struct SignInErrorJsonStruct:Decodable{
     let status:String
     let message:String

@@ -52,6 +52,7 @@
 		EEF75DBB2A8E7734000F1C3A /* TextField Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75DBA2A8E7734000F1C3A /* TextField Extension.swift */; };
 		EEF75DBD2A8EA57B000F1C3A /* Ui Window Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75DBC2A8EA57B000F1C3A /* Ui Window Extension.swift */; };
 		EEF75DBF2A8EAB68000F1C3A /* UIViewController Extention.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75DBE2A8EAB68000F1C3A /* UIViewController Extention.swift.swift */; };
+		EEF75DC12A8F8D94000F1C3A /* UIView Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75DC02A8F8D94000F1C3A /* UIView Extension.swift */; };
 		EEFA9AF42A8A8AB200EA95A5 /* AuthResponseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AF32A8A8AB200EA95A5 /* AuthResponseJson.swift */; };
 		EEFA9AF82A8A92AE00EA95A5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AF62A8A92AE00EA95A5 /* SignUpViewController.swift */; };
 		EEFA9AF92A8A92AE00EA95A5 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFA9AF72A8A92AE00EA95A5 /* SignUpViewController.xib */; };
@@ -110,6 +111,7 @@
 		EEF75DBA2A8E7734000F1C3A /* TextField Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField Extension.swift"; sourceTree = "<group>"; };
 		EEF75DBC2A8EA57B000F1C3A /* Ui Window Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ui Window Extension.swift"; sourceTree = "<group>"; };
 		EEF75DBE2A8EAB68000F1C3A /* UIViewController Extention.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController Extention.swift.swift"; sourceTree = "<group>"; };
+		EEF75DC02A8F8D94000F1C3A /* UIView Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView Extension.swift"; sourceTree = "<group>"; };
 		EEFA9AF32A8A8AB200EA95A5 /* AuthResponseJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseJson.swift; sourceTree = "<group>"; };
 		EEFA9AF62A8A92AE00EA95A5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		EEFA9AF72A8A92AE00EA95A5 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				EEF75DBA2A8E7734000F1C3A /* TextField Extension.swift */,
 				EEF75DBC2A8EA57B000F1C3A /* Ui Window Extension.swift */,
 				EEF75DBE2A8EAB68000F1C3A /* UIViewController Extention.swift.swift */,
+				EEF75DC02A8F8D94000F1C3A /* UIView Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 				848E40552A87F2DF0014D704 /* HomePageProtocols.swift in Sources */,
 				EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */,
 				848E40572A87F3060014D704 /* HomePageView.swift in Sources */,
+				EEF75DC12A8F8D94000F1C3A /* UIView Extension.swift in Sources */,
 				848E40672A88DBE90014D704 /* PetsCollectionViewCell.swift in Sources */,
 				848E40652A88DBDC0014D704 /* PetsCollectionView.swift in Sources */,
 				848E40612A880E700014D704 /* PrimaryNavBarView.swift in Sources */,

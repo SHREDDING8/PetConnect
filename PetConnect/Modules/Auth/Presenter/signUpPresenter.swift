@@ -27,9 +27,20 @@ protocol SignUpPresenterProtocol:AnyObject{
     func textFieldChanged()
     func passwordDidChange(value:String)
     
+    /// Set login to model
+    /// - Parameter value: login value
     func setLogin(value:String)
+    
+    /// Set email to model
+    /// - Parameter value: email value
     func setEmail(value:String)
+    
+    /// Set password to model
+    /// - Parameter value: password value
     func setPassword(value:String)
+    
+    /// Set confirm password to model
+    /// - Parameter value: confirm password value
     func setConfirmPassword(value:String)
     
     func signUpTapped()
@@ -73,11 +84,8 @@ class SignUpPresenter:SignUpPresenterProtocol{
     
     func setPassword(value:String){
         model?.password = value
-        print(model?.password)
     }
     
-    /// Adding confirm password to model
-    /// - Parameter value: confirm password value
     func setConfirmPassword(value:String){
         model?.confirmPassword = value
     }
