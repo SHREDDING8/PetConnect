@@ -15,8 +15,6 @@
 		848E405B2A87F3240014D704 /* HomePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E405A2A87F3240014D704 /* HomePagePresenter.swift */; };
 		848E405D2A87F55A0014D704 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E405C2A87F55A0014D704 /* BaseNavigationController.swift */; };
 		848E40612A880E700014D704 /* PrimaryNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40602A880E700014D704 /* PrimaryNavBarView.swift */; };
-		848E40632A88C7E50014D704 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40622A88C7E50014D704 /* UIViewController+Extention.swift */; };
-		848E40632A88C7E50014D704 /* UIViewController + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40622A88C7E50014D704 /* UIViewController + ext.swift */; };
 		848E40652A88DBDC0014D704 /* PetsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40642A88DBDC0014D704 /* PetsCollectionView.swift */; };
 		848E40672A88DBE90014D704 /* PetsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40662A88DBE90014D704 /* PetsCollectionViewCell.swift */; };
 		848E406A2A88DE660014D704 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E40692A88DE660014D704 /* Pet.swift */; };
@@ -28,7 +26,39 @@
 		EE22A3962A87AB6200DAF44C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE22A3942A87AB6200DAF44C /* LaunchScreen.storyboard */; };
 		EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */; };
 		EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */; };
-		EE22A3A62A87EF7100DAF44C /* Заглушка (Потом удалить).swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3A52A87EF7100DAF44C /* Заглушка (Потом удалить).swift */; };
+		EE5ABC252A89795B00E762D6 /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC232A89795A00E762D6 /* GreetingViewController.swift */; };
+		EE5ABC262A89795B00E762D6 /* GreetingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC242A89795A00E762D6 /* GreetingViewController.xib */; };
+		EE5ABC412A89816100E762D6 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC2D2A89816100E762D6 /* SF-Pro-Display-Light.otf */; };
+		EE5ABC422A89816100E762D6 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC2E2A89816100E762D6 /* SF-Pro-Display-Regular.otf */; };
+		EE5ABC432A89816100E762D6 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC2F2A89816100E762D6 /* SF-Pro-Display-Bold.otf */; };
+		EE5ABC442A89816100E762D6 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC302A89816100E762D6 /* SF-Pro-Display-Medium.otf */; };
+		EE5ABC452A89816100E762D6 /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC312A89816100E762D6 /* SF-Pro-Display-Heavy.otf */; };
+		EE5ABC462A89816100E762D6 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC322A89816100E762D6 /* SF-Pro-Display-Semibold.otf */; };
+		EE5ABC522A89D20600E762D6 /* GreetingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC512A89D20600E762D6 /* GreetingPresenter.swift */; };
+		EE5ABC542A8A442500E762D6 /* AuthBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC532A8A442500E762D6 /* AuthBuilder.swift */; };
+		EE5ABC582A8A464B00E762D6 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC572A8A464B00E762D6 /* SignInPresenter.swift */; };
+		EE5ABC5B2A8A467A00E762D6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5ABC592A8A467A00E762D6 /* SignInViewController.swift */; };
+		EE5ABC5C2A8A467A00E762D6 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE5ABC5A2A8A467A00E762D6 /* SignInViewController.xib */; };
+		EE66A1832A8D9741006947BE /* UsersNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1822A8D9741006947BE /* UsersNetworkService.swift */; };
+		EE66A1862A8D9757006947BE /* RequestJsonStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1852A8D9757006947BE /* RequestJsonStructs.swift */; };
+		EE66A1882A8D9764006947BE /* ResponseJsonStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1872A8D9764006947BE /* ResponseJsonStructs.swift */; };
+		EE66A18B2A8E2751006947BE /* EmailConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1892A8E2751006947BE /* EmailConfirmationViewController.swift */; };
+		EE66A18C2A8E2751006947BE /* EmailConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE66A18A2A8E2751006947BE /* EmailConfirmationViewController.xib */; };
+		EE66A1912A8E5469006947BE /* EmailConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1902A8E5469006947BE /* EmailConfirmationPresenter.swift */; };
+		EEDC7F692A8A5ED0008CBD72 /* signInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F682A8A5ECF008CBD72 /* signInModel.swift */; };
+		EEDC7F6C2A8A6A0B008CBD72 /* GeneralNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F6B2A8A6A0B008CBD72 /* GeneralNetworkService.swift */; };
+		EEDC7F6F2A8A6B37008CBD72 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */; };
+		EEDC7F722A8A6D1E008CBD72 /* AuthrequestJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F712A8A6D1E008CBD72 /* AuthrequestJson.swift */; };
+		EEF75DBB2A8E7734000F1C3A /* TextField Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75DBA2A8E7734000F1C3A /* TextField Extension.swift */; };
+		EEF75DBD2A8EA57B000F1C3A /* Ui Window Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75DBC2A8EA57B000F1C3A /* Ui Window Extension.swift */; };
+		EEF75DBF2A8EAB68000F1C3A /* UIViewController Extention.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75DBE2A8EAB68000F1C3A /* UIViewController Extention.swift.swift */; };
+		EEF75DC12A8F8D94000F1C3A /* UIView Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF75DC02A8F8D94000F1C3A /* UIView Extension.swift */; };
+		EEFA9AF42A8A8AB200EA95A5 /* AuthResponseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AF32A8A8AB200EA95A5 /* AuthResponseJson.swift */; };
+		EEFA9AF82A8A92AE00EA95A5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AF62A8A92AE00EA95A5 /* SignUpViewController.swift */; };
+		EEFA9AF92A8A92AE00EA95A5 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFA9AF72A8A92AE00EA95A5 /* SignUpViewController.xib */; };
+		EEFA9AFB2A8A964700EA95A5 /* signUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AFA2A8A964700EA95A5 /* signUpPresenter.swift */; };
+		EEFA9AFD2A8ACDA000EA95A5 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9AFC2A8ACDA000EA95A5 /* SignUpModel.swift */; };
+		EEFA9B012A8B437F00EA95A5 /* AuthValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFA9B002A8B437F00EA95A5 /* AuthValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,8 +71,6 @@
 		848E405A2A87F3240014D704 /* HomePagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePagePresenter.swift; sourceTree = "<group>"; };
 		848E405C2A87F55A0014D704 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		848E40602A880E700014D704 /* PrimaryNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryNavBarView.swift; sourceTree = "<group>"; };
-		848E40622A88C7E50014D704 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
-		848E40622A88C7E50014D704 /* UIViewController + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + ext.swift"; sourceTree = "<group>"; };
 		848E40642A88DBDC0014D704 /* PetsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionView.swift; sourceTree = "<group>"; };
 		848E40662A88DBE90014D704 /* PetsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsCollectionViewCell.swift; sourceTree = "<group>"; };
 		848E40692A88DE660014D704 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
@@ -57,7 +85,39 @@
 		EE22A3972A87AB6200DAF44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
-		EE22A3A52A87EF7100DAF44C /* Заглушка (Потом удалить).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Заглушка (Потом удалить).swift"; sourceTree = "<group>"; };
+		EE5ABC232A89795A00E762D6 /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
+		EE5ABC242A89795A00E762D6 /* GreetingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GreetingViewController.xib; sourceTree = "<group>"; };
+		EE5ABC2D2A89816100E762D6 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
+		EE5ABC2E2A89816100E762D6 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		EE5ABC2F2A89816100E762D6 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		EE5ABC302A89816100E762D6 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		EE5ABC312A89816100E762D6 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
+		EE5ABC322A89816100E762D6 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		EE5ABC512A89D20600E762D6 /* GreetingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingPresenter.swift; sourceTree = "<group>"; };
+		EE5ABC532A8A442500E762D6 /* AuthBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthBuilder.swift; sourceTree = "<group>"; };
+		EE5ABC572A8A464B00E762D6 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
+		EE5ABC592A8A467A00E762D6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		EE5ABC5A2A8A467A00E762D6 /* SignInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		EE66A1822A8D9741006947BE /* UsersNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersNetworkService.swift; sourceTree = "<group>"; };
+		EE66A1852A8D9757006947BE /* RequestJsonStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestJsonStructs.swift; sourceTree = "<group>"; };
+		EE66A1872A8D9764006947BE /* ResponseJsonStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseJsonStructs.swift; sourceTree = "<group>"; };
+		EE66A1892A8E2751006947BE /* EmailConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailConfirmationViewController.swift; sourceTree = "<group>"; };
+		EE66A18A2A8E2751006947BE /* EmailConfirmationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailConfirmationViewController.xib; sourceTree = "<group>"; };
+		EE66A1902A8E5469006947BE /* EmailConfirmationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailConfirmationPresenter.swift; sourceTree = "<group>"; };
+		EEDC7F682A8A5ECF008CBD72 /* signInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInModel.swift; sourceTree = "<group>"; };
+		EEDC7F6B2A8A6A0B008CBD72 /* GeneralNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralNetworkService.swift; sourceTree = "<group>"; };
+		EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
+		EEDC7F712A8A6D1E008CBD72 /* AuthrequestJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthrequestJson.swift; sourceTree = "<group>"; };
+		EEF75DBA2A8E7734000F1C3A /* TextField Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField Extension.swift"; sourceTree = "<group>"; };
+		EEF75DBC2A8EA57B000F1C3A /* Ui Window Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ui Window Extension.swift"; sourceTree = "<group>"; };
+		EEF75DBE2A8EAB68000F1C3A /* UIViewController Extention.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController Extention.swift.swift"; sourceTree = "<group>"; };
+		EEF75DC02A8F8D94000F1C3A /* UIView Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView Extension.swift"; sourceTree = "<group>"; };
+		EEFA9AF32A8A8AB200EA95A5 /* AuthResponseJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseJson.swift; sourceTree = "<group>"; };
+		EEFA9AF62A8A92AE00EA95A5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EEFA9AF72A8A92AE00EA95A5 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		EEFA9AFA2A8A964700EA95A5 /* signUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpPresenter.swift; sourceTree = "<group>"; };
+		EEFA9AFC2A8ACDA000EA95A5 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		EEFA9B002A8B437F00EA95A5 /* AuthValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +210,8 @@
 		EE22A3882A87AB6000DAF44C /* PetConnect */ = {
 			isa = PBXGroup;
 			children = (
+				EEF75DB92A8E7722000F1C3A /* Extensions */,
+				EE5ABC272A89811400E762D6 /* Fonts */,
 				EE22A39F2A87AE1E00DAF44C /* Services */,
 				EE22A39E2A87AE1700DAF44C /* Modules */,
 				EE22A39D2A87ADFD00DAF44C /* App */,
@@ -173,12 +235,12 @@
 		EE22A39E2A87AE1700DAF44C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				EE5ABC1B2A8978B400E762D6 /* Auth */,
 				848E404F2A87F25A0014D704 /* HomePage */,
 				EE22A3A02A87AE9800DAF44C /* MainTabBarViewController.swift */,
 				EE22A3A22A87AEAB00DAF44C /* MainBuilder.swift */,
 				848E405C2A87F55A0014D704 /* BaseNavigationController.swift */,
 				848E40602A880E700014D704 /* PrimaryNavBarView.swift */,
-				848E40622A88C7E50014D704 /* UIViewController+Extention.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -186,9 +248,182 @@
 		EE22A39F2A87AE1E00DAF44C /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				EE22A3A52A87EF7100DAF44C /* Заглушка (Потом удалить).swift */,
+				EEFA9AFE2A8B431F00EA95A5 /* ValidationServices */,
+				EEDC7F6A2A8A69C5008CBD72 /* NetworkServices */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		EE5ABC1B2A8978B400E762D6 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EE5ABC1E2A8978D100E762D6 /* Presenter */,
+				EE5ABC1D2A8978CB00E762D6 /* View */,
+				EE5ABC1C2A8978BD00E762D6 /* Model */,
+				EE5ABC532A8A442500E762D6 /* AuthBuilder.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		EE5ABC1C2A8978BD00E762D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EEDC7F682A8A5ECF008CBD72 /* signInModel.swift */,
+				EEFA9AFC2A8ACDA000EA95A5 /* SignUpModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE5ABC1D2A8978CB00E762D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE66A1922A8E572E006947BE /* Email Confirmation */,
+				EEFA9AF52A8A928D00EA95A5 /* SignUp */,
+				EE5ABC562A8A463300E762D6 /* SignIn */,
+				EE5ABC552A8A462400E762D6 /* Greeting */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE5ABC1E2A8978D100E762D6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EE5ABC512A89D20600E762D6 /* GreetingPresenter.swift */,
+				EE5ABC572A8A464B00E762D6 /* SignInPresenter.swift */,
+				EEFA9AFA2A8A964700EA95A5 /* signUpPresenter.swift */,
+				EE66A1902A8E5469006947BE /* EmailConfirmationPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EE5ABC272A89811400E762D6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EE5ABC282A89816100E762D6 /* San Francisco Pro Display */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EE5ABC282A89816100E762D6 /* San Francisco Pro Display */ = {
+			isa = PBXGroup;
+			children = (
+				EE5ABC2D2A89816100E762D6 /* SF-Pro-Display-Light.otf */,
+				EE5ABC2E2A89816100E762D6 /* SF-Pro-Display-Regular.otf */,
+				EE5ABC2F2A89816100E762D6 /* SF-Pro-Display-Bold.otf */,
+				EE5ABC302A89816100E762D6 /* SF-Pro-Display-Medium.otf */,
+				EE5ABC312A89816100E762D6 /* SF-Pro-Display-Heavy.otf */,
+				EE5ABC322A89816100E762D6 /* SF-Pro-Display-Semibold.otf */,
+			);
+			path = "San Francisco Pro Display";
+			sourceTree = "<group>";
+		};
+		EE5ABC552A8A462400E762D6 /* Greeting */ = {
+			isa = PBXGroup;
+			children = (
+				EE5ABC232A89795A00E762D6 /* GreetingViewController.swift */,
+				EE5ABC242A89795A00E762D6 /* GreetingViewController.xib */,
+			);
+			path = Greeting;
+			sourceTree = "<group>";
+		};
+		EE5ABC562A8A463300E762D6 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				EE5ABC592A8A467A00E762D6 /* SignInViewController.swift */,
+				EE5ABC5A2A8A467A00E762D6 /* SignInViewController.xib */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		EE66A1812A8D926F006947BE /* UsersNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				EE66A1842A8D9746006947BE /* Json */,
+				EE66A1822A8D9741006947BE /* UsersNetworkService.swift */,
+			);
+			path = UsersNetworkService;
+			sourceTree = "<group>";
+		};
+		EE66A1842A8D9746006947BE /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				EE66A1852A8D9757006947BE /* RequestJsonStructs.swift */,
+				EE66A1872A8D9764006947BE /* ResponseJsonStructs.swift */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		EE66A1922A8E572E006947BE /* Email Confirmation */ = {
+			isa = PBXGroup;
+			children = (
+				EE66A1892A8E2751006947BE /* EmailConfirmationViewController.swift */,
+				EE66A18A2A8E2751006947BE /* EmailConfirmationViewController.xib */,
+			);
+			path = "Email Confirmation";
+			sourceTree = "<group>";
+		};
+		EEDC7F6A2A8A69C5008CBD72 /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				EE66A1812A8D926F006947BE /* UsersNetworkService */,
+				EEDC7F6D2A8A6A89008CBD72 /* AuthNetworkService */,
+				EEDC7F6B2A8A6A0B008CBD72 /* GeneralNetworkService.swift */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		EEDC7F6D2A8A6A89008CBD72 /* AuthNetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				EEDC7F702A8A6D07008CBD72 /* Json */,
+				EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */,
+			);
+			path = AuthNetworkService;
+			sourceTree = "<group>";
+		};
+		EEDC7F702A8A6D07008CBD72 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				EEDC7F712A8A6D1E008CBD72 /* AuthrequestJson.swift */,
+				EEFA9AF32A8A8AB200EA95A5 /* AuthResponseJson.swift */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		EEF75DB92A8E7722000F1C3A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EEF75DBA2A8E7734000F1C3A /* TextField Extension.swift */,
+				EEF75DBC2A8EA57B000F1C3A /* Ui Window Extension.swift */,
+				EEF75DBE2A8EAB68000F1C3A /* UIViewController Extention.swift.swift */,
+				EEF75DC02A8F8D94000F1C3A /* UIView Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EEFA9AF52A8A928D00EA95A5 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				EEFA9AF62A8A92AE00EA95A5 /* SignUpViewController.swift */,
+				EEFA9AF72A8A92AE00EA95A5 /* SignUpViewController.xib */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		EEFA9AFE2A8B431F00EA95A5 /* ValidationServices */ = {
+			isa = PBXGroup;
+			children = (
+				EEFA9AFF2A8B434D00EA95A5 /* Auth */,
+			);
+			path = ValidationServices;
+			sourceTree = "<group>";
+		};
+		EEFA9AFF2A8B434D00EA95A5 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EEFA9B002A8B437F00EA95A5 /* AuthValidation.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +437,7 @@
 				EE22A3822A87AB6000DAF44C /* Sources */,
 				EE22A3832A87AB6000DAF44C /* Frameworks */,
 				EE22A3842A87AB6000DAF44C /* Resources */,
+				7E866C7DD5A3BC3E7BBD03DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,14 +486,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE5ABC5C2A8A467A00E762D6 /* SignInViewController.xib in Resources */,
+				EE5ABC462A89816100E762D6 /* SF-Pro-Display-Semibold.otf in Resources */,
 				EE22A3962A87AB6200DAF44C /* LaunchScreen.storyboard in Resources */,
 				EE22A3932A87AB6200DAF44C /* Assets.xcassets in Resources */,
+				EE5ABC262A89795B00E762D6 /* GreetingViewController.xib in Resources */,
+				EEFA9AF92A8A92AE00EA95A5 /* SignUpViewController.xib in Resources */,
+				EE5ABC442A89816100E762D6 /* SF-Pro-Display-Medium.otf in Resources */,
+				EE5ABC432A89816100E762D6 /* SF-Pro-Display-Bold.otf in Resources */,
+				EE66A18C2A8E2751006947BE /* EmailConfirmationViewController.xib in Resources */,
+				EE5ABC412A89816100E762D6 /* SF-Pro-Display-Light.otf in Resources */,
+				EE5ABC422A89816100E762D6 /* SF-Pro-Display-Regular.otf in Resources */,
+				EE5ABC452A89816100E762D6 /* SF-Pro-Display-Heavy.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7E866C7DD5A3BC3E7BBD03DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetConnect/Pods-PetConnect-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetConnect/Pods-PetConnect-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetConnect/Pods-PetConnect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FB2BDD7BE72A1ECDAA6E1F7C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -287,20 +550,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEF75DBF2A8EAB68000F1C3A /* UIViewController Extention.swift.swift in Sources */,
+				EEDC7F6F2A8A6B37008CBD72 /* AuthNetworkService.swift in Sources */,
+				EE5ABC5B2A8A467A00E762D6 /* SignInViewController.swift in Sources */,
+				EEDC7F692A8A5ED0008CBD72 /* signInModel.swift in Sources */,
 				EE22A38E2A87AB6000DAF44C /* ViewController.swift in Sources */,
+				EE66A1832A8D9741006947BE /* UsersNetworkService.swift in Sources */,
+				EE5ABC542A8A442500E762D6 /* AuthBuilder.swift in Sources */,
 				848E405D2A87F55A0014D704 /* BaseNavigationController.swift in Sources */,
-				848E40632A88C7E50014D704 /* UIViewController+Extention.swift in Sources */,
+				EE5ABC252A89795B00E762D6 /* GreetingViewController.swift in Sources */,
+				EEFA9AF82A8A92AE00EA95A5 /* SignUpViewController.swift in Sources */,
+				EE5ABC582A8A464B00E762D6 /* SignInPresenter.swift in Sources */,
+				EEFA9AFB2A8A964700EA95A5 /* signUpPresenter.swift in Sources */,
+				EE66A1882A8D9764006947BE /* ResponseJsonStructs.swift in Sources */,
+				EEDC7F722A8A6D1E008CBD72 /* AuthrequestJson.swift in Sources */,
+				EEF75DBB2A8E7734000F1C3A /* TextField Extension.swift in Sources */,
 				EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */,
+				EE66A1862A8D9757006947BE /* RequestJsonStructs.swift in Sources */,
 				EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */,
-				EE22A3A62A87EF7100DAF44C /* Заглушка (Потом удалить).swift in Sources */,
+				EE5ABC522A89D20600E762D6 /* GreetingPresenter.swift in Sources */,
+				EEF75DBD2A8EA57B000F1C3A /* Ui Window Extension.swift in Sources */,
+				EEFA9AFD2A8ACDA000EA95A5 /* SignUpModel.swift in Sources */,
+				EE66A1912A8E5469006947BE /* EmailConfirmationPresenter.swift in Sources */,
+				EEFA9B012A8B437F00EA95A5 /* AuthValidation.swift in Sources */,
+				EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */,
+				EEFA9AF42A8A8AB200EA95A5 /* AuthResponseJson.swift in Sources */,
+				EE66A18B2A8E2751006947BE /* EmailConfirmationViewController.swift in Sources */,
 				848E406C2A8A16710014D704 /* NotificationsTableViewCell.swift in Sources */,
 				EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */,
 				848E40552A87F2DF0014D704 /* HomePageProtocols.swift in Sources */,
 				EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */,
 				848E40572A87F3060014D704 /* HomePageView.swift in Sources */,
+				EEF75DC12A8F8D94000F1C3A /* UIView Extension.swift in Sources */,
 				848E40672A88DBE90014D704 /* PetsCollectionViewCell.swift in Sources */,
 				848E40652A88DBDC0014D704 /* PetsCollectionView.swift in Sources */,
 				848E40612A880E700014D704 /* PrimaryNavBarView.swift in Sources */,
+				EEDC7F6C2A8A6A0B008CBD72 /* GeneralNetworkService.swift in Sources */,
 				848E40592A87F3110014D704 /* HomePageViewController.swift in Sources */,
 				848E405B2A87F3240014D704 /* HomePagePresenter.swift in Sources */,
 				848E406A2A88DE660014D704 /* Pet.swift in Sources */,
@@ -359,7 +644,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -422,7 +707,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

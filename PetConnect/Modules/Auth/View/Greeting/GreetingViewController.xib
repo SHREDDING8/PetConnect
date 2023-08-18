@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22113.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GreetingViewController" customModule="PetConnect" customModuleProvider="target">
+            <connections>
+                <outlet property="appTitle" destination="b5m-fw-ODD" id="Wyi-Qh-v2y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Greeting" translatesAutoresizingMaskIntoConstraints="NO" id="ykO-W3-4od">
+                    <rect key="frame" x="0.0" y="210.66666666666669" width="430" height="557.33333333333326"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utX-WW-yhM">
+                    <rect key="frame" x="20" y="783" width="390" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Fco-0R-rsb"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Войти" cornerStyle="capsule">
+                        <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                        <color key="baseForegroundColor" name="GreetingGreen"/>
+                        <color key="baseBackgroundColor" name="GreetingLightGreen"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="signInTapped:" destination="-1" eventType="touchUpInside" id="Zsp-h8-TpZ"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PetConnect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5m-fw-ODD">
+                    <rect key="frame" x="15" y="109" width="400" height="41"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="34"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Привет!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxl-bv-J1W">
+                    <rect key="frame" x="15" y="162" width="400" height="33.666666666666657"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="28"/>
+                    <color key="textColor" red="0.098039215686274508" green="0.10980392156862745" blue="0.10588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJ3-HB-hnF">
+                    <rect key="frame" x="20" y="839" width="390" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="aOM-gN-RyD"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Зарегистрироваться" cornerStyle="capsule">
+                        <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="18"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" name="GreetingGreen"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="signUpTapped:" destination="-1" eventType="touchUpInside" id="FUh-uI-OS8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Hxl-bv-J1W" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="70h-QC-O48"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hxl-bv-J1W" secondAttribute="trailing" constant="15" id="FsC-bB-A6D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="b5m-fw-ODD" secondAttribute="trailing" constant="15" id="G1t-ug-A5E"/>
+                <constraint firstItem="utX-WW-yhM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="HY5-Gx-C29"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tJ3-HB-hnF" secondAttribute="trailing" constant="20" id="Ho6-p0-jxy"/>
+                <constraint firstItem="Hxl-bv-J1W" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Ifg-9g-5Ud"/>
+                <constraint firstItem="b5m-fw-ODD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="J3j-Rm-08R"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tJ3-HB-hnF" secondAttribute="bottom" constant="15" id="JXd-rW-PNj"/>
+                <constraint firstItem="ykO-W3-4od" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OKT-Md-Q0a"/>
+                <constraint firstItem="Hxl-bv-J1W" firstAttribute="top" secondItem="b5m-fw-ODD" secondAttribute="bottom" constant="12" id="OqQ-6e-fX3"/>
+                <constraint firstItem="tJ3-HB-hnF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Sxg-7u-nuQ"/>
+                <constraint firstItem="b5m-fw-ODD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="Thf-8h-h87"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ykO-W3-4od" secondAttribute="trailing" id="UHn-j2-otD"/>
+                <constraint firstItem="tJ3-HB-hnF" firstAttribute="top" secondItem="utX-WW-yhM" secondAttribute="bottom" constant="12" id="UnQ-jd-CrH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="utX-WW-yhM" secondAttribute="trailing" constant="20" id="V7G-Iv-20o"/>
+                <constraint firstItem="b5m-fw-ODD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dqL-gf-6k7"/>
+                <constraint firstItem="utX-WW-yhM" firstAttribute="top" secondItem="ykO-W3-4od" secondAttribute="bottom" constant="15" id="iEo-OQ-K6F"/>
+                <constraint firstItem="ykO-W3-4od" firstAttribute="top" secondItem="Hxl-bv-J1W" secondAttribute="bottom" constant="15" id="qib-vM-iZa"/>
+            </constraints>
+            <point key="canvasLocation" x="69.767441860465112" y="19.95708154506438"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Greeting" width="187.66667175292969" height="122"/>
+        <namedColor name="GreetingGreen">
+            <color red="0.0" green="0.41960784313725491" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GreetingLightGreen">
+            <color red="0.70980392156862748" green="0.81176470588235294" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

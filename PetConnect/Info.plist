@@ -19,5 +19,14 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SF-Pro-Display-Semibold.otf</string>
+		<string>SF-Pro-Display-Heavy.otf</string>
+		<string>SF-Pro-Display-Medium.otf</string>
+		<string>SF-Pro-Display-Bold.otf</string>
+		<string>SF-Pro-Display-Light.otf</string>
+		<string>SF-Pro-Display-Regular.otf</string>
+	</array>
 </dict>
 </plist>
