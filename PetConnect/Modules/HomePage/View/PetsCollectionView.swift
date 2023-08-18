@@ -40,7 +40,8 @@ class PetsCollectionView: UICollectionView {
         delegate = self
         dataSource = self
         
-        selectItem(at: [0,0], animated: true, scrollPosition: [])
+//        selectItem(at: [0,0], animated: true, scrollPosition: [])
+        
         self.register(PetsCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
     }
 }
