@@ -18,8 +18,6 @@ class GreetingViewController: UIViewController {
         self.navigationItem.largeTitleDisplayMode = .never
         setAppName()
         
-        
-        
     }
     
     fileprivate func setAppName(){

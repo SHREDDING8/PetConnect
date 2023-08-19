@@ -26,8 +26,7 @@ class ProfileViewController: UIViewController {
 
         return contentView
     }()
-    
-    
+     
     private lazy var sectionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -167,7 +166,6 @@ class ProfileViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-                
         drawLine(fromX: 20, fromY: Int(profileImageView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(profileImageView.frame.maxY)+16)
         drawLine(fromX: 20, fromY: Int(emailImageView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(emailImageView.frame.maxY)+16)
         drawLine(fromX: 20, fromY: Int(notificationImageView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(notificationImageView.frame.maxY)+16)
@@ -196,7 +194,6 @@ class ProfileViewController: UIViewController {
         contentView.addSubview(logoutLablel)
         
         NSLayoutConstraint.activate(staticConstraints())
-        
     }
     
     func drawLine(fromX: Int, fromY: Int, toX: Int, toY: Int) {

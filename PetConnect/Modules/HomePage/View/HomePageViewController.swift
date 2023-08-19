@@ -50,7 +50,8 @@ extension HomePageViewController: HomePageViewControllerProtocol {
 
 extension HomePageViewController: HomePageViewDelegate {
     func addNotification() {
-        print("Transition to add notification page")
+        let notificationController = HomePageBuilder.createNotificationPage()
+        self.navigationController?.pushViewController(notificationController, animated: true)
     }
     
     func buyTracker() {
@@ -71,7 +72,7 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? NotificationsTableViewCell else {
-            fatalError("Error")
+            fatalError("Cell was not found!")
         }
         
         return cell
