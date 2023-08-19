@@ -75,7 +75,7 @@ open class CustomTextField: UIView {
             self.textField.backgroundColor = newValue
         }
     }
-    
+
     open var textColor:UIColor = .black
     open var focusedColor:UIColor? = UIColor(named: "GreetingGreen")
     open var wrongValueColor:UIColor? = UIColor(named: "WrongValue")
@@ -209,7 +209,6 @@ extension CustomTextField:UITextFieldDelegate{
         if !self.showUpperLabelWhenTextFieldIsNotEmty && textField.hasText{
             self.hideUpperText()
         }
-        
         delegate?.textFieldDidEndEditing?(textField)
     }
     

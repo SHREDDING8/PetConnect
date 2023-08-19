@@ -23,6 +23,9 @@ protocol KeyChainStorageProtocol{
     func deleteAccessToken()
     func deleteRefreshToken()
     
+    func isAccessTokenAvailable() -> Bool
+    func isRefreshTokenAvailable() -> Bool
+    
 }
 
 open class KeyChainStorage:KeyChainStorageProtocol{
@@ -79,6 +82,33 @@ open class KeyChainStorage:KeyChainStorageProtocol{
     }
     func deleteRefreshToken(){
         keychain.delete(self.refreshTokenKey)
+    }
+    
+    
+    func isAccessTokenAvailable() -> Bool {
+        
+        if let accessTokenTimeSaved = self.getAccessTokenTimeSaved(){
+            let tokenExpired = Calendar.current.date(byAdding: DateComponents(hour: 23, minute: 50), to: accessTokenTimeSaved)!
+            
+            if tokenExpired > accessTokenTimeSaved{
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    func isRefreshTokenAvailable() -> Bool {
+        
+        if let refreshTokenTimeSaved = self.getRefreshTokenTimeSaved(){
+            let tokenExpired = Calendar.current.date(byAdding: DateComponents(day: 6, hour: 23, minute: 50), to: refreshTokenTimeSaved)!
+            
+            if tokenExpired > refreshTokenTimeSaved{
+                return true
+            }
+        }
+        
+        return false
     }
     
 }

@@ -94,19 +94,9 @@ class SignUpPresenter:SignUpPresenterProtocol{
         Task {
             do{
                 // check existing username
-                
-                let isUsernameExist = try await networkService?.existUsername(username: model?.username ?? "")
-                
-                let isSignUp = try await networkService?.signUp(username: model?.username ?? "", email: model?.email ?? "", password: model?.password ?? "")
-                
-                
-                if isUsernameExist ?? false{
-                    DispatchQueue.main.async {
-                        self.view?.usernameExist()
-                    }
-                    return
-                }
                                 
+                let isSignUp = try await networkService?.signUp(username: model?.username ?? "", email: model?.email ?? "", password: model?.password ?? "")
+                                                
                 if !(isSignUp ?? false){
                     DispatchQueue.main.async {
                         self.view?.unknownError()
@@ -125,7 +115,13 @@ class SignUpPresenter:SignUpPresenterProtocol{
                     self.view?.emailExist()
                 }
                 
-            } catch{
+            } catch UsersError.usernameExist{
+                
+                DispatchQueue.main.async {
+                    self.view?.usernameExist()
+                }
+                
+            }catch{
                 DispatchQueue.main.async {
                     self.view?.unknownError()
                 }
