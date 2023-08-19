@@ -14,24 +14,20 @@ class ProfileViewController: UIViewController {
     
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
-        scrollView.frame = view.bounds
-        scrollView.contentSize = contentSize
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
     
         return scrollView
     }()
 
     private lazy var contentView: UIView = {
         let contentView = UIView()
-        contentView.frame.size = contentSize
+        contentView.translatesAutoresizingMaskIntoConstraints = false
 
         return contentView
     }()
-    
-    private var contentSize: CGSize {
-        CGSize(width: view.frame.width, height: view.frame.height + 400)
-    }
-    
-    private lazy var sectionLablel: UILabel = {
+     
+    private lazy var sectionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Профиль"
@@ -170,7 +166,6 @@ class ProfileViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         drawLine(fromX: 20, fromY: Int(profileImageView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(profileImageView.frame.maxY)+16)
         drawLine(fromX: 20, fromY: Int(emailImageView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(emailImageView.frame.maxY)+16)
         drawLine(fromX: 20, fromY: Int(notificationImageView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(notificationImageView.frame.maxY)+16)
@@ -179,11 +174,13 @@ class ProfileViewController: UIViewController {
     }
     
     func setUpView() {
+        view.addSubview(sectionLabel)
         view.addSubview(scrollView)
+        
         scrollView.addSubview(contentView)
         
-        contentView.addSubview(sectionLablel)
         contentView.addSubview(avatarImageView)
+        
         contentView.addSubview(profileImageView)
         contentView.addSubview(profileLablel)
         contentView.addSubview(emailImageView)
@@ -216,34 +213,62 @@ class ProfileViewController: UIViewController {
         var constraints = [NSLayoutConstraint]()
         
         constraints.append(contentsOf: [
-            sectionLablel.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
-            sectionLablel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            
+            sectionLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 80),
+            sectionLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            
+            
+            scrollView.topAnchor.constraint(equalTo: sectionLabel.bottomAnchor, constant: 0),
+            scrollView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: 0),
+            scrollView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
+            scrollView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
+            
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            
+            contentView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1),
+            
             avatarImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4),
             avatarImageView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.4),
-            avatarImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            avatarImageView.topAnchor.constraint(equalTo: sectionLablel.bottomAnchor, constant: 38),
+            avatarImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            avatarImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 38),
+            
             profileImageView.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: 55),
-            profileImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            profileImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            
             profileLablel.centerYAnchor.constraint(equalTo: profileImageView.centerYAnchor),
             profileLablel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 16),
+            
+            
             emailImageView.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 32),
-            emailImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            emailImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            
             emailLablel.centerYAnchor.constraint(equalTo: emailImageView.centerYAnchor),
             emailLablel.leadingAnchor.constraint(equalTo: emailImageView.trailingAnchor, constant: 16),
+            
+            
             notificationImageView.topAnchor.constraint(equalTo: emailImageView.bottomAnchor, constant: 32),
-            notificationImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            notificationImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            
             notificationLablel.centerYAnchor.constraint(equalTo: notificationImageView.centerYAnchor),
             notificationLablel.leadingAnchor.constraint(equalTo: notificationImageView.trailingAnchor, constant: 16),
+            
+            
             notificationSwitch.centerYAnchor.constraint(equalTo: notificationImageView.centerYAnchor),
-            notificationSwitch.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -28),
+            notificationSwitch.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -28),
+            
             deleteImageView.topAnchor.constraint(equalTo: notificationImageView.bottomAnchor, constant: 32),
-            deleteImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            deleteImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             deleteLablel.centerYAnchor.constraint(equalTo: deleteImageView.centerYAnchor),
             deleteLablel.leadingAnchor.constraint(equalTo: deleteImageView.trailingAnchor, constant: 16),
+            
             logoutImageView.topAnchor.constraint(equalTo: deleteImageView.bottomAnchor, constant: 32),
-            logoutImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            logoutImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             logoutLablel.centerYAnchor.constraint(equalTo: logoutImageView.centerYAnchor),
             logoutLablel.leadingAnchor.constraint(equalTo: logoutImageView.trailingAnchor, constant: 16),
+            logoutLablel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -20),
             ])
         
         return constraints

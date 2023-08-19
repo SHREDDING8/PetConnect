@@ -41,7 +41,6 @@ class PetsCollectionView: UICollectionView {
         dataSource = self
         
 //        selectItem(at: [0,0], animated: true, scrollPosition: [])
-        
         self.register(PetsCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
     }
 }
