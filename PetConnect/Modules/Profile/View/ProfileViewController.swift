@@ -12,6 +12,25 @@ class ProfileViewController: UIViewController {
     // MARK: - Variables
     var presenter: ProfilePresenterProtocol?
     
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.frame = view.bounds
+        scrollView.contentSize = contentSize
+    
+        return scrollView
+    }()
+
+    private lazy var contentView: UIView = {
+        let contentView = UIView()
+        contentView.frame.size = contentSize
+
+        return contentView
+    }()
+    
+    private var contentSize: CGSize {
+        CGSize(width: view.frame.width, height: view.frame.height + 400)
+    }
+    
     private lazy var sectionLablel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -149,31 +168,35 @@ class ProfileViewController: UIViewController {
         setUpView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        drawLine(fromX: 20, fromY: Int(profileImageView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(profileImageView.frame.maxY)+16)
+        drawLine(fromX: 20, fromY: Int(emailImageView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(emailImageView.frame.maxY)+16)
+        drawLine(fromX: 20, fromY: Int(notificationImageView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(notificationImageView.frame.maxY)+16)
+        drawLine(fromX: 20, fromY: Int(deleteImageView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(deleteImageView.frame.maxY)+16)
+        
+    }
+    
     func setUpView() {
-        view.addSubview(sectionLablel)
-        view.addSubview(avatarImageView)
-        view.addSubview(profileImageView)
-        view.addSubview(profileLablel)
-        view.addSubview(emailImageView)
-        view.addSubview(emailLablel)
-        view.addSubview(notificationImageView)
-        view.addSubview(notificationLablel)
-        view.addSubview(notificationSwitch)
-        view.addSubview(deleteImageView)
-        view.addSubview(deleteLablel)
-        view.addSubview(logoutImageView)
-        view.addSubview(logoutLablel)
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        
+        contentView.addSubview(sectionLablel)
+        contentView.addSubview(avatarImageView)
+        contentView.addSubview(profileImageView)
+        contentView.addSubview(profileLablel)
+        contentView.addSubview(emailImageView)
+        contentView.addSubview(emailLablel)
+        contentView.addSubview(notificationImageView)
+        contentView.addSubview(notificationLablel)
+        contentView.addSubview(notificationSwitch)
+        contentView.addSubview(deleteImageView)
+        contentView.addSubview(deleteLablel)
+        contentView.addSubview(logoutImageView)
+        contentView.addSubview(logoutLablel)
         
         NSLayoutConstraint.activate(staticConstraints())
-        
-        print(profileImageView.frame.origin.y)
-        drawLine(fromX: 20, fromY: 400, toX: Int(view.frame.width)-20, toY: 400)
-        drawLine(fromX: 20, fromY: 460, toX: Int(view.frame.width)-20, toY: 460)
-        drawLine(fromX: 20, fromY: 512, toX: Int(view.frame.width)-20, toY: 512)
-        drawLine(fromX: 20, fromY: 570, toX: Int(view.frame.width)-20, toY: 570)
-        
-        
-        
     }
     
     func drawLine(fromX: Int, fromY: Int, toX: Int, toY: Int) {
@@ -186,7 +209,7 @@ class ProfileViewController: UIViewController {
          shapeLayer.strokeColor = UIColor(named: "outline")?.cgColor
          shapeLayer.lineWidth = 1.0
 
-         view.layer.addSublayer(shapeLayer)
+         contentView.layer.addSublayer(shapeLayer)
     }
     
     func staticConstraints() -> [NSLayoutConstraint] {
