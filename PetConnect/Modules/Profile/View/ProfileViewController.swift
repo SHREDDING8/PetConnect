@@ -164,12 +164,15 @@ class ProfileViewController: UIViewController {
         view.addSubview(logoutImageView)
         view.addSubview(logoutLablel)
         
+        NSLayoutConstraint.activate(staticConstraints())
+        
+        print(profileImageView.frame.origin.y)
         drawLine(fromX: 20, fromY: 400, toX: Int(view.frame.width)-20, toY: 400)
         drawLine(fromX: 20, fromY: 460, toX: Int(view.frame.width)-20, toY: 460)
         drawLine(fromX: 20, fromY: 512, toX: Int(view.frame.width)-20, toY: 512)
         drawLine(fromX: 20, fromY: 570, toX: Int(view.frame.width)-20, toY: 570)
         
-        NSLayoutConstraint.activate(staticConstraints())
+        
         
     }
     
