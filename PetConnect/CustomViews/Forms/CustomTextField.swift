@@ -9,10 +9,10 @@ import UIKit
 
 // MARK: - delegate protocol
 @objc protocol CustomTextFieldDelegate{
-    @objc optional func textFieldDidChange()
-    @objc optional func textFieldShouldReturn()
-    @objc optional func textFieldDidEndEditing()
-    @objc optional func textFieldDidBeginEditing()
+    @objc optional func textFieldDidChange(_ textField: UITextField)
+    @objc optional func textFieldShouldReturn(_ textField: UITextField)
+    @objc optional func textFieldDidEndEditing(_ textField: UITextField)
+    @objc optional func textFieldDidBeginEditing(_ textField: UITextField)
 }
 
 @IBDesignable
@@ -38,6 +38,12 @@ open class CustomTextField: UIView {
     // MARK: - Properties
     
     @IBInspectable
+    open var text: String = "" {
+        didSet{
+            self.textField.text = text
+        }
+    }
+    @IBInspectable
     open var cornerRadius: CGFloat = 0 {
         didSet{
             self.borderView.layer.cornerRadius = cornerRadius
@@ -45,11 +51,7 @@ open class CustomTextField: UIView {
     }
     
     @IBInspectable
-    open var placeholder:String = "" {
-        didSet{
-            self.textField.placeholder = placeholder
-        }
-    }
+    open var placeholder:String = ""
     @IBInspectable
     open var upperText:String = ""{
         didSet{
@@ -142,7 +144,7 @@ open class CustomTextField: UIView {
         self.borderView.layer.cornerRadius = self.cornerRadius
         self.upperLabel.text = upperText
         self.supportingLabel.text = supportingText
-        self.textField.placeholder = placeholder
+        self.textField.placeholder = self.placeholder
     }
     private func configureBorder(){
         self.borderView.layer.borderColor = UIColor.black.cgColor
@@ -166,7 +168,9 @@ open class CustomTextField: UIView {
     // MARK: - Actions
     
     @objc private func textFieldDidChange(){
-        delegate?.textFieldDidChange?()
+
+        self.text = self.textField.text ?? ""
+        delegate?.textFieldDidChange?(textField)
     }
     
     func showUpperText(){
@@ -206,9 +210,7 @@ extension CustomTextField:UITextFieldDelegate{
             self.hideUpperText()
         }
         
-        setWrongValue()
-        
-        delegate?.textFieldDidEndEditing?()
+        delegate?.textFieldDidEndEditing?(textField)
     }
     
     public func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -216,12 +218,12 @@ extension CustomTextField:UITextFieldDelegate{
         self.borderView.layer.borderColor = focusedColor?.cgColor
         self.upperLabel.textColor = focusedColor
         
-        delegate?.textFieldDidBeginEditing?()
+        delegate?.textFieldDidBeginEditing?(textField)
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.textField.resignFirstResponder()
-        delegate?.textFieldShouldReturn?()
+        delegate?.textFieldShouldReturn?(textField)
         return true
     }
     
