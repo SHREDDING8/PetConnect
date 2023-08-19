@@ -27,6 +27,8 @@ protocol AuthNetworkServiceProtocol{
     /// - Returns: (accessToken, refreshToken)
     func signIn(login:String,password:String) async throws -> (String, String)
     
+    static func refreshToken() async throws -> Bool
+    
 }
 class AuthNetworkService:AuthNetworkServiceProtocol{
     
@@ -58,6 +60,40 @@ class AuthNetworkService:AuthNetworkServiceProtocol{
                             }
                             
                         }
+                        continuation.resume(throwing: AuthErrors.unknown)
+                    }
+                    
+                case .failure(_):
+                    continuation.resume(throwing: AuthErrors.unknown)
+                }
+            }
+        }
+        
+        return result
+    }
+    
+    
+    static func refreshToken() async throws -> Bool{
+        
+        let keyChainService = KeyChainStorage()
+        
+        if !keyChainService.isAccessTokenAvailable(){
+            return true
+        }
+        
+        let url = URL(string: GeneralNetworkService.AuthControllerUrls.refreshToken)!
+        
+        let body = RefreshTokenRequestJsonStruct(refreshToken: keyChainService.getRefreshToken() ?? "")
+        
+        let result:Bool =  try await withCheckedThrowingContinuation { continuation in
+            AF.request(url, method: .post, parameters: body, encoder: .json).response { response in
+                switch response.result {
+                case .success(let success):
+                    if let tokensDecoded = try? JSONDecoder().decode(RefreshTokenResponseJsonStruct.self, from: success!){
+                        
+                        keyChainService.saveAccessToken(token: tokensDecoded.accessToken)
+                        keyChainService.saveRefreshToken(token: tokensDecoded.refreshToken)
+                    }else{
                         continuation.resume(throwing: AuthErrors.unknown)
                     }
                     

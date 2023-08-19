@@ -18,6 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
         let keyChainService = KeyChainStorage()
+        
+        // Delete if refresh token is expired
+        if !keyChainService.isRefreshTokenAvailable(){
+            keyChainService.deleteAccessToken()
+            keyChainService.deleteRefreshToken()
+        }
+        
         let accessToken = keyChainService.getAccessToken()
         let refreshToken = keyChainService.getRefreshToken()
         

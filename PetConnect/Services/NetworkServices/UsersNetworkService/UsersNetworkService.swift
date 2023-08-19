@@ -44,7 +44,9 @@ protocol UsersNetworkServiceProtocol{
 /// Possible errors in Users Network Service
 enum UsersError:Error{
     case emailExist
+    case usernameExist
     case unknown
+    
 }
 
 /// Users Network Service
@@ -108,7 +110,8 @@ class UsersNetworkService:UsersNetworkServiceProtocol{
                             
                         case "Email already exists!":
                             continuation.resume(throwing: UsersError.emailExist)
-                            
+                        case "Username already exists!":
+                            continuation.resume(throwing: UsersError.usernameExist)
                         default:
                             continuation.resume(throwing: UsersError.unknown)
                         }

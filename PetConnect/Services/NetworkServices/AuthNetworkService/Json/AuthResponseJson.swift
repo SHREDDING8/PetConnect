@@ -20,3 +20,8 @@ struct SignInErrorJsonStruct:Decodable{
     let details:String
     let code:Int
 }
+
+struct RefreshTokenResponseJsonStruct:Codable{
+    let accessToken:String
+    let refreshToken:String
+}
