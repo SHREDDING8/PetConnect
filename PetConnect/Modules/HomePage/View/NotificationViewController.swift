@@ -12,7 +12,7 @@ class NotificationViewController: UIViewController {
     // MARK: - Variables
     
     var presenter: NotificationPresenterProtocol?
-    var ready: Bool = false
+    var ready: Bool = true
     
     private lazy var saveButton: UIButton = {
         let button = UIButton()
@@ -58,11 +58,12 @@ class NotificationViewController: UIViewController {
 }
 
 extension NotificationViewController: NotificationViewProtocol{
-    func enableLogInButton() {
+    func enableSaveButton() {
         print("enable")
     }
     
-    
-    
+    func disableSaveButton() {
+        print("disable")
+    }
 }
 

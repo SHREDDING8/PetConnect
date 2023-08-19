@@ -9,7 +9,8 @@ import Foundation
 
 protocol NotificationViewProtocol: AnyObject {
 
-    func enableLogInButton()
+    func enableSaveButton()
+    func disableSaveButton()
     
 }
 
@@ -18,7 +19,7 @@ protocol NotificationPresenterProtocol: AnyObject {
         view: NotificationViewProtocol
     )
     
-    func signInTapped()
+    func savedTapped()
 }
 
 class NotificationPresenter: NotificationPresenterProtocol {
@@ -32,7 +33,8 @@ class NotificationPresenter: NotificationPresenterProtocol {
         self.view = view
     }
     
-    func signInTapped(){
+    func savedTapped(){
+        print("Saved")
     }
     
 }
