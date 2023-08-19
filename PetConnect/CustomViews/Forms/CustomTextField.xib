@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22113.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22089.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTextField" customModule="PetConnect" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="contentView" destination="nb8-6L-heA" id="iRl-nC-Rns"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nb8-6L-heA">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="211"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPU-qr-wKU">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="187.66666666666666"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="loginTextField" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Логин или Email" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="w59-4T-itl">
+                            <rect key="frame" x="16" y="8" width="361" height="171.66666666666666"/>
+                            <color key="backgroundColor" name="foodNotifCell"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="username"/>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="2Yd-yt-5ZK"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="w59-4T-itl" secondAttribute="trailing" constant="16" id="OBU-eU-ox3"/>
+                        <constraint firstItem="w59-4T-itl" firstAttribute="leading" secondItem="lPU-qr-wKU" secondAttribute="leading" constant="16" id="g3P-6T-xaZ"/>
+                        <constraint firstAttribute="bottom" secondItem="w59-4T-itl" secondAttribute="bottom" constant="8" id="qUc-03-dgD"/>
+                        <constraint firstItem="w59-4T-itl" firstAttribute="top" secondItem="lPU-qr-wKU" secondAttribute="top" constant="8" id="vJf-FD-unw"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lrI-uV-L7R">
+                    <rect key="frame" x="16.000000000000007" y="-7" width="96.666666666666686" height="15"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин или Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUt-6U-YXu">
+                            <rect key="frame" x="5" y="0.0" width="86.666666666666671" height="15"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="12"/>
+                            <color key="textColor" name="GreetingGreen"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="QUt-6U-YXu" secondAttribute="trailing" constant="5.0000000000000142" id="5ug-fK-gWI"/>
+                        <constraint firstItem="QUt-6U-YXu" firstAttribute="leading" secondItem="lrI-uV-L7R" secondAttribute="leading" constant="5" id="YYt-eX-GEP"/>
+                        <constraint firstAttribute="height" secondItem="QUt-6U-YXu" secondAttribute="height" id="azB-UA-2mJ"/>
+                        <constraint firstItem="QUt-6U-YXu" firstAttribute="centerY" secondItem="lrI-uV-L7R" secondAttribute="centerY" id="bdl-1r-I6h"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Supproting Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11G-5N-PgI">
+                    <rect key="frame" x="16" y="191.66666666666666" width="361" height="14.333333333333343"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="7uF-Ha-qPW"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="7uF-Ha-qPW" firstAttribute="trailing" secondItem="lPU-qr-wKU" secondAttribute="trailing" id="09R-az-2gl"/>
+                <constraint firstItem="lPU-qr-wKU" firstAttribute="leading" secondItem="7uF-Ha-qPW" secondAttribute="leading" id="MAH-5h-PQR"/>
+                <constraint firstAttribute="trailing" secondItem="11G-5N-PgI" secondAttribute="trailing" constant="16" id="NkM-db-DMU"/>
+                <constraint firstItem="lrI-uV-L7R" firstAttribute="leading" secondItem="nb8-6L-heA" secondAttribute="leading" constant="16" id="O80-up-S9h"/>
+                <constraint firstItem="lrI-uV-L7R" firstAttribute="top" secondItem="nb8-6L-heA" secondAttribute="top" constant="-7" id="QSe-Nu-J0B"/>
+                <constraint firstAttribute="bottom" secondItem="11G-5N-PgI" secondAttribute="bottom" constant="5" id="S7E-du-zGX"/>
+                <constraint firstItem="lPU-qr-wKU" firstAttribute="top" secondItem="nb8-6L-heA" secondAttribute="top" id="cHP-fF-GbY"/>
+                <constraint firstItem="11G-5N-PgI" firstAttribute="leading" secondItem="nb8-6L-heA" secondAttribute="leading" constant="16" id="jwu-7F-cxa"/>
+                <constraint firstItem="11G-5N-PgI" firstAttribute="top" secondItem="lPU-qr-wKU" secondAttribute="bottom" constant="4" id="wFE-9c-SUU"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="640" y="-307"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="GreetingGreen">
+            <color red="0.0" green="0.41999998688697815" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="foodNotifCell">
+            <color red="0.66299998760223389" green="0.7369999885559082" blue="0.66299998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
