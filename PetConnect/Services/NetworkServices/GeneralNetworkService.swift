@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol GeneralNetworkServiceProtocol{
     static var domain:String { get }
@@ -50,8 +51,8 @@ class GeneralNetworkService{
             
         }
         
-        public func getHeaders()->[String:String]{
-            return headers
+        public func getHeaders()->HTTPHeaders{
+            return HTTPHeaders(headers)
         }
         
         public func addAccessTokenHeader(){
