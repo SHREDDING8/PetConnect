@@ -83,7 +83,10 @@ class MainBuilder:MainBuilderProtocol{
     }
     
     static func createProfilePage()->UIViewController{
-        return UINavigationController()
+        let view = ProfileViewController()
+        let presenter = ProfilePresenter(view: view)
+        view.presenter = presenter
+        return BaseNavigationController(rootViewController: view)
     }
     
 }
