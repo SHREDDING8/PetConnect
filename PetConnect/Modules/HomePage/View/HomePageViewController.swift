@@ -11,6 +11,7 @@ final class HomePageViewController: UIViewController {
     
     var homePageView = HomePageView()
     var presenter: HomePagePresenterProtocol!
+    var notifications: [Notification] = []
     
     //MARK: - Life cycles
     override func loadView() {
@@ -27,6 +28,13 @@ final class HomePageViewController: UIViewController {
         presenter.requestPets()
         
         configurePrimaryNavBar(with: "Главная", image: UIImage(named: "kris"))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.notifications = NotificationPlaceholder.notifications
+        //homePageView.notificationsTableView.reloadData()
     }
 }
 
@@ -67,13 +75,14 @@ extension HomePageViewController: PrimaryNavBarViewDelegate {
 
 extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return notifications.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? NotificationsTableViewCell else {
             fatalError("Cell was not found!")
         }
+        cell.configure(img: UIImage(systemName: "person")!, category: notifications[indexPath.row].name, news: notifications[indexPath.row].name)
         
         return cell
     }
