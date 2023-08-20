@@ -13,7 +13,7 @@ protocol ProfileViewProtocol:AnyObject{
 }
 
 protocol ProfilePresenterProtocol: AnyObject {
-    init(view: ProfileViewProtocol, networkService:AuthNetworkService)
+    init(view: ProfileViewProtocol, networkService:AuthNetworkService, keyChainService:KeyChainStorageProtocol)
     func logOutTapped()
 }
 
@@ -21,10 +21,12 @@ class ProfilePresenter: ProfilePresenterProtocol {
     weak var view: ProfileViewProtocol?
 
     var networkService:AuthNetworkService?
+    var keyChainService:KeyChainStorageProtocol?
     
-    required init(view: ProfileViewProtocol, networkService:AuthNetworkService) {
+    required init(view: ProfileViewProtocol, networkService:AuthNetworkService, keyChainService:KeyChainStorageProtocol) {
         self.view = view
         self.networkService = networkService
+        self.keyChainService = keyChainService
     }
     
     func logOutTapped(){
@@ -33,6 +35,8 @@ class ProfilePresenter: ProfilePresenterProtocol {
                 if logOutResult{
                     DispatchQueue.main.async {
                         self.view?.logOutSuccessfull()
+                        self.keyChainService?.deleteAccessToken()
+                        self.keyChainService?.deleteRefreshToken()
                     }
                     
                 }else{
