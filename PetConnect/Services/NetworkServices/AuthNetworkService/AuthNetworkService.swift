@@ -83,10 +83,9 @@ class AuthNetworkService:AuthNetworkServiceProtocol{
         if !refresh { return false }
         
         let result:Bool = try await withCheckedThrowingContinuation { continuation in
-            AF.request(url, headers: headers.getHeaders()).response { response in
+            AF.request(url, method: .post, headers: headers.getHeaders()).response { response in
                 switch response.result {
                 case .success(_):
-                    
                     if response.response?.statusCode == 200{
                         continuation.resume(returning: true)
                     }else{
