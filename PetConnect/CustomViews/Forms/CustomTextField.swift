@@ -83,6 +83,16 @@ open class CustomTextField: UIView {
     open var showUpperLabelWhenTextFieldIsEmpty:Bool = false
     open var showUpperLabelWhenTextFieldIsNotEmty:Bool = true
     
+    open var isEnabled:Bool = true {
+        didSet{
+            if isEnabled{
+                self.enable()
+            }else{
+                self.disable()
+            }
+        }
+    }
+    
     init(cornerRadius:CGFloat, upperText:String, textFieldPlaceholder:String, supportingText:String){
         super.init(frame: CGRectZero)
         self.cornerRadius = cornerRadius
@@ -119,6 +129,7 @@ open class CustomTextField: UIView {
         configureBorder()
         textFieldInit()
         configureUpperLabel()
+        isEnabled = false
     }
     private func initFromNib()->UIView{
         let bundle = Bundle.init(for: CustomTextField.self)
@@ -162,6 +173,17 @@ open class CustomTextField: UIView {
         }else{
             self.upperLabelView.layer.opacity = 0
         }
+    }
+    private func enable(){
+        self.textField.isUserInteractionEnabled = true
+        self.contentView.layer.opacity = 1
+        self.borderView.layer.borderColor = UIColor.black.cgColor
+    }
+    
+    private func disable(){
+        self.textField.isUserInteractionEnabled = false
+        self.contentView.layer.opacity = 0.3
+        self.borderView.layer.borderColor = UIColor.systemGray.cgColor
     }
     
     
