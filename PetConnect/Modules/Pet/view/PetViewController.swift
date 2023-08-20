@@ -64,7 +64,7 @@ class PetViewController: UIViewController {
 
 extension PetViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return Pet.dataSource.count
+    return PetHim.dataSource.count
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -73,9 +73,9 @@ extension PetViewController: UICollectionViewDataSource, UICollectionViewDelegat
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PetCollectionViewCell.cellID, for: indexPath) as! PetCollectionViewCell
-        cell.namePet.text = Pet.dataSource[indexPath.row].name
-        cell.porodaLabel.text = Pet.dataSource[indexPath.row].poroda
-        cell.ageLabel.text = Pet.dataSource[indexPath.row].age
+        cell.namePet.text = PetHim.dataSource[indexPath.row].name
+        cell.porodaLabel.text = PetHim.dataSource[indexPath.row].poroda
+        cell.ageLabel.text = PetHim.dataSource[indexPath.row].age
         cell.imageGender.image = UIImage(named: "buttonAdd")
         cell.imagePet.image = UIImage(named: "buttonAdd")
         return cell

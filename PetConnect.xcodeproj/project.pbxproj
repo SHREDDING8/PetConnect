@@ -52,18 +52,18 @@
 		EE66A18B2A8E2751006947BE /* EmailConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1892A8E2751006947BE /* EmailConfirmationViewController.swift */; };
 		EE66A18C2A8E2751006947BE /* EmailConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE66A18A2A8E2751006947BE /* EmailConfirmationViewController.xib */; };
 		EE66A1912A8E5469006947BE /* EmailConfirmationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE66A1902A8E5469006947BE /* EmailConfirmationPresenter.swift */; };
-		EEAE38C02A92329C00C4661F /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38B22A92329C00C4661F /* Section.swift */; };
-		EEAE38C12A92329C00C4661F /* PetHim.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38B32A92329C00C4661F /* PetHim.swift */; };
-		EEAE38C22A92329C00C4661F /* TableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38B42A92329C00C4661F /* TableInfo.swift */; };
-		EEAE38C32A92329C00C4661F /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38B62A92329C00C4661F /* MenuHeaderView.swift */; };
-		EEAE38C42A92329C00C4661F /* PetMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38B72A92329C00C4661F /* PetMainTableViewCell.swift */; };
-		EEAE38C52A92329C00C4661F /* PetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38B82A92329C00C4661F /* PetViewController.swift */; };
-		EEAE38C62A92329C00C4661F /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38B92A92329C00C4661F /* MenuTableViewCell.swift */; };
-		EEAE38C72A92329C00C4661F /* PetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38BA2A92329C00C4661F /* PetDetailViewController.swift */; };
-		EEAE38C82A92329C00C4661F /* PetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38BC2A92329C00C4661F /* PetTableViewCell.swift */; };
-		EEAE38C92A92329C00C4661F /* ExpandabelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38BD2A92329C00C4661F /* ExpandabelHeaderView.swift */; };
-		EEAE38CA2A92329C00C4661F /* PetCreatePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38BE2A92329C00C4661F /* PetCreatePageViewController.swift */; };
-		EEAE38CB2A92329C00C4661F /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38BF2A92329C00C4661F /* Extention.swift */; };
+		EEAE39002A92382900C4661F /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38F22A92382900C4661F /* MenuHeaderView.swift */; };
+		EEAE39012A92382900C4661F /* PetMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38F32A92382900C4661F /* PetMainTableViewCell.swift */; };
+		EEAE39022A92382900C4661F /* PetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38F42A92382900C4661F /* PetViewController.swift */; };
+		EEAE39032A92382900C4661F /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38F52A92382900C4661F /* MenuTableViewCell.swift */; };
+		EEAE39042A92382900C4661F /* PetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38F62A92382900C4661F /* PetDetailViewController.swift */; };
+		EEAE39052A92382900C4661F /* PetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38F82A92382900C4661F /* PetTableViewCell.swift */; };
+		EEAE39062A92382900C4661F /* ExpandabelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38F92A92382900C4661F /* ExpandabelHeaderView.swift */; };
+		EEAE39072A92382900C4661F /* PetCreatePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38FA2A92382900C4661F /* PetCreatePageViewController.swift */; };
+		EEAE39082A92382900C4661F /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38FB2A92382900C4661F /* Extention.swift */; };
+		EEAE39092A92382900C4661F /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38FD2A92382900C4661F /* Section.swift */; };
+		EEAE390A2A92382900C4661F /* PetHim.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38FE2A92382900C4661F /* PetHim.swift */; };
+		EEAE390B2A92382900C4661F /* TableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEAE38FF2A92382900C4661F /* TableInfo.swift */; };
 		EEDC7F692A8A5ED0008CBD72 /* signInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F682A8A5ECF008CBD72 /* signInModel.swift */; };
 		EEDC7F6C2A8A6A0B008CBD72 /* GeneralNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F6B2A8A6A0B008CBD72 /* GeneralNetworkService.swift */; };
 		EEDC7F6F2A8A6B37008CBD72 /* AuthNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */; };
@@ -130,18 +130,18 @@
 		EE66A1892A8E2751006947BE /* EmailConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailConfirmationViewController.swift; sourceTree = "<group>"; };
 		EE66A18A2A8E2751006947BE /* EmailConfirmationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmailConfirmationViewController.xib; sourceTree = "<group>"; };
 		EE66A1902A8E5469006947BE /* EmailConfirmationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailConfirmationPresenter.swift; sourceTree = "<group>"; };
-		EEAE38B22A92329C00C4661F /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
-		EEAE38B32A92329C00C4661F /* PetHim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetHim.swift; sourceTree = "<group>"; };
-		EEAE38B42A92329C00C4661F /* TableInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableInfo.swift; sourceTree = "<group>"; };
-		EEAE38B62A92329C00C4661F /* MenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
-		EEAE38B72A92329C00C4661F /* PetMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetMainTableViewCell.swift; sourceTree = "<group>"; };
-		EEAE38B82A92329C00C4661F /* PetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetViewController.swift; sourceTree = "<group>"; };
-		EEAE38B92A92329C00C4661F /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
-		EEAE38BA2A92329C00C4661F /* PetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailViewController.swift; sourceTree = "<group>"; };
-		EEAE38BC2A92329C00C4661F /* PetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTableViewCell.swift; sourceTree = "<group>"; };
-		EEAE38BD2A92329C00C4661F /* ExpandabelHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandabelHeaderView.swift; sourceTree = "<group>"; };
-		EEAE38BE2A92329C00C4661F /* PetCreatePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetCreatePageViewController.swift; sourceTree = "<group>"; };
-		EEAE38BF2A92329C00C4661F /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
+		EEAE38F22A92382900C4661F /* MenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
+		EEAE38F32A92382900C4661F /* PetMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetMainTableViewCell.swift; sourceTree = "<group>"; };
+		EEAE38F42A92382900C4661F /* PetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetViewController.swift; sourceTree = "<group>"; };
+		EEAE38F52A92382900C4661F /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		EEAE38F62A92382900C4661F /* PetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailViewController.swift; sourceTree = "<group>"; };
+		EEAE38F82A92382900C4661F /* PetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetTableViewCell.swift; sourceTree = "<group>"; };
+		EEAE38F92A92382900C4661F /* ExpandabelHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandabelHeaderView.swift; sourceTree = "<group>"; };
+		EEAE38FA2A92382900C4661F /* PetCreatePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetCreatePageViewController.swift; sourceTree = "<group>"; };
+		EEAE38FB2A92382900C4661F /* Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
+		EEAE38FD2A92382900C4661F /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		EEAE38FE2A92382900C4661F /* PetHim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetHim.swift; sourceTree = "<group>"; };
+		EEAE38FF2A92382900C4661F /* TableInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableInfo.swift; sourceTree = "<group>"; };
 		EEDC7F682A8A5ECF008CBD72 /* signInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInModel.swift; sourceTree = "<group>"; };
 		EEDC7F6B2A8A6A0B008CBD72 /* GeneralNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralNetworkService.swift; sourceTree = "<group>"; };
 		EEDC7F6E2A8A6B37008CBD72 /* AuthNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthNetworkService.swift; sourceTree = "<group>"; };
@@ -475,44 +475,44 @@
 		EEAE38B02A92329C00C4661F /* Pet */ = {
 			isa = PBXGroup;
 			children = (
-				EEAE38B12A92329C00C4661F /* model */,
-				EEAE38B52A92329C00C4661F /* view */,
-				EEAE38BF2A92329C00C4661F /* Extention.swift */,
+				EEAE38FB2A92382900C4661F /* Extention.swift */,
+				EEAE38FC2A92382900C4661F /* model */,
+				EEAE38F12A92382900C4661F /* view */,
 			);
 			path = Pet;
 			sourceTree = "<group>";
 		};
-		EEAE38B12A92329C00C4661F /* model */ = {
+		EEAE38F12A92382900C4661F /* view */ = {
 			isa = PBXGroup;
 			children = (
-				EEAE38B22A92329C00C4661F /* Section.swift */,
-				EEAE38B32A92329C00C4661F /* PetHim.swift */,
-				EEAE38B42A92329C00C4661F /* TableInfo.swift */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		EEAE38B52A92329C00C4661F /* view */ = {
-			isa = PBXGroup;
-			children = (
-				EEAE38B62A92329C00C4661F /* MenuHeaderView.swift */,
-				EEAE38B72A92329C00C4661F /* PetMainTableViewCell.swift */,
-				EEAE38B82A92329C00C4661F /* PetViewController.swift */,
-				EEAE38B92A92329C00C4661F /* MenuTableViewCell.swift */,
-				EEAE38BA2A92329C00C4661F /* PetDetailViewController.swift */,
-				EEAE38BB2A92329C00C4661F /* addPet */,
+				EEAE38F22A92382900C4661F /* MenuHeaderView.swift */,
+				EEAE38F32A92382900C4661F /* PetMainTableViewCell.swift */,
+				EEAE38F42A92382900C4661F /* PetViewController.swift */,
+				EEAE38F52A92382900C4661F /* MenuTableViewCell.swift */,
+				EEAE38F62A92382900C4661F /* PetDetailViewController.swift */,
+				EEAE38F72A92382900C4661F /* addPet */,
 			);
 			path = view;
 			sourceTree = "<group>";
 		};
-		EEAE38BB2A92329C00C4661F /* addPet */ = {
+		EEAE38F72A92382900C4661F /* addPet */ = {
 			isa = PBXGroup;
 			children = (
-				EEAE38BC2A92329C00C4661F /* PetTableViewCell.swift */,
-				EEAE38BD2A92329C00C4661F /* ExpandabelHeaderView.swift */,
-				EEAE38BE2A92329C00C4661F /* PetCreatePageViewController.swift */,
+				EEAE38F82A92382900C4661F /* PetTableViewCell.swift */,
+				EEAE38F92A92382900C4661F /* ExpandabelHeaderView.swift */,
+				EEAE38FA2A92382900C4661F /* PetCreatePageViewController.swift */,
 			);
 			path = addPet;
+			sourceTree = "<group>";
+		};
+		EEAE38FC2A92382900C4661F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				EEAE38FD2A92382900C4661F /* Section.swift */,
+				EEAE38FE2A92382900C4661F /* PetHim.swift */,
+				EEAE38FF2A92382900C4661F /* TableInfo.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		EEDC7F6A2A8A69C5008CBD72 /* NetworkServices */ = {
@@ -706,38 +706,37 @@
 			files = (
 				EEF75DBF2A8EAB68000F1C3A /* UIViewController Extention.swift.swift in Sources */,
 				EEDC7F6F2A8A6B37008CBD72 /* AuthNetworkService.swift in Sources */,
+				EEAE39062A92382900C4661F /* ExpandabelHeaderView.swift in Sources */,
 				EE5ABC5B2A8A467A00E762D6 /* SignInViewController.swift in Sources */,
 				EEDC7F692A8A5ED0008CBD72 /* signInModel.swift in Sources */,
 				EE66A1832A8D9741006947BE /* UsersNetworkService.swift in Sources */,
-				EEAE38C92A92329C00C4661F /* ExpandabelHeaderView.swift in Sources */,
+				EEAE39052A92382900C4661F /* PetTableViewCell.swift in Sources */,
 				EE5ABC542A8A442500E762D6 /* AuthBuilder.swift in Sources */,
+				EEAE39012A92382900C4661F /* PetMainTableViewCell.swift in Sources */,
+				EEAE39082A92382900C4661F /* Extention.swift in Sources */,
 				CAA573592A91107E00433DBC /* NotificationViewController.swift in Sources */,
 				848E405D2A87F55A0014D704 /* BaseNavigationController.swift in Sources */,
-				EEAE38C22A92329C00C4661F /* TableInfo.swift in Sources */,
 				EE5ABC252A89795B00E762D6 /* GreetingViewController.swift in Sources */,
 				EEFA9AF82A8A92AE00EA95A5 /* SignUpViewController.swift in Sources */,
-				EEAE38C02A92329C00C4661F /* Section.swift in Sources */,
+				EEAE390A2A92382900C4661F /* PetHim.swift in Sources */,
 				EE5ABC582A8A464B00E762D6 /* SignInPresenter.swift in Sources */,
 				EEFA9AFB2A8A964700EA95A5 /* signUpPresenter.swift in Sources */,
-				EEAE38CA2A92329C00C4661F /* PetCreatePageViewController.swift in Sources */,
 				EE66A1882A8D9764006947BE /* ResponseJsonStructs.swift in Sources */,
-				EEAE38C72A92329C00C4661F /* PetDetailViewController.swift in Sources */,
-				EEAE38C12A92329C00C4661F /* PetHim.swift in Sources */,
 				EEDC7F722A8A6D1E008CBD72 /* AuthrequestJson.swift in Sources */,
+				EEAE39042A92382900C4661F /* PetDetailViewController.swift in Sources */,
 				CAA573552A910D4200433DBC /* HomePageBuilder.swift in Sources */,
-				EEAE38C52A92329C00C4661F /* PetViewController.swift in Sources */,
 				EEF75DBB2A8E7734000F1C3A /* TextField Extension.swift in Sources */,
 				CAA573512A90B79400433DBC /* ProfilePresenter.swift in Sources */,
+				EEAE39072A92382900C4661F /* PetCreatePageViewController.swift in Sources */,
 				EE22A3A12A87AE9800DAF44C /* MainTabBarViewController.swift in Sources */,
 				EE66A1862A8D9757006947BE /* RequestJsonStructs.swift in Sources */,
-				EEAE38CB2A92329C00C4661F /* Extention.swift in Sources */,
-				EEAE38C32A92329C00C4661F /* MenuHeaderView.swift in Sources */,
+				EEAE39022A92382900C4661F /* PetViewController.swift in Sources */,
 				EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */,
 				CAA573532A90B82E00433DBC /* ProfileViewController.swift in Sources */,
 				EE5ABC522A89D20600E762D6 /* GreetingPresenter.swift in Sources */,
-				EEAE38C82A92329C00C4661F /* PetTableViewCell.swift in Sources */,
+				EEAE390B2A92382900C4661F /* TableInfo.swift in Sources */,
+				EEAE39032A92382900C4661F /* MenuTableViewCell.swift in Sources */,
 				EEF75DBD2A8EA57B000F1C3A /* Ui Window Extension.swift in Sources */,
-				EEAE38C62A92329C00C4661F /* MenuTableViewCell.swift in Sources */,
 				EEFA9AFD2A8ACDA000EA95A5 /* SignUpModel.swift in Sources */,
 				EE66A1912A8E5469006947BE /* EmailConfirmationPresenter.swift in Sources */,
 				EE364A702A901E10008A8796 /* CustomTextField.swift in Sources */,
@@ -746,14 +745,15 @@
 				EEFA9AF42A8A8AB200EA95A5 /* AuthResponseJson.swift in Sources */,
 				EE66A18B2A8E2751006947BE /* EmailConfirmationViewController.swift in Sources */,
 				EE364A6C2A8F9BC1008A8796 /* KeyChainStorage.swift in Sources */,
+				EEAE39002A92382900C4661F /* MenuHeaderView.swift in Sources */,
 				848E406C2A8A16710014D704 /* NotificationsTableViewCell.swift in Sources */,
 				EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */,
 				CAA573572A910E7E00433DBC /* NotificationPresenter.swift in Sources */,
 				848E40552A87F2DF0014D704 /* HomePageProtocols.swift in Sources */,
 				EE22A3A32A87AEAB00DAF44C /* MainBuilder.swift in Sources */,
+				EEAE39092A92382900C4661F /* Section.swift in Sources */,
 				848E40572A87F3060014D704 /* HomePageView.swift in Sources */,
 				EEF75DC12A8F8D94000F1C3A /* UIView Extension.swift in Sources */,
-				EEAE38C42A92329C00C4661F /* PetMainTableViewCell.swift in Sources */,
 				848E40672A88DBE90014D704 /* PetsCollectionViewCell.swift in Sources */,
 				848E40652A88DBDC0014D704 /* PetsCollectionView.swift in Sources */,
 				848E40612A880E700014D704 /* PrimaryNavBarView.swift in Sources */,

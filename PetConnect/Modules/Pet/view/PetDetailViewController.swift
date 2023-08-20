@@ -271,9 +271,9 @@ extension PetDetailViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     if section == 2 {
-      return Pet.dataSource[0].chip != nil ? 3 : 0
+      return PetHim.dataSource[0].chip != nil ? 3 : 0
     } else if section == 3 {
-      return Pet.dataSource[0].cleimo != nil ? 2 : 0
+      return PetHim.dataSource[0].cleimo != nil ? 2 : 0
     } else {
       return 1
     }
@@ -281,7 +281,7 @@ extension PetDetailViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = MenuTableViewCell()
-    let pet = Pet.dataSource[0]
+    let pet = PetHim.dataSource[0]
     if indexPath.section == 0 {
       cell.descLabel.text = "Пол"
       cell.detailLabel.text = pet.imageGender

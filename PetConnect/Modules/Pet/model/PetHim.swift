@@ -28,10 +28,10 @@ struct PetHim {
   let cleimo: Cleimo?
   
   static let dataSource = [
-    PetHim(name: "Беляш", age: "2 года 3 месяца", poroda: "Мопс", imageGender: "male", imagePet: "chubaka",
+    PetHim(name: "Беляш", age: "2 года 3 месяца", poroda: "Мопс", imageGender: "male", imagePet: "mops",
         chip: Chip(number: "DSSDF7V6AA", date: "22.07.2020", mesto: "Задняя левая лапа"),
         cleimo: Cleimo(number: "DSSDF7V6AA", date: "22.07.2020")),
-    PetHim(name: "Бэлла", age: "1 год", poroda: "Пудель", imageGender: "female", imagePet: "bella", chip: nil, cleimo: nil)
+    PetHim(name: "Бэлла", age: "1 год", poroda: "Пудель", imageGender: "female", imagePet: "pudel", chip: nil, cleimo: nil)
   ]
 }
 
