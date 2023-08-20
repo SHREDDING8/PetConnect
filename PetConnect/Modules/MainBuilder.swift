@@ -75,7 +75,7 @@ class MainBuilder:MainBuilderProtocol{
     }
     
     static func createPetPage()->UIViewController{
-        return UINavigationController()
+        return BaseNavigationController(rootViewController: PetViewController())
     }
     
     static func createWalkPage()->UIViewController{
@@ -84,7 +84,8 @@ class MainBuilder:MainBuilderProtocol{
     
     static func createProfilePage()->UIViewController{
         let view = ProfileViewController()
-        let presenter = ProfilePresenter(view: view)
+        let networkService = AuthNetworkService()
+        let presenter = ProfilePresenter(view: view, networkService: networkService)
         view.presenter = presenter
         return BaseNavigationController(rootViewController: view)
     }
