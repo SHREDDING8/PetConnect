@@ -20,6 +20,17 @@ class GeneralNetworkService{
     public enum ControllersUrls{
         static let auth =  GeneralNetworkService.domain + "auth/"
         static let users = GeneralNetworkService.domain + "users/"
+        static let pets = GeneralNetworkService.domain + "pets/"
+        static func tablet(petId:Int)->String{
+            return GeneralNetworkService.domain + "pets/\(petId)/tablets/"
+        }
+        static func fodder(petId:Int)->String{
+            return GeneralNetworkService.domain + "pets/\(petId)/fodders/"
+        }
+        static func identifications(petId:Int)->String{
+            return GeneralNetworkService.domain + "pets/\(petId)/identifications/"
+        }
+        static let walkinMarker = GeneralNetworkService.domain + "walking-marker"
     }
     
     /// Possible urls for auth controller
