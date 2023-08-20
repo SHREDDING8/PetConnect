@@ -77,20 +77,6 @@
                         <constraint firstItem="C0D-bW-A1s" firstAttribute="leading" secondItem="Y9z-Xh-ik6" secondAttribute="leading" constant="16" id="tYt-lY-usv"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qqn-rh-GWI" customClass="CustomTextField" customModule="PetConnect" customModuleProvider="target">
-                    <rect key="frame" x="20" y="271" width="390" height="80"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="80" id="hF9-0s-IbW"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Логин или Email"/>
-                        <userDefinedRuntimeAttribute type="string" keyPath="upperText" value="Логин или Email"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="28"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </view>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин или Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Brf-lR-0C7">
                     <rect key="frame" x="36" y="77" width="95" height="14"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -144,15 +130,12 @@
                 <constraint firstItem="Brf-lR-0C7" firstAttribute="top" secondItem="uoH-0h-u5b" secondAttribute="top" constant="-7" id="M6c-l8-0Pw"/>
                 <constraint firstItem="cjI-Js-zFr" firstAttribute="top" secondItem="Y9z-Xh-ik6" secondAttribute="top" constant="-7" id="N2w-Iz-kpE"/>
                 <constraint firstItem="Nea-mz-y2G" firstAttribute="top" secondItem="Y9z-Xh-ik6" secondAttribute="bottom" constant="12" id="Rji-J6-AKK"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Qqn-rh-GWI" secondAttribute="trailing" constant="20" id="SLt-xu-7q5"/>
                 <constraint firstItem="z82-Ds-mp3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="UTo-gn-k8r"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Y9z-Xh-ik6" secondAttribute="trailing" constant="20" id="fbh-vJ-cfT"/>
                 <constraint firstItem="uoH-0h-u5b" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="glZ-ef-dp0"/>
                 <constraint firstItem="Brf-lR-0C7" firstAttribute="leading" secondItem="uoH-0h-u5b" secondAttribute="leading" constant="16" id="hOX-tU-qwI"/>
                 <constraint firstItem="Y9z-Xh-ik6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="iRK-ZL-AkD"/>
                 <constraint firstItem="Y9z-Xh-ik6" firstAttribute="top" secondItem="uoH-0h-u5b" secondAttribute="bottom" constant="16" id="l9f-JX-iE3"/>
-                <constraint firstItem="Qqn-rh-GWI" firstAttribute="top" secondItem="Nea-mz-y2G" secondAttribute="bottom" constant="25" id="noA-sI-4zO"/>
-                <constraint firstItem="Qqn-rh-GWI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="oTp-Pq-67r"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uoH-0h-u5b" secondAttribute="trailing" constant="20" id="vo2-oa-6jR"/>
                 <constraint firstItem="uoH-0h-u5b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zAz-Ja-Ley"/>
             </constraints>

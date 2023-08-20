@@ -33,7 +33,9 @@ class NotificationPresenter: NotificationPresenterProtocol {
         self.view = view
     }
     
-    func savedTapped(){
+    func savedTapped() {
+        var newNotification = Notification(name: "Name")
+        NotificationPlaceholder.notifications.append(newNotification)
         print("Saved")
     }
     
