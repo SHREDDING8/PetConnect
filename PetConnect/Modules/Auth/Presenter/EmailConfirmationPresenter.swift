@@ -28,6 +28,8 @@ protocol EmailConfirmationPresenterProtocol:AnyObject{
     
     func confirmTapped()
     func resendTapped()
+    func setEmail(email:String)
+    func isValidEmail()->Bool
     
 }
 class EmailConfirmationPresenter:EmailConfirmationPresenterProtocol{
@@ -35,7 +37,7 @@ class EmailConfirmationPresenter:EmailConfirmationPresenterProtocol{
     let networkService:UsersNetworkServiceProtocol?
     var authNetworkService:AuthNetworkServiceProtocol?
     var keyChainService:KeyChainStorageProtocol?
-    let email:String!
+    var email:String!
     let password:String!
     var passCode:[Int] = []
     
@@ -96,6 +98,14 @@ class EmailConfirmationPresenter:EmailConfirmationPresenterProtocol{
             }
             
         }
+    }
+    
+    func setEmail(email:String){
+        self.email = email
+    }
+    
+    func isValidEmail()->Bool{
+        return AuthValidation.validateEmail(value: self.email)
     }
     
 }

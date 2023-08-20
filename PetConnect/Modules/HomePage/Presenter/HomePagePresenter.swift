@@ -17,12 +17,12 @@ class HomePagePresenter: HomePagePresenterProtocol {
 }
 
 //MARK: - Functions for debug
+
 private extension HomePagePresenter {
     func obtainPetsArray() -> [Pet] {
         return [Pet(name: "Чубака", photo: UIImage(named: "chubaka")),
                 Pet(name: "Кристофер", photo: UIImage(named: "kris")),
                 Pet(name: "Бэлла", photo: UIImage(named: "bella")),
                 Pet(name: "Чубака", photo: UIImage(named: "chubaka"))]
-//        return []
     }
 }

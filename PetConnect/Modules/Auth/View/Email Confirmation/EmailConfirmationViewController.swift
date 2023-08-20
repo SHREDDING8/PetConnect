@@ -38,6 +38,11 @@ class EmailConfirmationViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         self.firstDigitTextField.becomeFirstResponder()
+        
+        if !(presenter?.isValidEmail() ?? false){
+            self.showEnterEmailAlert()
+        }
+        
     }
     
     
@@ -122,6 +127,24 @@ class EmailConfirmationViewController: UIViewController {
             textField.resignFirstResponder()
         }
         textField.isUserInteractionEnabled = false
+    }
+    
+    func showEnterEmailAlert(){
+        let alert = UIAlertController(title: "Ваш аккаунт не активирован", message: "Введите ваш Email", preferredStyle: .alert)
+        alert.addTextField()
+        let actionSend = UIAlertAction(title: "Отправить код подтверждения", style: .default) { action in
+            
+            self.presenter?.setEmail(email: alert.textFields?[0].text ?? "")
+            self.presenter?.resendTapped()
+        }
+        actionSend.isEnabled = false
+        
+        NotificationCenter.default.addObserver(forName: UITextField.textDidChangeNotification, object: alert.textFields?.first, queue: .main) { _ in
+            actionSend.isEnabled =  AuthValidation.validateEmail(value: alert.textFields?.first?.text ?? "")
+        }
+        
+        alert.addAction(actionSend)
+        self.present(alert, animated: true)
     }
     
 }
