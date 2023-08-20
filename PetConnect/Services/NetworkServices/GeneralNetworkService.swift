@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol GeneralNetworkServiceProtocol{
     static var domain:String { get }
@@ -39,5 +40,27 @@ class GeneralNetworkService{
         
         static let activation = ControllersUrls.users + "activation"
         static let activationResend = ControllersUrls.users + "activation/resend"
+    }
+        
+    public class Headers{
+        private var headers:[String:String] = [:]
+        
+        private enum Keys{
+            static let deviceId = "deviceId"
+            static let accessToken = "Authorization"
+            
+        }
+        
+        public func getHeaders()->HTTPHeaders{
+            return HTTPHeaders(headers)
+        }
+        
+        public func addAccessTokenHeader(){
+            
+            let keyChainService = KeyChainStorage()
+            
+            headers[Keys.accessToken] = "Bearer \(keyChainService.getAccessToken() ?? "")"
+        }
+        
     }
 }

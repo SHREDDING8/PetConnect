@@ -105,7 +105,7 @@ class NotificationViewController: UIViewController {
     @objc func saveNotifications() {
         presenter?.savedTapped()
     }
-    
+
 }
 
 extension NotificationViewController: NotificationViewProtocol{
