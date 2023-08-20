@@ -19,6 +19,7 @@ protocol ProfilePresenterProtocol: AnyObject {
 
 class ProfilePresenter: ProfilePresenterProtocol {
     weak var view: ProfileViewProtocol?
+
     var networkService:AuthNetworkService?
     
     required init(view: ProfileViewProtocol, networkService:AuthNetworkService) {

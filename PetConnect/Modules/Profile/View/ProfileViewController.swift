@@ -277,7 +277,6 @@ class ProfileViewController: UIViewController {
         
         return constraints
     }
-    
     @objc func logOutTapped(){
         print(123)
         presenter?.logOutTapped()
