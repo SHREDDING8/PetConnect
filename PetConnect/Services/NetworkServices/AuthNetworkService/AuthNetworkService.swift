@@ -26,6 +26,7 @@ protocol AuthNetworkServiceProtocol{
     ///   - password: password value
     /// - Returns: (accessToken, refreshToken)
     func signIn(login:String,password:String) async throws -> (String, String)
+    func logOut() async throws -> Bool
     
     static func refreshToken() async throws -> Bool
     
@@ -72,6 +73,35 @@ class AuthNetworkService:AuthNetworkServiceProtocol{
         return result
     }
     
+    func logOut() async throws -> Bool{
+        let url = URL(string: GeneralNetworkService.AuthControllerUrls.logout)!
+        
+        let headers = GeneralNetworkService.Headers()
+        headers.addAccessTokenHeader()
+        
+        let refresh = try await AuthNetworkService.refreshToken()
+        if !refresh { return false }
+        
+        let result:Bool = try await withCheckedThrowingContinuation { continuation in
+            AF.request(url, method: .post, headers: headers.getHeaders()).response { response in
+                switch response.result {
+                case .success(_):
+                    if response.response?.statusCode == 200{
+                        continuation.resume(returning: true)
+                    }else{
+                        continuation.resume(returning: false)
+                    }
+                    
+                case .failure(_):
+                    
+                    continuation.resume(returning: false)
+                }
+            }
+        }
+        
+        return result
+    }
+    
     
     static func refreshToken() async throws -> Bool{
         
@@ -93,6 +123,7 @@ class AuthNetworkService:AuthNetworkServiceProtocol{
                         
                         keyChainService.saveAccessToken(token: tokensDecoded.accessToken)
                         keyChainService.saveRefreshToken(token: tokensDecoded.refreshToken)
+                        continuation.resume(returning: true)
                     }else{
                         continuation.resume(throwing: AuthErrors.unknown)
                     }
