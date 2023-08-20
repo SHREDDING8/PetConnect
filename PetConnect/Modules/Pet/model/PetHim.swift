@@ -27,7 +27,7 @@ struct PetHim {
   let chip: Chip?
   let cleimo: Cleimo?
   
-  static let dataSource = [
+  static var dataSource = [
     PetHim(name: "Беляш", age: "2 года 3 месяца", poroda: "Мопс", imageGender: "male", imagePet: "chubaka",
         chip: Chip(number: "DSSDF7V6AA", date: "22.07.2020", mesto: "Задняя левая лапа"),
         cleimo: Cleimo(number: "DSSDF7V6AA", date: "22.07.2020")),
