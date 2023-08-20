@@ -75,7 +75,8 @@ class MainBuilder:MainBuilderProtocol{
     }
     
     static func createPetPage()->UIViewController{
-        return UINavigationController(rootViewController: PetViewController())
+        return UINavigationController()
+//        return UINavigationController(rootViewController: PetViewController())
     }
     
     static func createWalkPage()->UIViewController{
