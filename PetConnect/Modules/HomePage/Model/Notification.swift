@@ -8,5 +8,11 @@
 import Foundation
 
 struct Notification {
+    var name: String
+    
+}
+
+class NotificationPlaceholder {
+    static var notifications: [Notification] = []
     
 }
