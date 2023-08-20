@@ -11,6 +11,7 @@ final class HomePageViewController: UIViewController {
     
     var homePageView = HomePageView()
     var presenter: HomePagePresenterProtocol!
+    var notifications: [Notification] = []
     
     //MARK: - Life cycles
     override func loadView() {
@@ -67,7 +68,7 @@ extension HomePageViewController: PrimaryNavBarViewDelegate {
 
 extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return notifications.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

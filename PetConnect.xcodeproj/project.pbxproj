@@ -24,6 +24,7 @@
 		CAA573552A910D4200433DBC /* HomePageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA573542A910D4200433DBC /* HomePageBuilder.swift */; };
 		CAA573572A910E7E00433DBC /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA573562A910E7E00433DBC /* NotificationPresenter.swift */; };
 		CAA573592A91107E00433DBC /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA573582A91107E00433DBC /* NotificationViewController.swift */; };
+		CACE7E192A9221250080ECFD /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACE7E182A9221250080ECFD /* Notification.swift */; };
 		EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A3892A87AB6000DAF44C /* AppDelegate.swift */; };
 		EE22A38C2A87AB6000DAF44C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE22A38B2A87AB6000DAF44C /* SceneDelegate.swift */; };
 		EE22A3932A87AB6200DAF44C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE22A3922A87AB6200DAF44C /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		CAA573542A910D4200433DBC /* HomePageBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageBuilder.swift; sourceTree = "<group>"; };
 		CAA573562A910E7E00433DBC /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
 		CAA573582A91107E00433DBC /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		CACE7E182A9221250080ECFD /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		DFA296A3C4A310183E7641D7 /* Pods_PetConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE22A3862A87AB6000DAF44C /* PetConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE22A3892A87AB6000DAF44C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -202,39 +204,7 @@
 			children = (
 				848E40692A88DE660014D704 /* Pet.swift */,
 				CAA573542A910D4200433DBC /* HomePageBuilder.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CAA5734C2A8FE8B700433DBC /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				CAA5734F2A90B6DE00433DBC /* Model */,
-				CAA5734E2A90B6D000433DBC /* View */,
-				CAA5734D2A90B6C400433DBC /* Presenter */,
-			);
-			path = Profile;
-			sourceTree = "<group>";
-		};
-		CAA5734D2A90B6C400433DBC /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				CAA573502A90B79400433DBC /* ProfilePresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		CAA5734E2A90B6D000433DBC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CAA573522A90B82E00433DBC /* ProfileViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CAA5734F2A90B6DE00433DBC /* Model */ = {
-			isa = PBXGroup;
-			children = (
+				CACE7E182A9221250080ECFD /* Notification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -674,6 +644,7 @@
 				EE5ABC5B2A8A467A00E762D6 /* SignInViewController.swift in Sources */,
 				EEDC7F692A8A5ED0008CBD72 /* signInModel.swift in Sources */,
 				EE66A1832A8D9741006947BE /* UsersNetworkService.swift in Sources */,
+				CACE7E192A9221250080ECFD /* Notification.swift in Sources */,
 				EE5ABC542A8A442500E762D6 /* AuthBuilder.swift in Sources */,
 				CAA573592A91107E00433DBC /* NotificationViewController.swift in Sources */,
 				848E405D2A87F55A0014D704 /* BaseNavigationController.swift in Sources */,
