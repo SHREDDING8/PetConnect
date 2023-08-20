@@ -19,6 +19,7 @@ class NotificationViewController: UIViewController {
     
     private lazy var saveButton: UIButton = {
         let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Сохранить", for: .normal)
         button.titleLabel?.textAlignment = .center
         button.backgroundColor = ready ? UIColor(named: "primary") : UIColor(named: "on-surface")?.withAlphaComponent(0.12)
@@ -31,6 +32,7 @@ class NotificationViewController: UIViewController {
         
         configureNavBar()
         setUpView()
+        
     }
     
     fileprivate func configureNavBar(){
@@ -44,7 +46,9 @@ class NotificationViewController: UIViewController {
     func setUpView() {
         view.addSubview(saveButton)
         view.addSubview(name)
-        //view.addSubview(date)
+        view.addSubview(date)
+        name.translatesAutoresizingMaskIntoConstraints = false
+        date.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(staticConstraints())
     }
     
@@ -53,15 +57,16 @@ class NotificationViewController: UIViewController {
         
         constraints.append(contentsOf: [
             saveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            saveButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
-            saveButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 61),
+            saveButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
+            saveButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 50),
             name.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            name.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            name.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
+            name.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
+            name.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             name.heightAnchor.constraint(equalToConstant: 80),
-//            date.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 16),
-//            date.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            date.heightAnchor.constraint(equalToConstant: 80),
+            date.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 0),
+            date.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
+            date.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            date.heightAnchor.constraint(equalToConstant: 80),
             ])
         
         return constraints
