@@ -161,6 +161,10 @@ class ProfileViewController: UIViewController {
         
         //self.navigationItem.largeTitleDisplayMode = .never
         
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(logOutTapped))
+        self.logoutLablel.isUserInteractionEnabled = true
+        self.logoutLablel.addGestureRecognizer(gesture)
+        
         setUpView()
     }
     
@@ -274,9 +278,27 @@ class ProfileViewController: UIViewController {
         return constraints
     }
     
+    @objc func logOutTapped(){
+        print(123)
+        presenter?.logOutTapped()
+    }
+    
 }
 
 extension ProfileViewController: ProfileViewProtocol{
+    func logOutSuccessfull() {
+        MainBuilder.setAuthWindow(window: self.view.window)
+    }
+    
+    func logOutError() {
+        let alert = UIAlertController(title: "Ошибка", message: "Повторите попытку", preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "Ok", style: .default)
+        alert.addAction(ok)
+        
+        self.present(alert, animated: true)
+    }
+    
     
 }
 
