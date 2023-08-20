@@ -13,7 +13,7 @@
 		7DD8F7FD2A910CF300D4A0BC /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8F7FB2A910CF300D4A0BC /* Section.swift */; };
 		7DD8F7FE2A910CF300D4A0BC /* TableInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8F7FC2A910CF300D4A0BC /* TableInfo.swift */; };
 		7DD8F8092A910D1B00D4A0BC /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8F8002A910D1A00D4A0BC /* MenuHeaderView.swift */; };
-		7DD8F80A2A910D1B00D4A0BC /* PetMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8F8012A910D1A00D4A0BC /* PetMainTableViewCell.swift */; };
+		7DD8F80A2A910D1B00D4A0BC /* PetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8F8012A910D1A00D4A0BC /* PetCollectionViewCell.swift */; };
 		7DD8F80B2A910D1B00D4A0BC /* PetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8F8022A910D1A00D4A0BC /* PetViewController.swift */; };
 		7DD8F80C2A910D1B00D4A0BC /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8F8032A910D1A00D4A0BC /* MenuTableViewCell.swift */; };
 		7DD8F80D2A910D1B00D4A0BC /* PetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8F8042A910D1A00D4A0BC /* PetDetailViewController.swift */; };
@@ -82,7 +82,7 @@
 		7DD8F7FB2A910CF300D4A0BC /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Section.swift; path = ../../../../../../../Desktop/Pet/model/Section.swift; sourceTree = "<group>"; };
 		7DD8F7FC2A910CF300D4A0BC /* TableInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableInfo.swift; path = ../../../../../../../Desktop/Pet/model/TableInfo.swift; sourceTree = "<group>"; };
 		7DD8F8002A910D1A00D4A0BC /* MenuHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
-		7DD8F8012A910D1A00D4A0BC /* PetMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetMainTableViewCell.swift; sourceTree = "<group>"; };
+		7DD8F8012A910D1A00D4A0BC /* PetCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetCollectionViewCell.swift; sourceTree = "<group>"; };
 		7DD8F8022A910D1A00D4A0BC /* PetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetViewController.swift; sourceTree = "<group>"; };
 		7DD8F8032A910D1A00D4A0BC /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		7DD8F8042A910D1A00D4A0BC /* PetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailViewController.swift; sourceTree = "<group>"; };
@@ -200,11 +200,9 @@
 		7DD8F7FF2A910D1A00D4A0BC /* view */ = {
 			isa = PBXGroup;
 			children = (
-				7DD8F8002A910D1A00D4A0BC /* MenuHeaderView.swift */,
-				7DD8F8012A910D1A00D4A0BC /* PetMainTableViewCell.swift */,
+				7DD8F8012A910D1A00D4A0BC /* PetCollectionViewCell.swift */,
 				7DD8F8022A910D1A00D4A0BC /* PetViewController.swift */,
-				7DD8F8032A910D1A00D4A0BC /* MenuTableViewCell.swift */,
-				7DD8F8042A910D1A00D4A0BC /* PetDetailViewController.swift */,
+				7DD8F8122A91EC4000D4A0BC /* DetailPet */,
 				7DD8F8052A910D1A00D4A0BC /* addPet */,
 			);
 			name = view;
@@ -219,6 +217,16 @@
 				7DD8F8082A910D1A00D4A0BC /* PetCreatePageViewController.swift */,
 			);
 			path = addPet;
+			sourceTree = "<group>";
+		};
+		7DD8F8122A91EC4000D4A0BC /* DetailPet */ = {
+			isa = PBXGroup;
+			children = (
+				7DD8F8002A910D1A00D4A0BC /* MenuHeaderView.swift */,
+				7DD8F8042A910D1A00D4A0BC /* PetDetailViewController.swift */,
+				7DD8F8032A910D1A00D4A0BC /* MenuTableViewCell.swift */,
+			);
+			path = DetailPet;
 			sourceTree = "<group>";
 		};
 		848E404F2A87F25A0014D704 /* HomePage */ = {
@@ -680,7 +688,7 @@
 				EE66A1862A8D9757006947BE /* RequestJsonStructs.swift in Sources */,
 				EE22A38A2A87AB6000DAF44C /* AppDelegate.swift in Sources */,
 				EE5ABC522A89D20600E762D6 /* GreetingPresenter.swift in Sources */,
-				7DD8F80A2A910D1B00D4A0BC /* PetMainTableViewCell.swift in Sources */,
+				7DD8F80A2A910D1B00D4A0BC /* PetCollectionViewCell.swift in Sources */,
 				7DD8F80E2A910D1B00D4A0BC /* PetTableViewCell.swift in Sources */,
 				EEF75DBD2A8EA57B000F1C3A /* Ui Window Extension.swift in Sources */,
 				EEFA9AFD2A8ACDA000EA95A5 /* SignUpModel.swift in Sources */,
