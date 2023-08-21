@@ -15,6 +15,7 @@ protocol ProfileViewProtocol:AnyObject{
 protocol ProfilePresenterProtocol: AnyObject {
     init(view: ProfileViewProtocol, networkService:AuthNetworkService, keyChainService:KeyChainStorageProtocol)
     func logOutTapped()
+    func deleteTapped()
 }
 
 class ProfilePresenter: ProfilePresenterProtocol {
@@ -54,6 +55,10 @@ class ProfilePresenter: ProfilePresenterProtocol {
             
         }
         
+    }
+    
+    func deleteTapped() {
+        print("Delete")
     }
     
 }
