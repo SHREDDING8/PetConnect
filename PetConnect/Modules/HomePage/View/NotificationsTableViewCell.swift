@@ -39,6 +39,15 @@ class NotificationsTableViewCell: UITableViewCell {
         return element
     }()
     
+    private lazy var notifImage: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFit
+        
+        return image
+    }()
+    
+    // add prescriptions
     private lazy var fisrtNotif: UILabel = {
         let element = UILabel()
         element.font = UIFont.systemFont(ofSize: 12, weight: .medium)
@@ -57,14 +66,20 @@ class NotificationsTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure(img image: UIImage, category categoryLabel: String, news newsLabel: String) {
-        
+    public func configure(name nameLable: String, category categoryLabel: Category, prescriptions prescriptionLabel: [String]) {
+        bgView.backgroundColor = categoryLabel.getBackgroundColor()
+        notifTitle.text = nameLable
+        notifType.text = categoryLabel.getTitle()
+        notifImage.image = categoryLabel.getImage()
+        // add prescriptions
     }
     
     private func setupViews() {
         addSubview(bgView)
         bgView.addSubview(notifTitle)
         bgView.addSubview(notifType)
+        bgView.addSubview(notifImage)
+        // add prescriptions
     }
     
     private func setupConstraints() {
@@ -73,6 +88,13 @@ class NotificationsTableViewCell: UITableViewCell {
             bgView.heightAnchor.constraint(equalToConstant: 116),
             bgView.leadingAnchor.constraint(equalTo: leadingAnchor),
             bgView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            notifTitle.topAnchor.constraint(equalTo: bgView.topAnchor, constant: 18),
+            notifTitle.leadingAnchor.constraint(equalTo: bgView.leadingAnchor, constant: 20),
+            notifType.topAnchor.constraint(equalTo: notifTitle.bottomAnchor, constant: 3),
+            notifType.leadingAnchor.constraint(equalTo: bgView.leadingAnchor, constant: 20),
+            notifImage.trailingAnchor.constraint(equalTo: bgView.trailingAnchor, constant: -20),
+            notifImage.centerYAnchor.constraint(equalTo: bgView.centerYAnchor),
+            // add prescriptions
         ])
     }
 }

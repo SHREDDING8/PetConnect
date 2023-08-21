@@ -34,7 +34,7 @@ final class HomePageViewController: UIViewController {
         super.viewWillAppear(animated)
         
         self.notifications = NotificationPlaceholder.notifications
-        //homePageView.notificationsTableView.reloadData()
+        homePageView.notificationsTableView.reloadData()
     }
 }
 
@@ -82,7 +82,7 @@ extension HomePageViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? NotificationsTableViewCell else {
             fatalError("Cell was not found!")
         }
-        cell.configure(img: UIImage(systemName: "person")!, category: notifications[indexPath.row].name, news: notifications[indexPath.row].name)
+        cell.configure(name: notifications[indexPath.row].name, category: notifications[indexPath.row].category, prescriptions: notifications[indexPath.row].prescriptions)
         
         return cell
     }

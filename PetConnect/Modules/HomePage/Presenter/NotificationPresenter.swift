@@ -34,7 +34,7 @@ class NotificationPresenter: NotificationPresenterProtocol {
     }
     
     func savedTapped() {
-        var newNotification = Notification(name: "Name")
+        let newNotification = Notification(name: "Name", category: .food, prescriptions: ["1 приём"])
         NotificationPlaceholder.notifications.append(newNotification)
         print("Saved")
     }

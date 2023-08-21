@@ -85,7 +85,8 @@ class MainBuilder:MainBuilderProtocol{
     static func createProfilePage()->UIViewController{
         let view = ProfileViewController()
         let networkService = AuthNetworkService()
-        let presenter = ProfilePresenter(view: view, networkService: networkService)
+        let keyChain = KeyChainStorage()
+        let presenter = ProfilePresenter(view: view, networkService: networkService, keyChainService: keyChain)
         view.presenter = presenter
         return BaseNavigationController(rootViewController: view)
     }

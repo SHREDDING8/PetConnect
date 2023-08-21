@@ -104,6 +104,7 @@ class NotificationViewController: UIViewController {
     
     @objc func saveNotifications() {
         presenter?.savedTapped()
+        navigationController?.popViewController(animated: true)
     }
 
 }
