@@ -79,11 +79,12 @@ open class KeyChainStorage:KeyChainStorageProtocol{
     
     func deleteAccessToken(){
         keychain.delete(self.accessTokenKey)
+        keychain.delete(self.accessTokenTimeSavedKey)
     }
     func deleteRefreshToken(){
         keychain.delete(self.refreshTokenKey)
+        keychain.delete(self.refreshokenTimeSavedKey)
     }
-    
     
     func isAccessTokenAvailable() -> Bool {
         
