@@ -114,6 +114,13 @@ class ProfileViewController: UIViewController {
         return notification
     }()
     
+    
+    private lazy var deleteView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     private lazy var deleteImageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
@@ -128,10 +135,15 @@ class ProfileViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Удалить аккаунт"
         label.font = .boldSystemFont(ofSize: 18)
-        label.textAlignment = .center
         label.textColor = UIColor(named: "primary")
         
         return label
+    }()
+    
+    private lazy var logoutView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     private lazy var logoutImageView: UIImageView = {
@@ -148,7 +160,6 @@ class ProfileViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Выход"
         label.font = .boldSystemFont(ofSize: 18)
-        label.textAlignment = .center
         label.textColor = UIColor(named: "primary")
         
         return label
@@ -161,9 +172,13 @@ class ProfileViewController: UIViewController {
         
         //self.navigationItem.largeTitleDisplayMode = .never
         
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(logOutTapped))
-        self.logoutLablel.isUserInteractionEnabled = true
-        self.logoutLablel.addGestureRecognizer(gesture)
+        let delete = UITapGestureRecognizer(target: self, action: #selector(deleteTapped))
+        self.deleteView.isUserInteractionEnabled = true
+        self.deleteView.addGestureRecognizer(delete)
+        
+        let logout = UITapGestureRecognizer(target: self, action: #selector(logOutTapped))
+        self.logoutView.isUserInteractionEnabled = true
+        self.logoutView.addGestureRecognizer(logout)
         
         setUpView()
     }
@@ -173,7 +188,7 @@ class ProfileViewController: UIViewController {
         drawLine(fromX: 20, fromY: Int(profileImageView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(profileImageView.frame.maxY)+16)
         drawLine(fromX: 20, fromY: Int(emailImageView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(emailImageView.frame.maxY)+16)
         drawLine(fromX: 20, fromY: Int(notificationImageView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(notificationImageView.frame.maxY)+16)
-        drawLine(fromX: 20, fromY: Int(deleteImageView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(deleteImageView.frame.maxY)+16)
+        drawLine(fromX: 20, fromY: Int(deleteView.frame.maxY)+16, toX: Int(view.frame.width)-20, toY: Int(deleteView.frame.maxY)+16)
         
     }
     
@@ -192,10 +207,12 @@ class ProfileViewController: UIViewController {
         contentView.addSubview(notificationImageView)
         contentView.addSubview(notificationLablel)
         contentView.addSubview(notificationSwitch)
-        contentView.addSubview(deleteImageView)
-        contentView.addSubview(deleteLablel)
-        contentView.addSubview(logoutImageView)
-        contentView.addSubview(logoutLablel)
+        contentView.addSubview(deleteView)
+        deleteView.addSubview(deleteImageView)
+        deleteView.addSubview(deleteLablel)
+        contentView.addSubview(logoutView)
+        logoutView.addSubview(logoutImageView)
+        logoutView.addSubview(logoutLablel)
         
         NSLayoutConstraint.activate(staticConstraints())
     }
@@ -263,24 +280,48 @@ class ProfileViewController: UIViewController {
             notificationSwitch.centerYAnchor.constraint(equalTo: notificationImageView.centerYAnchor),
             notificationSwitch.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -28),
             
-            deleteImageView.topAnchor.constraint(equalTo: notificationImageView.bottomAnchor, constant: 32),
-            deleteImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            deleteView.topAnchor.constraint(equalTo: notificationImageView.bottomAnchor, constant: 32),
+            deleteView.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1),
+            deleteView.heightAnchor.constraint(equalTo: deleteImageView.heightAnchor, multiplier: 1),
+            deleteImageView.leadingAnchor.constraint(equalTo: deleteView.leadingAnchor, constant: 20),
+            deleteImageView.centerYAnchor.constraint(equalTo: deleteView.centerYAnchor),
             deleteLablel.centerYAnchor.constraint(equalTo: deleteImageView.centerYAnchor),
             deleteLablel.leadingAnchor.constraint(equalTo: deleteImageView.trailingAnchor, constant: 16),
             
-            logoutImageView.topAnchor.constraint(equalTo: deleteImageView.bottomAnchor, constant: 32),
-            logoutImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            logoutView.topAnchor.constraint(equalTo: deleteView.bottomAnchor, constant: 32),
+            logoutView.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1),
+            logoutView.heightAnchor.constraint(equalTo: deleteImageView.heightAnchor, multiplier: 1),
+            logoutImageView.centerYAnchor.constraint(equalTo: logoutView.centerYAnchor),
+            logoutImageView.leadingAnchor.constraint(equalTo: logoutView.leadingAnchor, constant: 20),
             logoutLablel.centerYAnchor.constraint(equalTo: logoutImageView.centerYAnchor),
             logoutLablel.leadingAnchor.constraint(equalTo: logoutImageView.trailingAnchor, constant: 16),
-            logoutLablel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -20),
+            logoutView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
             ])
         
         return constraints
     }
+    
     @objc func logOutTapped(){
-        presenter?.logOutTapped()
+        let alertLogout = UIAlertController(title: "Подтвердите действие", message: "Вы уверены, что действительно хотите выйти из учетной записи PetConnect?", preferredStyle: .alert)
+         
+        alertLogout.addAction(UIAlertAction(title: "Отмена", style: .default, handler: nil))
+        alertLogout.addAction(UIAlertAction(title: "Выйти", style: .destructive, handler: { _ in
+            self.presenter?.logOutTapped()
+        }))
+    
+        self.present(alertLogout, animated: true)
     }
     
+    @objc func deleteTapped(){
+        let alertLogout = UIAlertController(title: "Подтвердите действие", message: "Вы уверены, что действительно хотите удалить аккаунт?", preferredStyle: .alert)
+         
+        alertLogout.addAction(UIAlertAction(title: "Отмена", style: .default, handler: nil))
+        alertLogout.addAction(UIAlertAction(title: "Удалить", style: .destructive, handler: { _ in
+             self.presenter?.deleteTapped()
+        }))
+    
+        self.present(alertLogout, animated: true)
+    }
 }
 
 extension ProfileViewController: ProfileViewProtocol{
